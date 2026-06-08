@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Conteo Perú 2026 · Segunda Vuelta · Proyección en vivo</title>
+<meta name="description" content="Conteo oficial de ONPE en tiempo real y proyección bayesiana del ganador de la segunda vuelta presidencial 2026." />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="brand">
+      <span class="dot" id="liveDot"></span>
+      <h1>Conteo Perú 2026 <span class="sub">· Segunda Vuelta</span></h1>
+    </div>
+    <div class="updated">
+      <span id="updated">cargando…</span>
+      <a class="src" href="https://resultadosegundavuelta.onpe.gob.pe/main/resumen" target="_blank" rel="noopener">Fuente: ONPE ↗</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="disclaimer" id="disclaimer">
+    <strong>Proyección estadística, no resultado oficial.</strong>
+    El conteo es de ONPE; la proyección es un modelo bayesiano que estima el resultado
+    final a partir de cómo ha votado cada departamento y cuánto falta contar. Puede equivocarse.
+  </div>
+
+  <!-- TITULAR -->
+  <section class="card headline" id="headline">
+    <div class="cand cand-keiko" id="card-keiko">
+      <div class="cand-top"><span class="cand-name">Keiko Fujimori</span><span class="cand-party">Fuerza Popular</span></div>
+      <div class="cand-pct" id="pct-keiko">—</div>
+      <div class="cand-band" id="band-keiko">proyectado · banda 95%</div>
+    </div>
+    <div class="versus" id="versus">
+      <div class="versus-label">proyección 2 vías</div>
+      <div class="versus-vs">vs</div>
+      <div class="versus-sub" id="actasLabel">— % actas</div>
+    </div>
+    <div class="cand cand-sanchez" id="card-sanchez">
+      <div class="cand-top"><span class="cand-name">Roberto Sánchez</span><span class="cand-party">Juntos por el Perú</span></div>
+      <div class="cand-pct" id="pct-sanchez">—</div>
+      <div class="cand-band" id="band-sanchez">proyectado · banda 95%</div>
+    </div>
+  </section>
+
+  <!-- BARRA DE PROYECCION CON BANDA -->
+  <section class="card barbox">
+    <div class="bar-track" id="barTrack">
+      <div class="bar-keiko" id="barKeiko"></div>
+      <div class="bar-band" id="barBand" title="banda de credibilidad 95%"></div>
+      <div class="bar-mid"></div>
+    </div>
+    <div class="bar-legend">
+      <span>← Keiko</span>
+      <span class="muted">50% — la línea para ganar</span>
+      <span>Sánchez →</span>
+    </div>
+  </section>
+
+  <div class="grid2">
+    <!-- PROBABILIDAD -->
+    <section class="card">
+      <h2>Probabilidad de victoria</h2>
+      <p class="hint">De <span id="nsamples">—</span> simulaciones Monte Carlo. Falta por contar: <strong id="fracFalta">—</strong>.</p>
+      <div class="prob-row">
+        <div class="prob-name">Keiko</div>
+        <div class="prob-bar"><div class="prob-fill pf-keiko" id="prob-keiko"></div></div>
+        <div class="prob-val" id="probval-keiko">—</div>
+      </div>
+      <div class="prob-row">
+        <div class="prob-name">Sánchez</div>
+        <div class="prob-bar"><div class="prob-fill pf-sanchez" id="prob-sanchez"></div></div>
+        <div class="prob-val" id="probval-sanchez">—</div>
+      </div>
+      <div class="winner" id="winner">—</div>
+    </section>
+
+    <!-- EVOLUCION -->
+    <section class="card">
+      <h2>Evolución de la proyección</h2>
+      <p class="hint">Cómo se ha movido la proyección de Keiko (banda 95%) conforme entran actas.</p>
+      <div class="chartwrap"><canvas id="chart"></canvas></div>
+    </section>
+  </div>
+
+  <!-- TABLA REGIONAL -->
+  <section class="card">
+    <div class="table-head">
+      <h2>Desglose por departamento</h2>
+      <input id="filtro" type="search" placeholder="Filtrar departamento…" autocomplete="off" />
+    </div>
+    <div class="table-scroll">
+      <table id="tabla">
+        <thead>
+          <tr>
+            <th data-k="nombre">Departamento</th>
+            <th data-k="pct_actas" class="num">% actas</th>
+            <th data-k="lider">Lidera</th>
+            <th data-k="margen" class="num">Margen</th>
+            <th class="barcol">Keiko ↔ Sánchez</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card map-card" id="mapCard">
+    <h2>Mapa por departamento</h2>
+    <p class="hint" id="mapHint">Color según quién lidera; intensidad = margen.</p>
+    <div id="map"></div>
+  </section>
+
+  <footer class="foot">
+    <p>Datos: <a href="https://resultadosegundavuelta.onpe.gob.pe" target="_blank" rel="noopener">ONPE</a> ·
+       Modelo: Beta-Binomial con pooling parcial + Monte Carlo ·
+       Código abierto. Esta página no está afiliada a ONPE ni a ninguna agrupación política.</p>
+    <p class="muted" id="metodo">—</p>
+  </footer>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

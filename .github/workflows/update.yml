@@ -1,0 +1,46 @@
+name: Actualizar conteo ONPE
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"        # cada ~5 min (GitHub puede retrasarlo bajo carga)
+  workflow_dispatch:             # botón manual
+  push:
+    branches: [main]
+    paths: ["collector/**", ".github/workflows/**"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: conteo-update
+  cancel-in-progress: false      # no cortar una corrida a medias
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install -r collector/requirements.txt
+
+      - name: Recolectar de ONPE + proyectar
+        run: python collector/build_outputs.py
+
+      - name: Commit de la data (solo si cambió)
+        run: |
+          git config user.name "conteo-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/data/latest.json docs/data/history.json
+          if git diff --staged --quiet; then
+            echo "Sin cambios en la data."; exit 0
+          fi
+          git commit -m "data: actualización ONPE $(date -u +%H:%MZ) [skip ci]"
+          git pull --rebase --autostash origin main || true
+          git push
