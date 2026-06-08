@@ -31,23 +31,49 @@ class OnpeError(RuntimeError):
     """La API no respondió como esperamos (HTML del SPA, esquema cambiado, etc.)."""
 
 
+class _SpaResponse(Exception):
+    """Interno: ONPE devolvió la SPA en vez de JSON; reintentable."""
+
+
 class OnpeClient:
     def __init__(self, base_url: str = BASE_URL, timeout: int = 20, max_retries: int = 4):
         self.base_url = base_url
         self.timeout = timeout
         self.max_retries = max_retries
         self._session = curl_requests.Session()
+        # Headers de un XHR real de Chrome. Algunos despliegues de ONPE detrás de
+        # un WAF rutean a la SPA (200 + HTML) si faltan los sec-* o el Origin, sobre
+        # todo desde IPs de datacenter (como los runners de GitHub Actions).
         self._session.headers.update(
             {
                 "Accept": "application/json, text/plain, */*",
                 "X-Requested-With": "XMLHttpRequest",
                 "Referer": REFERER,
-                "Accept-Language": "es-PE,es;q=0.9",
+                "Origin": "https://resultadosegundavuelta.onpe.gob.pe",
+                "Accept-Language": "es-PE,es;q=0.9,en;q=0.8",
+                "Sec-Fetch-Site": "same-origin",
+                "Sec-Fetch-Mode": "cors",
+                "Sec-Fetch-Dest": "empty",
+                "sec-ch-ua": '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": '"Windows"',
             }
         )
+        self._primed = False
+
+    def _prime(self) -> None:
+        """GET inicial a la SPA para obtener cookies de sesión/WAF antes de la API."""
+        if self._primed:
+            return
+        try:
+            self._session.get(REFERER, impersonate="chrome124", timeout=self.timeout)
+        except Exception:  # noqa: BLE001 — el priming es best-effort
+            pass
+        self._primed = True
 
     def _get(self, path: str, **params: Any) -> Any:
         """GET con impersonación de Chrome + reintentos. Devuelve payload['data']."""
+        self._prime()
         url = f"{self.base_url}{path}"
         last_exc: Exception | None = None
         for attempt in range(self.max_retries):
@@ -58,23 +84,31 @@ class OnpeClient:
                 if r.status_code == 204 or not r.text.strip():
                     return None  # sin contenido: no es error, simplemente no hay data
                 r.raise_for_status()
+                ct = r.headers.get("content-type", "")
+                body = r.text.lstrip()
+                if "json" not in ct and (body[:1] == "<" or "<!doctype" in body[:80].lower()):
+                    # ONPE devolvió la SPA en vez de JSON (anti-bot / WAF). Reintentar:
+                    # re-primear por si caducó la cookie de sesión.
+                    self._primed = False
+                    self._prime()
+                    raise _SpaResponse(f"SPA en vez de JSON desde {path}")
                 try:
                     payload = r.json()
                 except JSONDecodeError as exc:
                     snippet = r.text[:160].replace("\n", " ")
-                    raise OnpeError(
-                        f"Respuesta no-JSON desde {path} (¿bloqueo anti-bot?): {snippet!r}"
-                    ) from exc
+                    raise _SpaResponse(f"no-JSON desde {path}: {snippet!r}") from exc
                 if not isinstance(payload, dict) or "data" not in payload:
                     raise OnpeError(f"Payload inesperado desde {path}: {str(payload)[:160]!r}")
                 return payload["data"]
             except OnpeError:
                 raise  # error de esquema: no tiene sentido reintentar
-            except Exception as exc:  # noqa: BLE001 — transitorio de red
+            except Exception as exc:  # noqa: BLE001 — transitorio de red o SPA
                 last_exc = exc
                 if attempt < self.max_retries - 1:
-                    time.sleep(0.4 * (2**attempt))
-        raise OnpeError(f"{path}: {self.max_retries} intentos fallidos") from last_exc
+                    time.sleep(0.5 * (2**attempt))
+        raise OnpeError(
+            f"{path}: {self.max_retries} intentos fallidos (último: {last_exc})"
+        ) from last_exc
 
     # ---- endpoints ---------------------------------------------------------
 
