@@ -1,0 +1,844 @@
+{
+  "timestamp_utc": "2026-06-08T22:57:34Z",
+  "id_eleccion": 10,
+  "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
+  "candidatos": {
+    "keiko": {
+      "nombre": "Keiko Fujimori",
+      "agrupacion": "Fuerza Popular",
+      "codigo": 8
+    },
+    "sanchez": {
+      "nombre": "Roberto Sánchez",
+      "agrupacion": "Juntos por el Perú",
+      "codigo": 10
+    }
+  },
+  "nacional": {
+    "actas_pct": 94.847,
+    "actas_contabilizadas": 87986,
+    "actas_total": 92766,
+    "votos_emitidos": 18925940,
+    "votos_validos": 17686215,
+    "participacion": 69.261,
+    "votos": {
+      "keiko": 8825533,
+      "sanchez": 8860682
+    }
+  },
+  "regiones": [
+    {
+      "ubigeo": 10000,
+      "nombre": "Amazonas",
+      "exterior": false,
+      "actas_contabilizadas": 1203,
+      "actas_total": 1278,
+      "pct_actas": 94.13,
+      "votos": {
+        "keiko": 68151,
+        "sanchez": 118788
+      }
+    },
+    {
+      "ubigeo": 20000,
+      "nombre": "Áncash",
+      "exterior": false,
+      "actas_contabilizadas": 3425,
+      "actas_total": 3472,
+      "pct_actas": 98.65,
+      "votos": {
+        "keiko": 267408,
+        "sanchez": 348735
+      }
+    },
+    {
+      "ubigeo": 30000,
+      "nombre": "Apurímac",
+      "exterior": false,
+      "actas_contabilizadas": 1307,
+      "actas_total": 1317,
+      "pct_actas": 99.24,
+      "votos": {
+        "keiko": 43132,
+        "sanchez": 185825
+      }
+    },
+    {
+      "ubigeo": 40000,
+      "nombre": "Arequipa",
+      "exterior": false,
+      "actas_contabilizadas": 4190,
+      "actas_total": 4215,
+      "pct_actas": 99.41,
+      "votos": {
+        "keiko": 332308,
+        "sanchez": 580551
+      }
+    },
+    {
+      "ubigeo": 50000,
+      "nombre": "Ayacucho",
+      "exterior": false,
+      "actas_contabilizadas": 1862,
+      "actas_total": 1900,
+      "pct_actas": 98.0,
+      "votos": {
+        "keiko": 66494,
+        "sanchez": 253825
+      }
+    },
+    {
+      "ubigeo": 60000,
+      "nombre": "Cajamarca",
+      "exterior": false,
+      "actas_contabilizadas": 4210,
+      "actas_total": 4240,
+      "pct_actas": 99.29,
+      "votos": {
+        "keiko": 244352,
+        "sanchez": 490702
+      }
+    },
+    {
+      "ubigeo": 70000,
+      "nombre": "Cusco",
+      "exterior": false,
+      "actas_contabilizadas": 3711,
+      "actas_total": 3983,
+      "pct_actas": 93.17,
+      "votos": {
+        "keiko": 158153,
+        "sanchez": 560300
+      }
+    },
+    {
+      "ubigeo": 80000,
+      "nombre": "Huancavelica",
+      "exterior": false,
+      "actas_contabilizadas": 1262,
+      "actas_total": 1273,
+      "pct_actas": 99.14,
+      "votos": {
+        "keiko": 36707,
+        "sanchez": 160659
+      }
+    },
+    {
+      "ubigeo": 90000,
+      "nombre": "Huánuco",
+      "exterior": false,
+      "actas_contabilizadas": 2318,
+      "actas_total": 2341,
+      "pct_actas": 99.02,
+      "votos": {
+        "keiko": 139611,
+        "sanchez": 249669
+      }
+    },
+    {
+      "ubigeo": 100000,
+      "nombre": "Ica",
+      "exterior": false,
+      "actas_contabilizadas": 2421,
+      "actas_total": 2443,
+      "pct_actas": 99.1,
+      "votos": {
+        "sanchez": 259131,
+        "keiko": 279728
+      }
+    },
+    {
+      "ubigeo": 110000,
+      "nombre": "Junín",
+      "exterior": false,
+      "actas_contabilizadas": 3600,
+      "actas_total": 3691,
+      "pct_actas": 97.53,
+      "votos": {
+        "keiko": 317745,
+        "sanchez": 387009
+      }
+    },
+    {
+      "ubigeo": 120000,
+      "nombre": "La Libertad",
+      "exterior": false,
+      "actas_contabilizadas": 5264,
+      "actas_total": 5302,
+      "pct_actas": 99.28,
+      "votos": {
+        "sanchez": 442641,
+        "keiko": 599711
+      }
+    },
+    {
+      "ubigeo": 130000,
+      "nombre": "Lambayeque",
+      "exterior": false,
+      "actas_contabilizadas": 3577,
+      "actas_total": 3590,
+      "pct_actas": 99.64,
+      "votos": {
+        "sanchez": 304695,
+        "keiko": 435721
+      }
+    },
+    {
+      "ubigeo": 140000,
+      "nombre": "Lima",
+      "exterior": false,
+      "actas_contabilizadas": 28328,
+      "actas_total": 29247,
+      "pct_actas": 96.86,
+      "votos": {
+        "sanchez": 2267034,
+        "keiko": 3943740
+      }
+    },
+    {
+      "ubigeo": 150000,
+      "nombre": "Loreto",
+      "exterior": false,
+      "actas_contabilizadas": 2218,
+      "actas_total": 2697,
+      "pct_actas": 82.24,
+      "votos": {
+        "sanchez": 161328,
+        "keiko": 192455
+      }
+    },
+    {
+      "ubigeo": 160000,
+      "nombre": "Madre de Dios",
+      "exterior": false,
+      "actas_contabilizadas": 484,
+      "actas_total": 507,
+      "pct_actas": 95.46,
+      "votos": {
+        "keiko": 28704,
+        "sanchez": 63492
+      }
+    },
+    {
+      "ubigeo": 170000,
+      "nombre": "Moquegua",
+      "exterior": false,
+      "actas_contabilizadas": 576,
+      "actas_total": 578,
+      "pct_actas": 99.65,
+      "votos": {
+        "keiko": 33353,
+        "sanchez": 88235
+      }
+    },
+    {
+      "ubigeo": 180000,
+      "nombre": "Pasco",
+      "exterior": false,
+      "actas_contabilizadas": 788,
+      "actas_total": 802,
+      "pct_actas": 98.25,
+      "votos": {
+        "keiko": 50699,
+        "sanchez": 78518
+      }
+    },
+    {
+      "ubigeo": 190000,
+      "nombre": "Piura",
+      "exterior": false,
+      "actas_contabilizadas": 5213,
+      "actas_total": 5281,
+      "pct_actas": 98.71,
+      "votos": {
+        "sanchez": 439700,
+        "keiko": 581730
+      }
+    },
+    {
+      "ubigeo": 200000,
+      "nombre": "Puno",
+      "exterior": false,
+      "actas_contabilizadas": 3373,
+      "actas_total": 3397,
+      "pct_actas": 99.29,
+      "votos": {
+        "keiko": 95674,
+        "sanchez": 608930
+      }
+    },
+    {
+      "ubigeo": 210000,
+      "nombre": "San Martín",
+      "exterior": false,
+      "actas_contabilizadas": 2520,
+      "actas_total": 2534,
+      "pct_actas": 99.45,
+      "votos": {
+        "keiko": 218127,
+        "sanchez": 262583
+      }
+    },
+    {
+      "ubigeo": 220000,
+      "nombre": "Tacna",
+      "exterior": false,
+      "actas_contabilizadas": 1027,
+      "actas_total": 1041,
+      "pct_actas": 98.66,
+      "votos": {
+        "keiko": 65388,
+        "sanchez": 162820
+      }
+    },
+    {
+      "ubigeo": 230000,
+      "nombre": "Tumbes",
+      "exterior": false,
+      "actas_contabilizadas": 630,
+      "actas_total": 632,
+      "pct_actas": 99.68,
+      "votos": {
+        "sanchez": 45427,
+        "keiko": 81960
+      }
+    },
+    {
+      "ubigeo": 240000,
+      "nombre": "Callao",
+      "exterior": false,
+      "actas_contabilizadas": 2829,
+      "actas_total": 2898,
+      "pct_actas": 97.62,
+      "votos": {
+        "sanchez": 206765,
+        "keiko": 394407
+      }
+    },
+    {
+      "ubigeo": 250000,
+      "nombre": "Ucayali",
+      "exterior": false,
+      "actas_contabilizadas": 1513,
+      "actas_total": 1564,
+      "pct_actas": 96.74,
+      "votos": {
+        "sanchez": 125364,
+        "keiko": 139577
+      }
+    },
+    {
+      "ubigeo": 910000,
+      "nombre": "Exterior – África",
+      "exterior": true,
+      "actas_contabilizadas": 1,
+      "actas_total": 1,
+      "pct_actas": 100.0,
+      "votos": {
+        "keiko": 0,
+        "sanchez": 0
+      }
+    },
+    {
+      "ubigeo": 920000,
+      "nombre": "Exterior – América",
+      "exterior": true,
+      "actas_contabilizadas": 137,
+      "actas_total": 678,
+      "pct_actas": 20.21,
+      "votos": {
+        "sanchez": 8209,
+        "keiko": 10768
+      }
+    },
+    {
+      "ubigeo": 930000,
+      "nombre": "Exterior – Asia",
+      "exterior": true,
+      "actas_contabilizadas": 2,
+      "actas_total": 2,
+      "pct_actas": 100.0,
+      "votos": {
+        "keiko": 0,
+        "sanchez": 0
+      }
+    },
+    {
+      "ubigeo": 940000,
+      "nombre": "Exterior – Europa",
+      "exterior": true,
+      "actas_contabilizadas": 8,
+      "actas_total": 8,
+      "pct_actas": 100.0,
+      "votos": {
+        "sanchez": 242,
+        "keiko": 291
+      }
+    },
+    {
+      "ubigeo": 950000,
+      "nombre": "Exterior – Oceanía",
+      "exterior": true,
+      "actas_contabilizadas": 0,
+      "actas_total": 0,
+      "pct_actas": 0.0,
+      "votos": {
+        "keiko": 0,
+        "sanchez": 0
+      }
+    }
+  ],
+  "proyeccion": {
+    "metodo": "beta-binomial-pooling-parcial-actas-v1",
+    "n_samples": 20000,
+    "kappa": 4.0,
+    "frac_faltante": 0.0514,
+    "sigma_sistematico_pts": 0.308,
+    "ganador_proyectado": "sanchez",
+    "prob_victoria": {
+      "keiko": 0.4835,
+      "sanchez": 0.5165
+    },
+    "share_actual_2via": {
+      "keiko": 49.901,
+      "sanchez": 50.099
+    },
+    "proyeccion_2via_pct": {
+      "keiko": {
+        "media": 49.972,
+        "lo": 48.85,
+        "mediana": 49.974,
+        "hi": 51.09
+      },
+      "sanchez": {
+        "media": 50.028,
+        "lo": 48.91,
+        "mediana": 50.026,
+        "hi": 51.15
+      }
+    },
+    "votos_por_acta_nacional": 201.0,
+    "por_region": [
+      {
+        "ubigeo": 10000,
+        "nombre": "Amazonas",
+        "exterior": false,
+        "pct_actas": 94.13,
+        "lider": "sanchez",
+        "margen": 27.09,
+        "share_keiko_actual": 36.46,
+        "share_keiko_proyectado": 36.5,
+        "votos": {
+          "keiko": 68151,
+          "sanchez": 118788
+        }
+      },
+      {
+        "ubigeo": 20000,
+        "nombre": "Áncash",
+        "exterior": false,
+        "pct_actas": 98.65,
+        "lider": "sanchez",
+        "margen": 13.2,
+        "share_keiko_actual": 43.4,
+        "share_keiko_proyectado": 43.42,
+        "votos": {
+          "keiko": 267408,
+          "sanchez": 348735
+        }
+      },
+      {
+        "ubigeo": 30000,
+        "nombre": "Apurímac",
+        "exterior": false,
+        "pct_actas": 99.24,
+        "lider": "sanchez",
+        "margen": 62.32,
+        "share_keiko_actual": 18.84,
+        "share_keiko_proyectado": 18.94,
+        "votos": {
+          "keiko": 43132,
+          "sanchez": 185825
+        }
+      },
+      {
+        "ubigeo": 40000,
+        "nombre": "Arequipa",
+        "exterior": false,
+        "pct_actas": 99.41,
+        "lider": "sanchez",
+        "margen": 27.19,
+        "share_keiko_actual": 36.4,
+        "share_keiko_proyectado": 36.41,
+        "votos": {
+          "keiko": 332308,
+          "sanchez": 580551
+        }
+      },
+      {
+        "ubigeo": 50000,
+        "nombre": "Ayacucho",
+        "exterior": false,
+        "pct_actas": 98.0,
+        "lider": "sanchez",
+        "margen": 58.48,
+        "share_keiko_actual": 20.76,
+        "share_keiko_proyectado": 20.82,
+        "votos": {
+          "keiko": 66494,
+          "sanchez": 253825
+        }
+      },
+      {
+        "ubigeo": 60000,
+        "nombre": "Cajamarca",
+        "exterior": false,
+        "pct_actas": 99.29,
+        "lider": "sanchez",
+        "margen": 33.51,
+        "share_keiko_actual": 33.24,
+        "share_keiko_proyectado": 33.25,
+        "votos": {
+          "keiko": 244352,
+          "sanchez": 490702
+        }
+      },
+      {
+        "ubigeo": 70000,
+        "nombre": "Cusco",
+        "exterior": false,
+        "pct_actas": 93.17,
+        "lider": "sanchez",
+        "margen": 55.97,
+        "share_keiko_actual": 22.01,
+        "share_keiko_proyectado": 22.05,
+        "votos": {
+          "keiko": 158153,
+          "sanchez": 560300
+        }
+      },
+      {
+        "ubigeo": 80000,
+        "nombre": "Huancavelica",
+        "exterior": false,
+        "pct_actas": 99.14,
+        "lider": "sanchez",
+        "margen": 62.8,
+        "share_keiko_actual": 18.6,
+        "share_keiko_proyectado": 18.69,
+        "votos": {
+          "keiko": 36707,
+          "sanchez": 160659
+        }
+      },
+      {
+        "ubigeo": 90000,
+        "nombre": "Huánuco",
+        "exterior": false,
+        "pct_actas": 99.02,
+        "lider": "sanchez",
+        "margen": 28.27,
+        "share_keiko_actual": 35.86,
+        "share_keiko_proyectado": 35.88,
+        "votos": {
+          "keiko": 139611,
+          "sanchez": 249669
+        }
+      },
+      {
+        "ubigeo": 100000,
+        "nombre": "Ica",
+        "exterior": false,
+        "pct_actas": 99.1,
+        "lider": "keiko",
+        "margen": 3.82,
+        "share_keiko_actual": 51.91,
+        "share_keiko_proyectado": 51.91,
+        "votos": {
+          "sanchez": 259131,
+          "keiko": 279728
+        }
+      },
+      {
+        "ubigeo": 110000,
+        "nombre": "Junín",
+        "exterior": false,
+        "pct_actas": 97.53,
+        "lider": "sanchez",
+        "margen": 9.83,
+        "share_keiko_actual": 45.09,
+        "share_keiko_proyectado": 45.1,
+        "votos": {
+          "keiko": 317745,
+          "sanchez": 387009
+        }
+      },
+      {
+        "ubigeo": 120000,
+        "nombre": "La Libertad",
+        "exterior": false,
+        "pct_actas": 99.28,
+        "lider": "keiko",
+        "margen": 15.07,
+        "share_keiko_actual": 57.53,
+        "share_keiko_proyectado": 57.52,
+        "votos": {
+          "sanchez": 442641,
+          "keiko": 599711
+        }
+      },
+      {
+        "ubigeo": 130000,
+        "nombre": "Lambayeque",
+        "exterior": false,
+        "pct_actas": 99.64,
+        "lider": "keiko",
+        "margen": 17.7,
+        "share_keiko_actual": 58.85,
+        "share_keiko_proyectado": 58.83,
+        "votos": {
+          "sanchez": 304695,
+          "keiko": 435721
+        }
+      },
+      {
+        "ubigeo": 140000,
+        "nombre": "Lima",
+        "exterior": false,
+        "pct_actas": 96.86,
+        "lider": "keiko",
+        "margen": 27.0,
+        "share_keiko_actual": 63.5,
+        "share_keiko_proyectado": 63.5,
+        "votos": {
+          "sanchez": 2267034,
+          "keiko": 3943740
+        }
+      },
+      {
+        "ubigeo": 150000,
+        "nombre": "Loreto",
+        "exterior": false,
+        "pct_actas": 82.24,
+        "lider": "keiko",
+        "margen": 8.8,
+        "share_keiko_actual": 54.4,
+        "share_keiko_proyectado": 54.4,
+        "votos": {
+          "sanchez": 161328,
+          "keiko": 192455
+        }
+      },
+      {
+        "ubigeo": 160000,
+        "nombre": "Madre de Dios",
+        "exterior": false,
+        "pct_actas": 95.46,
+        "lider": "sanchez",
+        "margen": 37.73,
+        "share_keiko_actual": 31.13,
+        "share_keiko_proyectado": 31.28,
+        "votos": {
+          "keiko": 28704,
+          "sanchez": 63492
+        }
+      },
+      {
+        "ubigeo": 170000,
+        "nombre": "Moquegua",
+        "exterior": false,
+        "pct_actas": 99.65,
+        "lider": "sanchez",
+        "margen": 45.14,
+        "share_keiko_actual": 27.43,
+        "share_keiko_proyectado": 27.58,
+        "votos": {
+          "keiko": 33353,
+          "sanchez": 88235
+        }
+      },
+      {
+        "ubigeo": 180000,
+        "nombre": "Pasco",
+        "exterior": false,
+        "pct_actas": 98.25,
+        "lider": "sanchez",
+        "margen": 21.53,
+        "share_keiko_actual": 39.24,
+        "share_keiko_proyectado": 39.3,
+        "votos": {
+          "keiko": 50699,
+          "sanchez": 78518
+        }
+      },
+      {
+        "ubigeo": 190000,
+        "nombre": "Piura",
+        "exterior": false,
+        "pct_actas": 98.71,
+        "lider": "keiko",
+        "margen": 13.91,
+        "share_keiko_actual": 56.95,
+        "share_keiko_proyectado": 56.95,
+        "votos": {
+          "sanchez": 439700,
+          "keiko": 581730
+        }
+      },
+      {
+        "ubigeo": 200000,
+        "nombre": "Puno",
+        "exterior": false,
+        "pct_actas": 99.29,
+        "lider": "sanchez",
+        "margen": 72.84,
+        "share_keiko_actual": 13.58,
+        "share_keiko_proyectado": 13.62,
+        "votos": {
+          "keiko": 95674,
+          "sanchez": 608930
+        }
+      },
+      {
+        "ubigeo": 210000,
+        "nombre": "San Martín",
+        "exterior": false,
+        "pct_actas": 99.45,
+        "lider": "sanchez",
+        "margen": 9.25,
+        "share_keiko_actual": 45.38,
+        "share_keiko_proyectado": 45.38,
+        "votos": {
+          "keiko": 218127,
+          "sanchez": 262583
+        }
+      },
+      {
+        "ubigeo": 220000,
+        "nombre": "Tacna",
+        "exterior": false,
+        "pct_actas": 98.66,
+        "lider": "sanchez",
+        "margen": 42.69,
+        "share_keiko_actual": 28.65,
+        "share_keiko_proyectado": 28.73,
+        "votos": {
+          "keiko": 65388,
+          "sanchez": 162820
+        }
+      },
+      {
+        "ubigeo": 230000,
+        "nombre": "Tumbes",
+        "exterior": false,
+        "pct_actas": 99.68,
+        "lider": "keiko",
+        "margen": 28.68,
+        "share_keiko_actual": 64.34,
+        "share_keiko_proyectado": 64.26,
+        "votos": {
+          "sanchez": 45427,
+          "keiko": 81960
+        }
+      },
+      {
+        "ubigeo": 240000,
+        "nombre": "Callao",
+        "exterior": false,
+        "pct_actas": 97.62,
+        "lider": "keiko",
+        "margen": 31.21,
+        "share_keiko_actual": 65.61,
+        "share_keiko_proyectado": 65.59,
+        "votos": {
+          "sanchez": 206765,
+          "keiko": 394407
+        }
+      },
+      {
+        "ubigeo": 250000,
+        "nombre": "Ucayali",
+        "exterior": false,
+        "pct_actas": 96.74,
+        "lider": "keiko",
+        "margen": 5.36,
+        "share_keiko_actual": 52.68,
+        "share_keiko_proyectado": 52.68,
+        "votos": {
+          "sanchez": 125364,
+          "keiko": 139577
+        }
+      },
+      {
+        "ubigeo": 910000,
+        "nombre": "Exterior – África",
+        "exterior": true,
+        "pct_actas": 100.0,
+        "lider": "keiko",
+        "margen": 0.0,
+        "share_keiko_actual": 50.0,
+        "share_keiko_proyectado": 49.82,
+        "votos": {
+          "keiko": 0,
+          "sanchez": 0
+        }
+      },
+      {
+        "ubigeo": 920000,
+        "nombre": "Exterior – América",
+        "exterior": true,
+        "pct_actas": 20.21,
+        "lider": "keiko",
+        "margen": 13.48,
+        "share_keiko_actual": 56.74,
+        "share_keiko_proyectado": 56.57,
+        "votos": {
+          "sanchez": 8209,
+          "keiko": 10768
+        }
+      },
+      {
+        "ubigeo": 930000,
+        "nombre": "Exterior – Asia",
+        "exterior": true,
+        "pct_actas": 100.0,
+        "lider": "keiko",
+        "margen": 0.0,
+        "share_keiko_actual": 50.0,
+        "share_keiko_proyectado": 49.98,
+        "votos": {
+          "keiko": 0,
+          "sanchez": 0
+        }
+      },
+      {
+        "ubigeo": 940000,
+        "nombre": "Exterior – Europa",
+        "exterior": true,
+        "pct_actas": 100.0,
+        "lider": "keiko",
+        "margen": 9.19,
+        "share_keiko_actual": 54.6,
+        "share_keiko_proyectado": 52.98,
+        "votos": {
+          "sanchez": 242,
+          "keiko": 291
+        }
+      },
+      {
+        "ubigeo": 950000,
+        "nombre": "Exterior – Oceanía",
+        "exterior": true,
+        "pct_actas": 0.0,
+        "lider": "keiko",
+        "margen": 0.0,
+        "share_keiko_actual": 50.0,
+        "share_keiko_proyectado": 49.93,
+        "votos": {
+          "keiko": 0,
+          "sanchez": 0
+        }
+      }
+    ]
+  }
+}
