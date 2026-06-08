@@ -48,6 +48,25 @@ function renderBar(d) {
   $('barBand').style.width = Math.max(0, k.hi - k.lo) + '%';
 }
 
+function renderExterior(d) {
+  const r = (d.regiones || []).find((x) => x.ubigeo === 900000 || x.exterior);
+  if (!r) { $('extCard').style.display = 'none'; return; }
+  const k = r.votos.keiko, s = r.votos.sanchez, n = k + s;
+  if (n === 0) { $('extCard').style.display = 'none'; return; }
+  const kPct = (k / n) * 100;
+  $('extKeiko').textContent = pct(kPct, 1);
+  $('extSanchez').textContent = pct(100 - kPct, 1);
+  $('extBar').style.width = kPct + '%';
+  $('extActas').textContent = `${pct(r.pct_actas)} escrutado · ${nf.format(r.actas_contabilizadas)}/${nf.format(r.actas_total)} actas`;
+  // votos pendientes estimados: escalar lo contado por las actas que faltan
+  const pend = r.actas_contabilizadas > 0
+    ? Math.round(n * (r.actas_total / r.actas_contabilizadas - 1))
+    : 0;
+  const lider = kPct >= 50 ? 'Keiko' : 'Sánchez';
+  $('extNote').innerHTML = `${nf.format(n)} votos contados · faltan ~<strong>${nf.format(pend)}</strong> por contar. `
+    + `El extranjero lidera <strong>${lider}</strong> y ya está incorporado en la proyección nacional.`;
+}
+
 function renderProb(d) {
   const pr = d.proyeccion.prob_victoria;
   const fmtP = (x) => (x >= 0.999 ? '>99.9%' : x <= 0.001 ? '<0.1%' : (x * 100).toFixed(1) + '%');
@@ -141,6 +160,7 @@ async function tick() {
     const ageMin = (Date.now() - new Date(latest.timestamp_utc.replace(/Z?$/, 'Z')).getTime()) / 60000;
     window._latest = latest;
     renderHeadline(latest); renderBar(latest); renderProb(latest);
+    renderExterior(latest);
     renderTable(latest); renderChart(history); renderUpdated(latest, ageMin > 20);
     if (geo) renderMap(latest);
   } catch (e) {

@@ -158,6 +158,28 @@ class OnpeClient:
             raise OnpeError(f"participantes depto {ubigeo_n01}: payload inesperado")
         return data
 
+    def totales_ambito(self, id_eleccion: int, ambito: int) -> dict[str, Any] | None:
+        """Totales por ámbito geográfico: 1 = Perú, 2 = Exterior.
+        Clave para el exterior, cuyo total de actas NO se puede inferir de mapa-calor
+        (las provincias a 0% son invisibles)."""
+        data = self._get(
+            "/resumen-general/totales",
+            idEleccion=id_eleccion,
+            tipoFiltro="ambito_geografico",
+            idAmbitoGeografico=ambito,
+        )
+        return data if isinstance(data, dict) else None
+
+    def participantes_ambito(self, id_eleccion: int, ambito: int) -> list[dict[str, Any]] | None:
+        """Split de candidatos por ámbito (1 = Perú, 2 = Exterior)."""
+        data = self._get(
+            "/resumen-general/participantes",
+            idEleccion=id_eleccion,
+            tipoFiltro="ambito_geografico",
+            idAmbitoGeografico=ambito,
+        )
+        return data if isinstance(data, list) else None
+
     def mapa_calor_departamentos(self, id_eleccion: int) -> list[dict[str, Any]]:
         """Filas a nivel provincia; el caller las agrega por ubigeoNivel01."""
         data = self._get(

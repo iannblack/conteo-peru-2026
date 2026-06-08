@@ -73,6 +73,12 @@ class FakeClient:
             return None
         return _part(*d["votos"])
 
+    def totales_ambito(self, eid, ambito):
+        return None  # sin exterior en los fixtures
+
+    def participantes_ambito(self, eid, ambito):
+        return None
+
 
 def _deps_25():
     # 25 departamentos mínimos para pasar el sanity check (>=25)
@@ -92,3 +98,29 @@ def test_pocos_departamentos_lanza_error():
     pocos = {10000: {"votos": (1000, 1000), "contab": 90, "total": 100}}
     with pytest.raises(OnpeError):
         construir_snapshot(FakeClient(pocos))
+
+
+class FakeClientExt(FakeClient):
+    """Cliente con ámbito exterior poblado (2543 actas, 158 contadas)."""
+
+    def totales_ambito(self, eid, ambito):
+        if ambito == 2:
+            return {"totalActas": 2543, "contabilizadas": 158, "totalVotosValidos": 20699}
+        return None
+
+    def participantes_ambito(self, eid, ambito):
+        if ambito == 2:
+            return _part(11823, 8876)  # exterior pro-Keiko
+        return None
+
+
+def test_exterior_se_agrega_con_total_real():
+    snap = construir_snapshot(FakeClientExt(_deps_25()))
+    ext = [r for r in snap["regiones"] if r["exterior"]]
+    assert len(ext) == 1
+    e = ext[0]
+    assert e["nombre"] == "Extranjero"
+    assert e["actas_total"] == 2543          # total REAL del ámbito, no inferido
+    assert e["actas_contabilizadas"] == 158
+    assert e["pct_actas"] == 6.21
+    assert e["votos"]["keiko"] == 11823
