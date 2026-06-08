@@ -26,17 +26,24 @@ function timeAgo(iso) {
 }
 
 function renderHeadline(d) {
+  // Número grande = conteo ACTUAL escrutado (lo que muestra ONPE). La proyección
+  // va como línea secundaria. El share actual viene directo de los votos válidos.
+  const v = d.nacional.votos, total = v.keiko + v.sanchez || 1;
+  const actK = (v.keiko / total) * 100, actS = (v.sanchez / total) * 100;
   const proj = d.proyeccion.proyeccion_2via_pct;
-  $('pct-keiko').textContent = pct(proj.keiko.media);
-  $('pct-sanchez').textContent = pct(proj.sanchez.media);
-  $('band-keiko').textContent = `proy. · ${pct(proj.keiko.lo)}–${pct(proj.keiko.hi)}`;
-  $('band-sanchez').textContent = `proy. · ${pct(proj.sanchez.lo)}–${pct(proj.sanchez.hi)}`;
+  $('pct-keiko').textContent = pct(actK, 2);
+  $('pct-sanchez').textContent = pct(actS, 2);
+  $('band-keiko').textContent = `${pct(proj.keiko.media)} (${pct(proj.keiko.lo)}–${pct(proj.keiko.hi)})`;
+  $('band-sanchez').textContent = `${pct(proj.sanchez.media)} (${pct(proj.sanchez.lo)}–${pct(proj.sanchez.hi)})`;
   $('actasLabel').textContent = `${pct(d.nacional.actas_pct)} actas`;
 }
 
 function renderBar(d) {
+  // Relleno sólido = conteo actual; banda punteada = rango proyectado (95%).
+  const v = d.nacional.votos, total = v.keiko + v.sanchez || 1;
+  const actK = (v.keiko / total) * 100;
   const k = d.proyeccion.proyeccion_2via_pct.keiko;
-  $('barKeiko').style.width = k.media + '%';
+  $('barKeiko').style.width = actK + '%';
   $('barBand').style.left = k.lo + '%';
   $('barBand').style.width = Math.max(0, k.hi - k.lo) + '%';
 }
