@@ -17,6 +17,7 @@ Códigos de agrupación: 8 = Fuerza Popular (Keiko), 10 = Juntos por el Perú (S
 """
 from __future__ import annotations
 
+import os
 import time
 from json import JSONDecodeError
 from typing import Any
@@ -41,6 +42,11 @@ class OnpeClient:
         self.timeout = timeout
         self.max_retries = max_retries
         self._session = curl_requests.Session()
+        # Proxy opcional (residencial/Perú) para entornos con IP bloqueada por ONPE,
+        # como los runners de GitHub Actions. Definir ONPE_PROXY=http://user:pass@host:port
+        proxy = os.environ.get("ONPE_PROXY", "").strip()
+        if proxy:
+            self._session.proxies = {"http": proxy, "https": proxy}
         # Headers de un XHR real de Chrome. Algunos despliegues de ONPE detrás de
         # un WAF rutean a la SPA (200 + HTML) si faltan los sec-* o el Origin, sobre
         # todo desde IPs de datacenter (como los runners de GitHub Actions).

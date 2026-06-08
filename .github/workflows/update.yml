@@ -31,6 +31,11 @@ jobs:
         run: pip install -r collector/requirements.txt
 
       - name: Recolectar de ONPE + proyectar
+        # ONPE bloquea las IPs de datacenter (devuelve la SPA). Para que este job
+        # funcione, define el secret ONPE_PROXY con un proxy residencial/Perú.
+        # Sin proxy, el job fallará y el recolector LOCAL (launchd) mantiene la data.
+        env:
+          ONPE_PROXY: ${{ secrets.ONPE_PROXY }}
         run: python collector/build_outputs.py
 
       - name: Commit de la data (solo si cambió)
