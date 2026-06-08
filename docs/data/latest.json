@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-08T23:14:25Z",
+  "timestamp_utc": "2026-06-08T23:20:16Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 94.873,
-    "actas_contabilizadas": 88010,
+    "actas_pct": 94.886,
+    "actas_contabilizadas": 88022,
     "actas_total": 92766,
-    "votos_emitidos": 18928719,
-    "votos_validos": 17688840,
-    "participacion": 69.271,
+    "votos_emitidos": 18930198,
+    "votos_validos": 17690192,
+    "participacion": 69.277,
     "votos": {
-      "keiko": 8826639,
-      "sanchez": 8862201
+      "keiko": 8827318,
+      "sanchez": 8862874
     }
   },
   "regiones": [
@@ -127,12 +127,12 @@
       "ubigeo": 90000,
       "nombre": "Huánuco",
       "exterior": false,
-      "actas_contabilizadas": 2318,
+      "actas_contabilizadas": 2320,
       "actas_total": 2341,
-      "pct_actas": 99.02,
+      "pct_actas": 99.1,
       "votos": {
-        "keiko": 139611,
-        "sanchez": 249669
+        "keiko": 139726,
+        "sanchez": 249924
       }
     },
     {
@@ -199,12 +199,12 @@
       "ubigeo": 150000,
       "nombre": "Loreto",
       "exterior": false,
-      "actas_contabilizadas": 2218,
+      "actas_contabilizadas": 2228,
       "actas_total": 2697,
-      "pct_actas": 82.24,
+      "pct_actas": 82.61,
       "votos": {
-        "sanchez": 161328,
-        "keiko": 192455
+        "sanchez": 162439,
+        "keiko": 193784
       }
     },
     {
@@ -323,8 +323,8 @@
       "actas_total": 1564,
       "pct_actas": 97.12,
       "votos": {
-        "sanchez": 126000,
-        "keiko": 139600
+        "sanchez": 126082,
+        "keiko": 139606
       }
     },
     {
@@ -392,29 +392,29 @@
     "metodo": "beta-binomial-pooling-parcial-actas-v1",
     "n_samples": 20000,
     "kappa": 4.0,
-    "frac_faltante": 0.0513,
-    "sigma_sistematico_pts": 0.308,
+    "frac_faltante": 0.0511,
+    "sigma_sistematico_pts": 0.307,
     "ganador_proyectado": "sanchez",
     "prob_victoria": {
-      "keiko": 0.4847,
-      "sanchez": 0.5153
+      "keiko": 0.4846,
+      "sanchez": 0.5154
     },
     "share_actual_2via": {
-      "keiko": 49.899,
-      "sanchez": 50.101
+      "keiko": 49.9,
+      "sanchez": 50.1
     },
     "proyeccion_2via_pct": {
       "keiko": {
         "media": 49.973,
-        "lo": 48.863,
+        "lo": 48.865,
         "mediana": 49.976,
-        "hi": 51.08
+        "hi": 51.077
       },
       "sanchez": {
         "media": 50.027,
-        "lo": 48.92,
+        "lo": 48.923,
         "mediana": 50.024,
-        "hi": 51.137
+        "hi": 51.135
       }
     },
     "votos_por_acta_nacional": 201.0,
@@ -535,14 +535,14 @@
         "ubigeo": 90000,
         "nombre": "Huánuco",
         "exterior": false,
-        "pct_actas": 99.02,
+        "pct_actas": 99.1,
         "lider": "sanchez",
-        "margen": 28.27,
+        "margen": 28.28,
         "share_keiko_actual": 35.86,
         "share_keiko_proyectado": 35.88,
         "votos": {
-          "keiko": 139611,
-          "sanchez": 249669
+          "keiko": 139726,
+          "sanchez": 249924
         }
       },
       {
@@ -619,14 +619,14 @@
         "ubigeo": 150000,
         "nombre": "Loreto",
         "exterior": false,
-        "pct_actas": 82.24,
+        "pct_actas": 82.61,
         "lider": "keiko",
         "margen": 8.8,
         "share_keiko_actual": 54.4,
         "share_keiko_proyectado": 54.39,
         "votos": {
-          "sanchez": 161328,
-          "keiko": 192455
+          "sanchez": 162439,
+          "keiko": 193784
         }
       },
       {
@@ -761,12 +761,12 @@
         "exterior": false,
         "pct_actas": 97.12,
         "lider": "keiko",
-        "margen": 5.12,
-        "share_keiko_actual": 52.56,
-        "share_keiko_proyectado": 52.56,
+        "margen": 5.09,
+        "share_keiko_actual": 52.55,
+        "share_keiko_proyectado": 52.54,
         "votos": {
-          "sanchez": 126000,
-          "keiko": 139600
+          "sanchez": 126082,
+          "keiko": 139606
         }
       },
       {
