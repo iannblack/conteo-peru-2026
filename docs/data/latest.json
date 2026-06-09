@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-09T21:05:46Z",
+  "timestamp_utc": "2026-06-09T21:11:17Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 96.096,
-    "actas_contabilizadas": 89144,
+    "actas_pct": 96.104,
+    "actas_contabilizadas": 89152,
     "actas_total": 92766,
-    "votos_emitidos": 19065813,
-    "votos_validos": 17818455,
-    "participacion": 69.773,
+    "votos_emitidos": 19066786,
+    "votos_validos": 17819384,
+    "participacion": 69.777,
     "votos": {
-      "keiko": 8896405,
-      "sanchez": 8922050
+      "keiko": 8896677,
+      "sanchez": 8922707
     }
   },
   "regiones": [
@@ -107,8 +107,8 @@
       "actas_total": 3983,
       "pct_actas": 94.05,
       "votos": {
-        "keiko": 159116,
-        "sanchez": 565361
+        "keiko": 159317,
+        "sanchez": 566171
       }
     },
     {
@@ -768,54 +768,54 @@
     "sigma_sistematico_pts": 0.234,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
-      "keiko": 0.64,
-      "sanchez": 0.36
+      "keiko": 0.6369,
+      "sanchez": 0.3631
     },
     "share_actual_2via": {
-      "keiko": 49.927,
-      "sanchez": 50.073
+      "keiko": 49.925,
+      "sanchez": 50.075
     },
     "proyeccion_2via_pct": {
       "keiko": {
-        "media": 50.103,
-        "lo": 49.536,
-        "mediana": 50.105,
-        "hi": 50.658
+        "media": 50.101,
+        "lo": 49.535,
+        "mediana": 50.103,
+        "hi": 50.657
       },
       "sanchez": {
-        "media": 49.897,
-        "lo": 49.342,
-        "mediana": 49.895,
-        "hi": 50.464
+        "media": 49.899,
+        "lo": 49.343,
+        "mediana": 49.897,
+        "hi": 50.465
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9290007,
-        "lo": 9184923,
-        "mediana": 9290261,
-        "hi": 9392960
+        "media": 9290206,
+        "lo": 9185127,
+        "mediana": 9290462,
+        "hi": 9393162
       },
       "sanchez": {
-        "media": 9251731,
-        "lo": 9148778,
-        "mediana": 9251477,
-        "hi": 9356815
+        "media": 9252583,
+        "lo": 9149627,
+        "mediana": 9252327,
+        "hi": 9357662
       },
       "total_2via": {
-        "media": 18541737,
-        "lo": 18541737,
-        "mediana": 18541737,
-        "hi": 18541737
+        "media": 18542789,
+        "lo": 18542789,
+        "mediana": 18542789,
+        "hi": 18542789
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 38784,
-      "media": 38276,
-      "lo": -171892,
-      "hi": 244182,
-      "abs_mediana": 38784
+      "mediana": 38135,
+      "media": 37623,
+      "lo": -172535,
+      "hi": 243535,
+      "abs_mediana": 38135
     },
     "votos_por_acta_nacional": 199.9,
     "por_region": [
@@ -909,12 +909,12 @@
         "exterior": false,
         "pct_actas": 94.05,
         "lider": "sanchez",
-        "margen": 56.07,
+        "margen": 56.08,
         "share_keiko_actual": 21.96,
-        "share_keiko_proyectado": 21.99,
+        "share_keiko_proyectado": 21.98,
         "votos": {
-          "keiko": 159116,
-          "sanchez": 565361
+          "keiko": 159317,
+          "sanchez": 566171
         }
       },
       {
