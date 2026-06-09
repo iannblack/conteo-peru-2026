@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-09T04:41:56Z",
+  "timestamp_utc": "2026-06-09T04:47:15Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 95.331,
-    "actas_contabilizadas": 88435,
+    "actas_pct": 95.338,
+    "actas_contabilizadas": 88441,
     "actas_total": 92766,
-    "votos_emitidos": 18984304,
-    "votos_validos": 17740923,
-    "participacion": 69.475,
+    "votos_emitidos": 18985107,
+    "votos_validos": 17741668,
+    "participacion": 69.478,
     "votos": {
-      "keiko": 8850639,
-      "sanchez": 8890284
+      "keiko": 8851075,
+      "sanchez": 8890593
     }
   },
   "regiones": [
@@ -151,12 +151,12 @@
       "ubigeo": 110000,
       "nombre": "Junín",
       "exterior": false,
-      "actas_contabilizadas": 3647,
+      "actas_contabilizadas": 3650,
       "actas_total": 3691,
-      "pct_actas": 98.81,
+      "pct_actas": 98.89,
       "votos": {
-        "keiko": 320769,
-        "sanchez": 390685
+        "keiko": 320822,
+        "sanchez": 390904
       }
     },
     {
@@ -343,12 +343,12 @@
       "ubigeo": 920000,
       "nombre": "Exterior – América",
       "exterior": true,
-      "actas_contabilizadas": 173,
+      "actas_contabilizadas": 174,
       "actas_total": 1570,
-      "pct_actas": 11.02,
+      "pct_actas": 11.08,
       "votos": {
-        "sanchez": 10731,
-        "keiko": 15212
+        "sanchez": 10820,
+        "keiko": 15385
       }
     },
     {
@@ -548,8 +548,8 @@
     "sigma_sistematico_pts": 0.28,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
-      "keiko": 0.5644,
-      "sanchez": 0.4356
+      "keiko": 0.5663,
+      "sanchez": 0.4337
     },
     "share_actual_2via": {
       "keiko": 49.888,
@@ -557,45 +557,45 @@
     },
     "proyeccion_2via_pct": {
       "keiko": {
-        "media": 50.056,
-        "lo": 49.399,
-        "mediana": 50.055,
-        "hi": 50.713
+        "media": 50.057,
+        "lo": 49.402,
+        "mediana": 50.056,
+        "hi": 50.712
       },
       "sanchez": {
-        "media": 49.944,
-        "lo": 49.287,
-        "mediana": 49.945,
-        "hi": 50.601
+        "media": 49.943,
+        "lo": 49.288,
+        "mediana": 49.944,
+        "hi": 50.598
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9315103,
-        "lo": 9192795,
-        "mediana": 9314769,
-        "hi": 9437342
+        "media": 9315168,
+        "lo": 9193147,
+        "mediana": 9314847,
+        "hi": 9437046
       },
       "sanchez": {
-        "media": 9294115,
-        "lo": 9171877,
-        "mediana": 9294450,
-        "hi": 9416423
+        "media": 9293768,
+        "lo": 9171891,
+        "mediana": 9294090,
+        "hi": 9415789
       },
       "total_2via": {
-        "media": 18609218,
-        "lo": 18609218,
-        "mediana": 18609218,
-        "hi": 18609218
+        "media": 18608937,
+        "lo": 18608937,
+        "mediana": 18608937,
+        "hi": 18608937
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 20319,
-      "media": 20988,
-      "lo": -223628,
-      "hi": 265465,
-      "abs_mediana": 20319
+      "mediana": 20757,
+      "media": 21400,
+      "lo": -222642,
+      "hi": 265155,
+      "abs_mediana": 20757
     },
     "votos_por_acta_nacional": 200.6,
     "por_region": [
@@ -743,14 +743,14 @@
         "ubigeo": 110000,
         "nombre": "Junín",
         "exterior": false,
-        "pct_actas": 98.81,
+        "pct_actas": 98.89,
         "lider": "sanchez",
-        "margen": 9.83,
-        "share_keiko_actual": 45.09,
-        "share_keiko_proyectado": 45.09,
+        "margen": 9.85,
+        "share_keiko_actual": 45.08,
+        "share_keiko_proyectado": 45.08,
         "votos": {
-          "keiko": 320769,
-          "sanchez": 390685
+          "keiko": 320822,
+          "sanchez": 390904
         }
       },
       {
@@ -967,14 +967,14 @@
         "ubigeo": 920000,
         "nombre": "Exterior – América",
         "exterior": true,
-        "pct_actas": 11.02,
+        "pct_actas": 11.08,
         "lider": "keiko",
-        "margen": 17.27,
-        "share_keiko_actual": 58.64,
-        "share_keiko_proyectado": 58.51,
+        "margen": 17.42,
+        "share_keiko_actual": 58.71,
+        "share_keiko_proyectado": 58.58,
         "votos": {
-          "sanchez": 10731,
-          "keiko": 15212
+          "sanchez": 10820,
+          "keiko": 15385
         }
       },
       {
