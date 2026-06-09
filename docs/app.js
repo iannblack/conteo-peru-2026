@@ -133,57 +133,72 @@ function renderProb(d) {
     + `<span class="muted">(Keiko podría terminar entre ${pct(proj.keiko.lo)} y ${pct(proj.keiko.hi)}).</span>`;
 }
 
-// ---- sección 4: "viaje en el tiempo" del pronóstico ----------------------
-let evoPts = [];
+// ---- sección 4: la historia del conteo, en palabras ----------------------
+// Una línea de tiempo de momentos clave (inicio, cambios de líder, ahora),
+// escrita como la contaría un noticiero. Nada que manipular ni interpretar.
 
-// línea vertical punteada que marca el momento elegido con el slider
-const evoMarker = {
-  id: 'evoMarker',
-  afterDatasetsDraw(c) {
-    const i = window._evoIdx;
-    if (i == null || !evoPts.length) return;
-    const x = c.scales.x.getPixelForValue(Math.min(i, evoPts.length - 1));
-    const { top, bottom } = c.chartArea;
-    const ctx = c.ctx;
-    ctx.save();
-    ctx.strokeStyle = '#ffffff'; ctx.globalAlpha = .75; ctx.lineWidth = 1.5; ctx.setLineDash([5, 5]);
-    ctx.beginPath(); ctx.moveTo(x, top); ctx.lineTo(x, bottom); ctx.stroke();
-    ctx.restore();
-  },
-};
-
-function evoFmtWhen(iso) {
+function horaAmigable(iso) {
   const t = new Date(iso.endsWith('Z') ? iso : iso + 'Z');
-  return t.toLocaleString('es-PE', { weekday: 'long', hour: '2-digit', minute: '2-digit' });
+  const dia = t.toLocaleDateString('es-PE', { weekday: 'long' });
+  let h = t.getHours(), m = t.getMinutes();
+  let tramo;
+  if (h < 6) tramo = 'de la madrugada';
+  else if (h < 12) tramo = 'de la mañana';
+  else if (h === 12 && m === 0) return `${dia} al mediodía`;
+  else if (h < 19) tramo = 'de la tarde';
+  else tramo = 'de la noche';
+  const h12 = h % 12 === 0 ? 12 : h % 12;
+  return `${dia} a las ${h12}:${String(m).padStart(2, '0')} ${tramo}`;
 }
 
-function updateEvoCard(i) {
-  const p = evoPts[i];
-  if (!p) return;
-  window._evoIdx = i;
-  const k = p.keiko.media, s = p.sanchez.media;
-  const esAhora = i === evoPts.length - 1;
-  $('evoWhen').textContent = esAhora ? `Ahora mismo (${evoFmtWhen(p.t)})` : evoFmtWhen(p.t);
-  $('evoK').textContent = `Keiko ${k.toFixed(1)}%`;
-  $('evoS').textContent = `Sánchez ${s.toFixed(1)}%`;
-  const lider = k >= s ? 'Keiko' : 'Sánchez';
-  let frase;
-  if (Math.abs(k - s) < 0.3) frase = esAhora ? 'El pronóstico está prácticamente empatado.' : 'En ese momento estaba prácticamente empatado.';
-  else frase = esAhora ? `Hoy el pronóstico favorece a ${lider}.` : `En ese momento el pronóstico favorecía a ${lider}.`;
-  $('evoVerdict').textContent = frase;
-  if (chart) chart.update('none');
-}
+function liderDe(p) { return p.keiko.media >= 50 ? 'keiko' : 'sanchez'; }
+function nombreDe(l) { return l === 'keiko' ? 'Keiko' : 'Sánchez'; }
+function colorDe(l) { return l === 'keiko' ? KEIKO : SANCHEZ; }
 
-function evoSummaryText() {
-  if (evoPts.length < 2) return 'Aún hay pocos datos para mostrar la evolución.';
-  const lider = (p) => (p.keiko.media >= 50 ? 'Keiko' : 'Sánchez');
-  const primero = lider(evoPts[0]), ultimo = lider(evoPts[evoPts.length - 1]);
-  let cruce = -1;
-  for (let i = 1; i < evoPts.length; i++) {
-    if (lider(evoPts[i - 1]) !== lider(evoPts[i])) cruce = i;
+function renderTimeline(pts) {
+  if (!pts || pts.length < 1) return;
+  // hitos: inicio + cambios de líder SOSTENIDOS (3+ puntos seguidos) + ahora
+  const hitos = [{ tipo: 'inicio', i: 0 }];
+  let cur = liderDe(pts[0]);
+  for (let i = 1; i < pts.length; i++) {
+    const l = liderDe(pts[i]);
+    if (l !== cur) {
+      const fin = Math.min(i + 3, pts.length);
+      let sostenido = true;
+      for (let j = i; j < fin; j++) if (liderDe(pts[j]) !== l) { sostenido = false; break; }
+      if (sostenido) { hitos.push({ tipo: 'cambio', i }); cur = l; }
+    }
   }
-  if (cruce === -1) return `En resumen: ${ultimo} ha ido adelante en el pronóstico durante todo el conteo.`;
-  return `En resumen: al inicio del conteo iba adelante ${primero}. Desde el ${evoFmtWhen(evoPts[cruce].t)}, el pronóstico favorece a ${ultimo}.`;
+  const cambios = hitos.filter((h) => h.tipo === 'cambio').slice(-3); // sin ruido infinito
+  const lista = [hitos[0], ...cambios, { tipo: 'ahora', i: pts.length - 1 }];
+
+  const cercania = (p) => {
+    const d = Math.abs(p.keiko.media - p.sanchez.media);
+    if (d < 0.4) return 'están casi empatados';
+    if (d < 1.5) return 'por poco';
+    return 'con ventaja clara';
+  };
+
+  $('tline').innerHTML = lista.map((h) => {
+    const p = pts[h.i];
+    const l = liderDe(p);
+    const nom = nombreDe(l), col = colorDe(l);
+    let cuando, que;
+    if (h.tipo === 'inicio') {
+      cuando = `${horaAmigable(p.t)} — empezó el conteo`;
+      que = `Iba adelante <b style="color:${col}">${nom}</b> <span class="muted">(${cercania(p)})</span>`;
+    } else if (h.tipo === 'cambio') {
+      cuando = horaAmigable(p.t);
+      que = `<b>¡Cambio!</b> <b style="color:${col}">${nom}</b> pasó adelante`;
+    } else {
+      cuando = `AHORA (${horaAmigable(p.t)})`;
+      que = `Va ganando <b style="color:${col}">${nom}</b> <span class="muted">(${cercania(p)})</span>`;
+    }
+    return `<div class="tl-item ${h.tipo === 'ahora' ? 'tl-now' : ''}">
+      <span class="tl-dot" style="background:${col}"></span>
+      <div class="tl-body"><div class="tl-when">${cuando}</div><div class="tl-what">${que}</div></div>
+    </div>`;
+  }).join('');
 }
 
 function renderChart(history) {
@@ -222,16 +237,9 @@ function renderChart(history) {
     },
   };
   if (chart) { chart.data.labels = labels; chart.data.datasets = ds; chart.update(); }
-  else chart = new Chart($('chart'), { type: 'line', data: { labels, datasets: ds }, options: opts, plugins: [evoMarker] });
+  else chart = new Chart($('chart'), { type: 'line', data: { labels, datasets: ds }, options: opts });
 
-  // sincronizar el slider de tiempo: si estaba en "ahora", se queda en "ahora"
-  const slider = $('evoSlider');
-  const estabaAlFinal = +slider.value >= +slider.max;
-  slider.max = pts.length - 1;
-  if (estabaAlFinal) slider.value = pts.length - 1;
-  evoPts = pts;
-  $('evoSummary').textContent = evoSummaryText();
-  updateEvoCard(+slider.value);
+  renderTimeline(pts);
 }
 
 function renderTable(d) {
@@ -298,7 +306,14 @@ async function tick() {
 }
 
 // interacciones
-$('evoSlider').addEventListener('input', (e) => updateEvoCard(+e.target.value));
+$('evoToggle').addEventListener('click', () => {
+  const det = $('evoDetail');
+  const abrir = det.hidden;
+  det.hidden = !abrir;
+  $('evoToggle').setAttribute('aria-expanded', String(abrir));
+  $('evoToggle').textContent = abrir ? 'Ocultar el gráfico detallado ▴' : 'Ver el gráfico detallado ▾';
+  if (abrir && chart) chart.resize();  // el canvas estaba oculto: recalcular tamaño
+});
 $('filtro').addEventListener('input', drawTable);
 document.querySelectorAll('th[data-k]').forEach((th) => th.addEventListener('click', () => {
   const k = th.dataset.k;

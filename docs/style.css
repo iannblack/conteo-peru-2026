@@ -108,24 +108,26 @@ main{padding:20px 0 60px}
 .ext-card .hint{margin:14px 0 0}
 @media(max-width:720px){ .ext-cont{grid-template-columns:70px 1fr 160px} .ext-cont-meta{font-size:11px} }
 
-/* sección 4: viaje en el tiempo */
-.evo-card{background:var(--panel2); border:1px solid var(--line); border-radius:12px;
-  padding:14px 16px; text-align:center; margin:4px 0 16px}
-.evo-when{font-size:13px; color:var(--muted); text-transform:capitalize}
-.evo-nums{display:flex; justify-content:center; align-items:baseline; gap:12px;
-  margin:7px 0 5px; font-variant-numeric:tabular-nums; flex-wrap:wrap}
-.evo-k{color:var(--keiko); font-size:25px; font-weight:760}
-.evo-s{color:var(--sanchez); font-size:25px; font-weight:760}
-.evo-vs{color:var(--faint); font-size:17px}
-.evo-verdict{font-size:14px}
-#evoSlider{width:100%; -webkit-appearance:none; appearance:none; height:10px; border-radius:6px;
-  background:#39414e; outline:none; margin-top:2px; cursor:pointer}
-#evoSlider::-webkit-slider-thumb{-webkit-appearance:none; appearance:none; width:30px; height:30px;
-  border-radius:50%; background:#fff; border:4px solid var(--sanchez); cursor:grab;
-  box-shadow:0 2px 10px rgba(0,0,0,.55)}
-#evoSlider::-moz-range-thumb{width:30px; height:30px; border-radius:50%; background:#fff;
-  border:4px solid var(--sanchez); cursor:grab}
-.evo-slider-labels{display:flex; justify-content:space-between; font-size:12.5px; color:var(--muted); margin-top:6px}
+/* sección 4: la historia del conteo (línea de tiempo en palabras) */
+.tline{margin:10px 0 16px; position:relative; padding-left:6px}
+.tl-item{display:flex; gap:14px; align-items:flex-start; position:relative; padding-bottom:22px}
+.tl-item::before{content:''; position:absolute; left:8px; top:20px; bottom:-2px;
+  width:2px; background:var(--line)}
+.tl-item:last-child{padding-bottom:0}
+.tl-item:last-child::before{display:none}
+.tl-dot{width:18px; height:18px; border-radius:50%; flex:none; margin-top:2px;
+  border:3px solid var(--bg); box-shadow:0 0 0 2px var(--line); z-index:1}
+.tl-when{font-size:13px; color:var(--muted)}
+.tl-when::first-letter{text-transform:uppercase}
+.tl-what{font-size:16.5px; line-height:1.45; margin-top:2px}
+.tl-now{background:var(--panel2); border:1px solid var(--line); border-radius:12px;
+  padding:12px 14px 12px 12px; margin-left:-12px}
+.tl-now .tl-when{font-weight:700; color:var(--ink)}
+.tl-now .tl-what{font-size:18px}
+.evo-toggle{background:var(--panel2); border:1px solid var(--line); color:var(--muted);
+  border-radius:10px; padding:9px 16px; font-size:13.5px; cursor:pointer; width:100%}
+.evo-toggle:hover{color:var(--ink); border-color:#3a4350}
+#evoDetail{margin-top:14px}
 
 .chartwrap{position:relative; height:220px}
 .grid2{display:grid; grid-template-columns:1fr 1fr; gap:14px}
