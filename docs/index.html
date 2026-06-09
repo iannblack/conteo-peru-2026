@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Conteo Perú 2026 · Segunda Vuelta · Proyección en vivo</title>
-<meta name="description" content="Conteo oficial de ONPE en tiempo real y proyección bayesiana del ganador de la segunda vuelta presidencial 2026." />
+<title>Conteo Perú 2026 · Segunda Vuelta · ¿Quién va ganando?</title>
+<meta name="description" content="Conteo oficial de ONPE en tiempo real y pronóstico del ganador de la segunda vuelta presidencial 2026, explicado en simple." />
 <link rel="preconnect" href="https://cdn.jsdelivr.net" />
 <link rel="stylesheet" href="style.css" />
 </head>
@@ -24,51 +24,69 @@
 
 <main class="wrap">
   <div class="disclaimer" id="disclaimer">
-    <strong>Proyección estadística, no resultado oficial.</strong>
-    El conteo es de ONPE; la proyección es un modelo bayesiano que estima el resultado
-    final a partir de cómo ha votado cada departamento y cuánto falta contar. Puede equivocarse.
+    Los números del conteo son <strong>oficiales de ONPE</strong> y se actualizan cada 5 minutos.
+    El pronóstico es un <strong>cálculo estadístico nuestro</strong> y puede equivocarse.
   </div>
 
-  <!-- TITULAR -->
-  <section class="card headline" id="headline">
-    <div class="cand cand-keiko" id="card-keiko">
-      <div class="cand-top"><span class="cand-name">Keiko Fujimori</span><span class="cand-party">Fuerza Popular</span></div>
-      <div class="cand-pct" id="pct-keiko">—</div>
-      <div class="cand-proj">proy. <span id="band-keiko">—</span></div>
+  <!-- 1 · CONTEO OFICIAL -->
+  <section class="card" id="s1">
+    <div class="sec-head"><span class="sec-num">1</span><h2>Así va el conteo oficial</h2></div>
+    <p class="hint">Porcentaje de votos válidos de cada candidato, con las actas que ONPE ya contó.
+       Los votos en blanco y los nulos no suman para ninguno de los dos.</p>
+    <div class="headline">
+      <div class="cand cand-keiko">
+        <div class="cand-top"><span class="cand-name">Keiko Fujimori</span><span class="cand-party">Fuerza Popular</span></div>
+        <div class="cand-pct" id="pct-keiko">—</div>
+        <div class="cand-proj" id="votes-keiko">—</div>
+      </div>
+      <div class="versus">
+        <div class="versus-label">actas contadas</div>
+        <div class="versus-big" id="actasLabel">—</div>
+        <div class="versus-sub" id="faltaLabel">—</div>
+      </div>
+      <div class="cand cand-sanchez">
+        <div class="cand-top"><span class="cand-name">Roberto Sánchez</span><span class="cand-party">Juntos por el Perú</span></div>
+        <div class="cand-pct" id="pct-sanchez">—</div>
+        <div class="cand-proj" id="votes-sanchez">—</div>
+      </div>
     </div>
-    <div class="versus" id="versus">
-      <div class="versus-label">escrutado</div>
-      <div class="versus-vs">vs</div>
-      <div class="versus-sub" id="actasLabel">— % actas</div>
-    </div>
-    <div class="cand cand-sanchez" id="card-sanchez">
-      <div class="cand-top"><span class="cand-name">Roberto Sánchez</span><span class="cand-party">Juntos por el Perú</span></div>
-      <div class="cand-pct" id="pct-sanchez">—</div>
-      <div class="cand-proj">proy. <span id="band-sanchez">—</span></div>
-    </div>
-  </section>
-
-  <!-- BARRA DE PROYECCION CON BANDA -->
-  <section class="card barbox">
     <div class="bar-track" id="barTrack">
       <div class="bar-keiko" id="barKeiko"></div>
-      <div class="bar-band" id="barBand" title="banda de credibilidad 95%"></div>
       <div class="bar-mid"></div>
     </div>
     <div class="bar-legend">
-      <span>← Keiko</span>
-      <span class="muted">50% — la línea para ganar</span>
-      <span>Sánchez →</span>
+      <span style="color:var(--keiko)">■ Keiko</span>
+      <span class="muted">La línea blanca marca el 50%: quien la pasa, gana</span>
+      <span style="color:var(--sanchez)">Sánchez ■</span>
     </div>
-    <p class="hint" style="margin:.6em 0 0">Relleno sólido = conteo actual escrutado · franja punteada = rango proyectado (95%).</p>
   </section>
 
-  <!-- VOTO EN EL EXTRANJERO -->
-  <section class="card ext-card" id="extCard">
-    <div class="ext-head">
-      <h2>Voto en el extranjero <span class="dot" id="extDot"></span></h2>
-      <span class="ext-badge" id="extActas">—</span>
+  <!-- 2 · PRONÓSTICO -->
+  <section class="card" id="s2">
+    <div class="sec-head"><span class="sec-num">2</span><h2>¿Quién ganaría? — Pronóstico</h2></div>
+    <p class="hint">Estimamos los votos que faltan contar según cómo votó cada región y el extranjero.
+       <strong>No es un resultado oficial.</strong></p>
+    <div class="winner-big" id="winner">—</div>
+    <div class="prob-row">
+      <div class="prob-name">Keiko</div>
+      <div class="prob-bar"><div class="prob-fill pf-keiko" id="prob-keiko"></div></div>
+      <div class="prob-val" id="probval-keiko">—</div>
     </div>
+    <div class="prob-row">
+      <div class="prob-name">Sánchez</div>
+      <div class="prob-bar"><div class="prob-fill pf-sanchez" id="prob-sanchez"></div></div>
+      <div class="prob-val" id="probval-sanchez">—</div>
+    </div>
+    <p class="hint" id="probHint">—</p>
+    <div class="margenv" id="margenVotos">—</div>
+    <div class="final-est" id="finalEst">—</div>
+  </section>
+
+  <!-- 3 · EXTRANJERO -->
+  <section class="card ext-card" id="extCard">
+    <div class="sec-head"><span class="sec-num">3</span><h2>El voto en el extranjero</h2><span class="ext-badge" id="extActas">—</span></div>
+    <p class="hint">Casi un millón de peruanos votan fuera del país y su conteo va más lento.
+       Puede definir una elección tan reñida como esta.</p>
     <div class="ext-split">
       <div class="ext-side"><span class="ext-name">Keiko</span><span class="ext-pct ek" id="extKeiko">—</span></div>
       <div class="ext-bartrack"><i id="extBar"></i></div>
@@ -78,48 +96,34 @@
     <p class="hint" id="extNote">—</p>
   </section>
 
-  <div class="grid2">
-    <!-- PROBABILIDAD -->
-    <section class="card">
-      <h2>Probabilidad de victoria</h2>
-      <p class="hint">De <span id="nsamples">—</span> simulaciones Monte Carlo. Falta por contar: <strong id="fracFalta">—</strong>.</p>
-      <div class="prob-row">
-        <div class="prob-name">Keiko</div>
-        <div class="prob-bar"><div class="prob-fill pf-keiko" id="prob-keiko"></div></div>
-        <div class="prob-val" id="probval-keiko">—</div>
-      </div>
-      <div class="prob-row">
-        <div class="prob-name">Sánchez</div>
-        <div class="prob-bar"><div class="prob-fill pf-sanchez" id="prob-sanchez"></div></div>
-        <div class="prob-val" id="probval-sanchez">—</div>
-      </div>
-      <div class="winner" id="winner">—</div>
-      <div class="margenv" id="margenVotos"></div>
-    </section>
+  <!-- 4 · EVOLUCIÓN -->
+  <section class="card" id="s4">
+    <div class="sec-head"><span class="sec-num">4</span><h2>¿Cómo ha cambiado el pronóstico?</h2></div>
+    <p class="hint">Cada línea es el resultado final estimado de un candidato, hora a hora.
+       <span style="color:var(--keiko)">■ Keiko</span> ·
+       <span style="color:var(--sanchez)">■ Sánchez</span> ·
+       la línea punteada gris es el 50% (la meta para ganar).</p>
+    <div class="chartwrap"><canvas id="chart"></canvas></div>
+  </section>
 
-    <!-- EVOLUCION -->
-    <section class="card">
-      <h2>Evolución de la proyección</h2>
-      <p class="hint">Cómo se ha movido la proyección de Keiko (banda 95%) conforme entran actas.</p>
-      <div class="chartwrap"><canvas id="chart"></canvas></div>
-    </section>
-  </div>
-
-  <!-- TABLA REGIONAL -->
-  <section class="card">
+  <!-- 5 · TABLA -->
+  <section class="card" id="s5">
     <div class="table-head">
-      <h2>Desglose por departamento</h2>
-      <input id="filtro" type="search" placeholder="Filtrar departamento…" autocomplete="off" />
+      <div class="sec-head"><span class="sec-num">5</span><h2>Detalle por departamento</h2></div>
+      <input id="filtro" type="search" placeholder="Buscar departamento…" autocomplete="off" />
     </div>
+    <p class="hint">En la barra de reparto, <span style="color:var(--keiko)">■ naranja</span> son los votos de Keiko
+       y <span style="color:var(--sanchez)">■ azul</span> los de Sánchez.
+       Toca los títulos de las columnas para ordenar.</p>
     <div class="table-scroll">
       <table id="tabla">
         <thead>
           <tr>
             <th data-k="nombre">Departamento</th>
-            <th data-k="pct_actas" class="num">% actas</th>
-            <th data-k="lider">Lidera</th>
-            <th data-k="margen" class="num">Margen</th>
-            <th class="barcol">Keiko ↔ Sánchez</th>
+            <th data-k="pct_actas" class="num">Contado</th>
+            <th data-k="lider">Va ganando</th>
+            <th data-k="margen" class="num">Ventaja</th>
+            <th class="barcol">Reparto</th>
           </tr>
         </thead>
         <tbody id="tbody"></tbody>
@@ -127,23 +131,26 @@
     </div>
   </section>
 
+  <!-- 6 · MAPAS -->
   <section class="card map-card" id="mapCard">
-    <h2>Mapa por departamento</h2>
-    <p class="hint" id="mapHint">Color según quién lidera; intensidad = margen.</p>
+    <div class="sec-head"><span class="sec-num">6</span><h2>Mapa del Perú</h2></div>
+    <p class="hint" id="mapHint">Naranja = va ganando Keiko · Azul = va ganando Sánchez · Color más intenso = ventaja más grande.
+       Pasa el dedo o el mouse por un departamento para ver el detalle.</p>
     <div id="map"></div>
   </section>
 
   <section class="card map-card" id="worldCard">
-    <h2>Mapa del voto en el extranjero</h2>
-    <p class="hint">Cada país coloreado según quién lidera (votos contados) · gris = sin escrutinio aún.</p>
+    <div class="sec-head"><span class="sec-num">7</span><h2>Mapa del voto en el extranjero</h2></div>
+    <p class="hint">Cada país donde votan peruanos, coloreado según quién va ganando ahí.
+       Gris = todavía no hay votos contados de ese país.</p>
     <div id="worldMap"></div>
     <div class="world-chips" id="worldConts"></div>
   </section>
 
   <footer class="foot">
-    <p>Datos: <a href="https://resultadosegundavuelta.onpe.gob.pe" target="_blank" rel="noopener">ONPE</a> ·
-       Modelo: Beta-Binomial con pooling parcial + Monte Carlo ·
-       Código abierto. Esta página no está afiliada a ONPE ni a ninguna agrupación política.</p>
+    <p>Datos del conteo: <a href="https://resultadosegundavuelta.onpe.gob.pe" target="_blank" rel="noopener">ONPE</a> ·
+       Pronóstico: modelo estadístico de código abierto ·
+       Esta página no está afiliada a ONPE ni a ningún partido político.</p>
     <p class="muted" id="metodo">—</p>
   </footer>
 </main>

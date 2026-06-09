@@ -26,26 +26,22 @@ function timeAgo(iso) {
 }
 
 function renderHeadline(d) {
-  // Número grande = conteo ACTUAL escrutado (lo que muestra ONPE). La proyección
-  // va como línea secundaria. El share actual viene directo de los votos válidos.
+  // Número grande = conteo ACTUAL de ONPE. Debajo, los votos en cifras.
   const v = d.nacional.votos, total = v.keiko + v.sanchez || 1;
   const actK = (v.keiko / total) * 100, actS = (v.sanchez / total) * 100;
-  const proj = d.proyeccion.proyeccion_2via_pct;
   $('pct-keiko').textContent = pct(actK, 2);
   $('pct-sanchez').textContent = pct(actS, 2);
-  $('band-keiko').textContent = `${pct(proj.keiko.media)} (${pct(proj.keiko.lo)}–${pct(proj.keiko.hi)})`;
-  $('band-sanchez').textContent = `${pct(proj.sanchez.media)} (${pct(proj.sanchez.lo)}–${pct(proj.sanchez.hi)})`;
-  $('actasLabel').textContent = `${pct(d.nacional.actas_pct)} actas`;
+  $('votes-keiko').textContent = `${nf.format(v.keiko)} votos`;
+  $('votes-sanchez').textContent = `${nf.format(v.sanchez)} votos`;
+  $('actasLabel').textContent = pct(d.nacional.actas_pct);
+  const falta = Math.max(0, 100 - d.nacional.actas_pct);
+  $('faltaLabel').textContent = `falta ${pct(falta)}`;
 }
 
 function renderBar(d) {
-  // Relleno sólido = conteo actual; banda punteada = rango proyectado (95%).
+  // Barra simple: el reparto del conteo actual. La línea blanca es el 50%.
   const v = d.nacional.votos, total = v.keiko + v.sanchez || 1;
-  const actK = (v.keiko / total) * 100;
-  const k = d.proyeccion.proyeccion_2via_pct.keiko;
-  $('barKeiko').style.width = actK + '%';
-  $('barBand').style.left = k.lo + '%';
-  $('barBand').style.width = Math.max(0, k.hi - k.lo) + '%';
+  $('barKeiko').style.width = (v.keiko / total) * 100 + '%';
 }
 
 function renderExterior(d) {
@@ -64,55 +60,77 @@ function renderExterior(d) {
   $('extSanchez').textContent = pct(100 - kPct, 1);
   $('extBar').style.width = kPct + '%';
   const escPct = totActas ? (100 * contabActas / totActas) : 0;
-  $('extActas').textContent = `${pct(escPct)} escrutado · ${nf.format(contabActas)}/${nf.format(totActas)} actas`;
+  $('extActas').textContent = `contado: ${pct(escPct, 0)}`;
 
-  // desglose por continente (mayor padrón primero)
+  // desglose por continente (mayor padrón primero), en palabras simples
   const rows = [...cont].sort((a, b) => b.actas_total - a.actas_total).map((r) => {
     const n = r.votos.keiko + r.votos.sanchez;
     const nombre = r.nombre.replace('Exterior – ', '');
     if (n === 0) {
       return `<div class="ext-cont"><span class="ext-cont-name">${nombre}</span>`
         + `<div class="ext-cont-bar empty"></div>`
-        + `<span class="ext-cont-meta">${pct(r.pct_actas)} esc. · pendiente</span></div>`;
+        + `<span class="ext-cont-meta">aún sin votos contados</span></div>`;
     }
     const ck = (r.votos.keiko / n) * 100;
+    const who = ck >= 50 ? 'Keiko' : 'Sánchez';
     return `<div class="ext-cont"><span class="ext-cont-name">${nombre}</span>`
       + `<div class="ext-cont-bar"><i style="width:${ck}%"></i></div>`
-      + `<span class="ext-cont-meta">${pct(ck)} K · ${pct(r.pct_actas)} esc.</span></div>`;
+      + `<span class="ext-cont-meta">gana ${who} ${pct(Math.max(ck, 100 - ck), 0)} · contado ${pct(r.pct_actas, 0)}</span></div>`;
   }).join('');
   $('extConts').innerHTML = rows;
 
   const pend = contabActas > 0 ? Math.round(aggN * (totActas / contabActas - 1)) : 0;
   const lider = kPct >= 50 ? 'Keiko' : 'Sánchez';
-  $('extNote').innerHTML = `${nf.format(aggN)} votos contados · faltan ~<strong>${nf.format(pend)}</strong> por contar. `
-    + `El extranjero lidera <strong>${lider}</strong> y ya está incorporado en la proyección nacional.`;
+  const milesP = pend >= 10000 ? `${nf.format(Math.round(pend / 1000))} mil` : nf.format(pend);
+  $('extNote').innerHTML = `Hasta ahora van <strong>${nf.format(aggN)}</strong> votos contados del extranjero y `
+    + `faltan unos <strong>${milesP}</strong>. Por ahora ahí gana <strong>${lider}</strong>. `
+    + `Estos votos ya están considerados en el pronóstico de arriba.`;
 }
 
 function renderProb(d) {
   const pr = d.proyeccion.prob_victoria;
-  const fmtP = (x) => (x >= 0.999 ? '>99.9%' : x <= 0.001 ? '<0.1%' : (x * 100).toFixed(1) + '%');
-  $('prob-keiko').style.width = (pr.keiko * 100).toFixed(1) + '%';
-  $('prob-sanchez').style.width = (pr.sanchez * 100).toFixed(1) + '%';
-  $('probval-keiko').textContent = fmtP(pr.keiko);
-  $('probval-sanchez').textContent = fmtP(pr.sanchez);
-  $('nsamples').textContent = nf.format(d.proyeccion.n_samples);
-  $('fracFalta').textContent = pct(d.proyeccion.frac_faltante * 100);
+  // probabilidades como "X de cada 100" — mucho más intuitivo que un % suelto
+  const pk = Math.round(pr.keiko * 100), ps = 100 - pk;
+  $('prob-keiko').style.width = pk + '%';
+  $('prob-sanchez').style.width = ps + '%';
+  $('probval-keiko').textContent = `${pk} de 100`;
+  $('probval-sanchez').textContent = `${ps} de 100`;
 
   const g = d.proyeccion.ganador_proyectado;
   const name = g === 'keiko' ? 'Keiko Fujimori' : 'Roberto Sánchez';
-  const p = Math.max(pr.keiko, pr.sanchez);
-  let verb = p >= 0.95 ? 'favorito claro' : p >= 0.75 ? 'favorito' : p >= 0.6 ? 'ligera ventaja' : 'empate técnico';
-  $('winner').innerHTML = `Proyección actual: <b style="color:${g === 'keiko' ? KEIKO : SANCHEZ}">${name}</b> — ${verb} (${fmtP(p)}).`;
+  const gcol = g === 'keiko' ? KEIKO : SANCHEZ;
+  const p = Math.max(pk, ps);
+  let frase;
+  if (p >= 95) frase = 'es casi segura ganadora';
+  else if (p >= 75) frase = 'es la clara favorita';
+  else if (p >= 60) frase = 'lleva la delantera, pero aún no es seguro';
+  else frase = 'va apenas adelante — esto sigue siendo un empate';
+  if (g === 'sanchez') frase = frase.replace('segura ganadora', 'seguro ganador').replace('la clara favorita', 'el claro favorito');
+  $('winner').innerHTML = `<b style="color:${gcol}">${name}</b> ${frase}.`;
 
-  // margen proyectado en votos
+  $('probHint').textContent = `¿Cómo leer esto? Simulamos la elección ${nf.format(d.proyeccion.n_samples)} veces `
+    + `con los datos de hoy: ${g === 'keiko' ? 'Keiko' : 'Sánchez'} gana en ${p} de cada 100 escenarios.`;
+
+  // margen en votos, en lenguaje de calle ("42 mil votos")
   const mv = d.proyeccion.margen_votos;
   if (mv) {
     const lname = mv.lider === 'keiko' ? 'Keiko' : 'Sánchez';
     const lcol = mv.lider === 'keiko' ? KEIKO : SANCHEZ;
-    const side = (v) => (v >= 0 ? `Keiko +${nf.format(v)}` : `Sánchez +${nf.format(-v)}`);
-    $('margenVotos').innerHTML = `Ganaría por <b style="color:${lcol}">≈ ${nf.format(mv.abs_mediana)} votos</b> `
-      + `<span class="muted">(${lname}). Rango 95%: ${side(mv.lo)} ↔ ${side(mv.hi)}.</span>`;
+    const miles = (x) => (Math.abs(x) >= 10000 ? `${nf.format(Math.round(Math.abs(x) / 1000))} mil` : nf.format(Math.abs(x)));
+    const cruzaCero = mv.lo < 0 && mv.hi > 0;
+    let extra = '';
+    if (cruzaCero) {
+      extra = ` <span class="muted">Pero ojo: por lo apretado del conteo, todavía podría ganar cualquiera de los dos.</span>`;
+    }
+    $('margenVotos').innerHTML = `Ventaja más probable: <b style="color:${lcol}">unos ${miles(mv.abs_mediana)} votos</b> a favor de ${lname}.${extra}`;
   }
+
+  // resultado final estimado, con su rango en palabras simples
+  const proj = d.proyeccion.proyeccion_2via_pct;
+  $('finalEst').innerHTML = `Resultado final estimado: `
+    + `<b style="color:${KEIKO}">Keiko ${pct(proj.keiko.media)}</b> — `
+    + `<b style="color:${SANCHEZ}">Sánchez ${pct(proj.sanchez.media)}</b> `
+    + `<span class="muted">(Keiko podría terminar entre ${pct(proj.keiko.lo)} y ${pct(proj.keiko.hi)}).</span>`;
 }
 
 function renderChart(history) {
@@ -120,27 +138,34 @@ function renderChart(history) {
   const pts = history.slice(-200);
   const labels = pts.map((p) => {
     const t = new Date(p.t.endsWith('Z') ? p.t : p.t + 'Z');
-    return t.toLocaleTimeString('es-PE', { hour: '2-digit', minute: '2-digit' });
+    // con día incluido: el conteo cruza la medianoche y "01:12 a.m." solo confunde
+    return t.toLocaleString('es-PE', { weekday: 'short', hour: '2-digit', minute: '2-digit' });
   });
-  const hi = pts.map((p) => p.keiko.hi), lo = pts.map((p) => p.keiko.lo), med = pts.map((p) => p.keiko.media);
+  // Dos líneas (una por candidato) + línea punteada del 50%: lo que cualquiera
+  // entiende de un vistazo. La sombra naranja tenue es el rango posible de Keiko.
+  const kHi = pts.map((p) => p.keiko.hi), kLo = pts.map((p) => p.keiko.lo);
+  const kMed = pts.map((p) => p.keiko.media), sMed = pts.map((p) => p.sanchez.media);
+  const meta50 = pts.map(() => 50);
   const ds = [
-    { label: 'hi', data: hi, borderColor: 'transparent', backgroundColor: 'rgba(245,135,31,.16)', fill: '+1', pointRadius: 0, tension: .3 },
-    { label: 'lo', data: lo, borderColor: 'transparent', backgroundColor: 'transparent', fill: false, pointRadius: 0, tension: .3 },
-    { label: 'Keiko proyectada', data: med, borderColor: KEIKO, borderWidth: 2, fill: false, pointRadius: 0, tension: .3 },
+    { label: '_hi', data: kHi, borderColor: 'transparent', backgroundColor: 'rgba(245,135,31,.10)', fill: '+1', pointRadius: 0, tension: .3 },
+    { label: '_lo', data: kLo, borderColor: 'transparent', backgroundColor: 'transparent', fill: false, pointRadius: 0, tension: .3 },
+    { label: 'Keiko', data: kMed, borderColor: KEIKO, borderWidth: 2.5, fill: false, pointRadius: 0, tension: .3 },
+    { label: 'Sánchez', data: sMed, borderColor: SANCHEZ, borderWidth: 2.5, fill: false, pointRadius: 0, tension: .3 },
+    { label: '_meta', data: meta50, borderColor: '#7d8794', borderWidth: 1, borderDash: [6, 6], fill: false, pointRadius: 0 },
   ];
   const opts = {
     responsive: true, maintainAspectRatio: false, animation: false,
     interaction: { mode: 'index', intersect: false },
     scales: {
       y: { grid: { color: '#262c36' }, ticks: { color: '#8b95a4', callback: (v) => v + '%' },
-           suggestedMin: 48, suggestedMax: 52 },
+           suggestedMin: 47, suggestedMax: 53 },
       x: { grid: { display: false }, ticks: { color: '#8b95a4', maxTicksLimit: 7 } },
     },
     plugins: {
       legend: { display: false },
       annotation: false,
-      tooltip: { filter: (i) => i.dataset.label === 'Keiko proyectada',
-        callbacks: { label: (i) => `Keiko: ${i.parsed.y.toFixed(2)}%` } },
+      tooltip: { filter: (i) => !i.dataset.label.startsWith('_'),
+        callbacks: { label: (i) => `${i.dataset.label}: ${i.parsed.y.toFixed(2)}%` } },
     },
   };
   if (chart) { chart.data.labels = labels; chart.data.datasets = ds; chart.update(); }
@@ -167,10 +192,10 @@ function drawTable() {
     const tagcls = r.lider === 'keiko' ? 'tag-keiko' : 'tag-sanchez';
     const kshare = r.share_keiko_actual;
     return `<tr>
-      <td>${r.nombre}${r.exterior ? ' <span class="muted">·ext</span>' : ''}</td>
+      <td>${r.exterior ? r.nombre.replace('Exterior – ', '') + ' <span class="tag tag-ext">extranjero</span>' : r.nombre}</td>
       <td class="num">${pct(r.pct_actas)}</td>
       <td><span class="tag ${tagcls}">${lider}</span></td>
-      <td class="num">${pct(r.margen)}</td>
+      <td class="num">+${Number(r.margen).toFixed(1)} pts</td>
       <td><div class="minibar ${r.exterior ? 'exterior' : ''}"><i style="width:${kshare}%"></i></div></td>
     </tr>`;
   }).join('');
@@ -179,7 +204,8 @@ function drawTable() {
 function renderUpdated(d, stale) {
   $('updated').textContent = `Actualizado ${timeAgo(d.timestamp_utc)}`;
   $('liveDot').classList.toggle('stale', !!stale);
-  $('metodo').textContent = `Método: ${d.proyeccion.metodo} · error sistemático ±${d.proyeccion.sigma_sistematico_pts} pts · ${nf.format(d.nacional.votos_validos)} votos válidos contados.`;
+  $('metodo').textContent = `Pronóstico calculado con ${nf.format(d.nacional.votos_validos)} votos ya contados · `
+    + `se actualiza solo cada 5 minutos · última data de ONPE: ${timeAgo(d.timestamp_utc)}.`;
 }
 
 async function tick() {
@@ -244,9 +270,9 @@ function buildMap() {
   $('map').innerHTML = svg;
   $('map').insertAdjacentHTML('beforeend', `<div class="map-tip" id="mapTip"></div>`);
   $('mapCard').insertAdjacentHTML('beforeend',
-    `<div class="map-legend"><span><i class="swatch" style="background:${KEIKO}"></i>Keiko</span>
-     <span><i class="swatch" style="background:${SANCHEZ}"></i>Sánchez</span>
-     <span class="muted">intensidad = margen</span></div>`);
+    `<div class="map-legend"><span><i class="swatch" style="background:${KEIKO}"></i>gana Keiko</span>
+     <span><i class="swatch" style="background:${SANCHEZ}"></i>gana Sánchez</span>
+     <span class="muted">color más intenso = más ventaja</span></div>`);
 
   const tip = $('mapTip');
   $('map').addEventListener('mousemove', (e) => {
@@ -271,7 +297,7 @@ function renderMap(d) {
     el.setAttribute('fill', color);
     el.setAttribute('fill-opacity', alpha);
     const lider = r.lider === 'keiko' ? 'Keiko' : 'Sánchez';
-    el._tip = `<strong>${r.nombre}</strong><br>${lider} +${pct(r.margen)} · ${pct(r.pct_actas)} actas`;
+    el._tip = `<strong>${r.nombre}</strong><br>va ganando ${lider} por ${pct(r.margen)}<br>votos contados: ${pct(r.pct_actas)}`;
   });
 }
 
@@ -343,18 +369,18 @@ function renderWorldMap(d) {
     const margen = Math.abs(2 * ck - 100);
     el.setAttribute('fill', lider === 'keiko' ? KEIKO : SANCHEZ);
     el.setAttribute('fill-opacity', (0.4 + Math.min(margen, 40) / 40 * 0.55).toFixed(2));
-    el._tip = `<strong>${p.nombre}</strong><br>${lider === 'keiko' ? 'Keiko' : 'Sánchez'} ${pct(Math.max(ck, 100 - ck))} · ${nf.format(n)} votos`;
+    el._tip = `<strong>${p.nombre}</strong><br>va ganando ${lider === 'keiko' ? 'Keiko' : 'Sánchez'} con ${pct(Math.max(ck, 100 - ck))}<br>${nf.format(n)} votos contados`;
   });
   // chips resumen por continente
   const cont = (d.regiones || []).filter((x) => x.exterior);
   $('worldConts').innerHTML = [...cont].sort((a, b) => b.actas_total - a.actas_total).map((r) => {
     const n = r.votos.keiko + r.votos.sanchez;
     const nombre = r.nombre.replace('Exterior – ', '');
-    if (!n) return `<span class="wchip"><b>${nombre}</b> <span class="muted">pendiente</span></span>`;
+    if (!n) return `<span class="wchip"><b>${nombre}</b> <span class="muted">sin votos aún</span></span>`;
     const ck = (r.votos.keiko / n) * 100;
-    const who = ck >= 50 ? 'K' : 'S';
+    const who = ck >= 50 ? 'Keiko' : 'Sánchez';
     const col = ck >= 50 ? KEIKO : SANCHEZ;
-    return `<span class="wchip"><b>${nombre}</b> <span style="color:${col}">${pct(Math.max(ck, 100 - ck))} ${who}</span></span>`;
+    return `<span class="wchip"><b>${nombre}</b> <span style="color:${col}">gana ${who} ${pct(Math.max(ck, 100 - ck), 0)}</span></span>`;
   }).join('');
 }
 

@@ -36,8 +36,18 @@ h1,h2{margin:0; font-weight:680}
 main{padding:20px 0 60px}
 .card{background:var(--panel); border:1px solid var(--line); border-radius:var(--r);
   padding:18px 18px; margin:14px 0}
-.card h2{font-size:15px; letter-spacing:.01em}
-.hint{margin:.3em 0 1em; font-size:12.5px; color:var(--muted)}
+.card h2{font-size:16px; letter-spacing:.01em}
+.hint{margin:.3em 0 1em; font-size:13.5px; color:var(--muted); line-height:1.5}
+
+/* secciones numeradas: guían la lectura de arriba a abajo */
+.sec-head{display:flex; align-items:center; gap:10px; margin-bottom:6px}
+.sec-num{width:25px; height:25px; border-radius:50%; background:var(--panel2); border:1px solid var(--line);
+  color:var(--muted); font-size:13px; font-weight:700; display:flex; align-items:center; justify-content:center; flex:none}
+.sec-head .ext-badge{margin-left:auto}
+.versus-big{font-size:27px; font-weight:760; font-variant-numeric:tabular-nums; line-height:1.1}
+.winner-big{font-size:20px; font-weight:650; margin:12px 0 14px; line-height:1.35}
+.final-est{margin-top:10px; padding-top:10px; border-top:1px solid var(--line); font-size:13.5px; line-height:1.55}
+.tag-ext{background:#2c3340; color:#aeb8c6}
 
 .disclaimer{font-size:12.5px; color:#d8dde4; background:linear-gradient(180deg,#1c222b,#191e26);
   border:1px solid var(--line); border-left:3px solid var(--warn); border-radius:10px; padding:11px 14px; margin:14px 0}
@@ -89,21 +99,21 @@ main{padding:20px 0 60px}
 .ext-bartrack{position:relative; height:16px; border-radius:8px; overflow:hidden; background:var(--sanchez)}
 .ext-bartrack i{position:absolute; left:0; top:0; bottom:0; background:var(--keiko); transition:width .6s cubic-bezier(.4,0,.2,1)}
 .ext-conts{margin-top:16px; display:flex; flex-direction:column; gap:9px}
-.ext-cont{display:grid; grid-template-columns:92px 1fr 142px; align-items:center; gap:10px}
+.ext-cont{display:grid; grid-template-columns:86px 1fr 205px; align-items:center; gap:10px}
 .ext-cont-name{font-size:13px; color:var(--ink)}
 .ext-cont-bar{position:relative; height:9px; border-radius:5px; overflow:hidden; background:var(--sanchez)}
 .ext-cont-bar.empty{background:var(--panel2)}
 .ext-cont-bar i{position:absolute; left:0; top:0; bottom:0; background:var(--keiko); transition:width .6s}
 .ext-cont-meta{font-size:11.5px; color:var(--muted); text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap}
 .ext-card .hint{margin:14px 0 0}
-@media(max-width:720px){ .ext-cont{grid-template-columns:74px 1fr 124px} .ext-cont-meta{font-size:11px} }
+@media(max-width:720px){ .ext-cont{grid-template-columns:70px 1fr 160px} .ext-cont-meta{font-size:11px} }
 
 .chartwrap{position:relative; height:220px}
 .grid2{display:grid; grid-template-columns:1fr 1fr; gap:14px}
 .grid2 .card{margin:0}
 
 /* probabilidad */
-.prob-row{display:grid; grid-template-columns:62px 1fr 58px; align-items:center; gap:10px; margin:9px 0}
+.prob-row{display:grid; grid-template-columns:64px 1fr 84px; align-items:center; gap:10px; margin:9px 0}
 .prob-name{font-size:13px; color:var(--muted)}
 .prob-bar{height:14px; background:var(--panel2); border-radius:7px; overflow:hidden}
 .prob-fill{height:100%; width:0; border-radius:7px; transition:width .6s cubic-bezier(.4,0,.2,1)}
@@ -120,16 +130,23 @@ main{padding:20px 0 60px}
   border-radius:8px; padding:7px 11px; font-size:13px; width:200px; max-width:46vw}
 #filtro:focus{outline:none; border-color:var(--sanchez)}
 .table-scroll{overflow-x:auto}
-table{width:100%; border-collapse:collapse; font-size:13.5px}
-th,td{padding:9px 10px; text-align:left; border-bottom:1px solid var(--line); white-space:nowrap}
-th{font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--faint); font-weight:600; cursor:pointer; user-select:none}
+/* table-layout fijo: la tabla SIEMPRE cabe completa, nada se corta.
+   Una barra de reparto truncada por overflow miente visualmente. */
+table{width:100%; border-collapse:collapse; font-size:13px; table-layout:fixed}
+th,td{padding:8px 6px; text-align:left; border-bottom:1px solid var(--line);
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+th{font-size:11px; text-transform:uppercase; letter-spacing:.04em; color:var(--faint); font-weight:600; cursor:pointer; user-select:none}
 th.num,td.num{text-align:right; font-variant-numeric:tabular-nums}
-th.barcol{width:30%; cursor:default}
+th:nth-child(1){width:28%}
+th:nth-child(2){width:13%}
+th:nth-child(3){width:18%}
+th:nth-child(4){width:15%}
+th.barcol{width:26%; cursor:default}
 tbody tr:hover{background:var(--panel2)}
 .tag{display:inline-block; padding:1px 8px; border-radius:20px; font-size:11.5px; font-weight:600}
 .tag-keiko{background:var(--keiko-soft); color:#ffcf9b}
 .tag-sanchez{background:var(--sanchez-soft); color:#bcdcff}
-.minibar{position:relative; height:10px; border-radius:5px; overflow:hidden; background:var(--sanchez); min-width:120px}
+.minibar{position:relative; height:10px; border-radius:5px; overflow:hidden; background:var(--sanchez); min-width:90px}
 .minibar i{position:absolute; left:0; top:0; bottom:0; background:var(--keiko)}
 .minibar.exterior{opacity:.7}
 
