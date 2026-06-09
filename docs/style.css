@@ -133,7 +133,12 @@ tbody tr:hover{background:var(--panel2)}
 
 /* mapa */
 .map-card #map{display:flex; justify-content:center}
-.map-card svg{max-width:520px; width:100%; height:auto}
+.map-card #worldMap{display:flex; justify-content:center}
+.map-card #map svg{max-width:520px; width:100%; height:auto}
+.map-card #worldMap svg{max-width:760px; width:100%; height:auto}
+.world-chips{display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:14px}
+.wchip{font-size:12px; background:var(--panel2); border:1px solid var(--line); border-radius:20px; padding:4px 11px}
+.wchip b{font-weight:600}
 .map-dep{stroke:var(--bg); stroke-width:.6; transition:opacity .2s; cursor:pointer}
 .map-dep:hover{opacity:.78}
 .map-tip{position:fixed; pointer-events:none; background:#0b0e13; border:1px solid var(--line);

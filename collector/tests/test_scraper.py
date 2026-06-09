@@ -82,6 +82,9 @@ class FakeClient:
     def totales_continente_exterior(self, eid, code):
         return None  # sin exterior en los fixtures base
 
+    def participantes_pais_exterior(self, eid, n02):
+        return None
+
 
 def _deps_25():
     # 25 departamentos mínimos para pasar el sanity check (>=25)

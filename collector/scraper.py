@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 from typing import Any
 
 from onpe_client import OnpeClient, OnpeError
-from ubigeo import EXTERIOR, es_exterior, nombre_departamento
+from ubigeo import EXTERIOR, EXTERIOR_PAISES, es_exterior, nombre_departamento
 
 COD_KEIKO = 8
 COD_SANCHEZ = 10
@@ -54,6 +54,42 @@ def _agregar_actas(mapa_calor: list[dict[str, Any]]) -> dict[int, dict[str, floa
     return {dep: {"contabilizadas": round(v[0]), "total": round(v[1])} for dep, v in agg.items()}
 
 
+def _exterior_paises(
+    client: OnpeClient, eid: int, mapa_calor: list[dict[str, Any]]
+) -> list[dict[str, Any]]:
+    """Votos por país del exterior (para el mapa mundial).
+
+    Actas contadas por país salen de mapa-calor (nivel_02). Para los países con
+    actas contadas, se baja el split. El total de actas por país NO está disponible
+    en ONPE, así que aquí sólo va lo CONTADO (el peso del modelo vive a nivel
+    continente, donde el total sí es confiable).
+    """
+    contab_por_pais: dict[int, int] = {}
+    for row in mapa_calor:
+        n02 = int(row.get("ubigeoNivel02") or 0)
+        if n02 >= 900000:
+            contab_por_pais[n02] = contab_por_pais.get(n02, 0) + int(row.get("actasContabilizadas") or 0)
+
+    paises: list[dict[str, Any]] = []
+    for n02, (iso3, nombre) in EXTERIOR_PAISES.items():
+        contab = contab_por_pais.get(n02, 0)
+        if contab <= 0:
+            continue  # sin actas contadas aún: no lo pintamos
+        votos = _split_votos(client.participantes_pais_exterior(eid, n02))
+        if not votos or (votos["keiko"] + votos["sanchez"]) == 0:
+            continue
+        paises.append(
+            {
+                "ubigeo": n02,
+                "iso3": iso3,
+                "nombre": nombre,
+                "actas_contabilizadas": contab,
+                "votos": votos,
+            }
+        )
+    return paises
+
+
 def construir_snapshot(client: OnpeClient | None = None) -> dict[str, Any]:
     """Baja todo lo necesario y devuelve el snapshot normalizado.
 
@@ -69,7 +105,8 @@ def construir_snapshot(client: OnpeClient | None = None) -> dict[str, Any]:
     if nac_votos is None:
         raise OnpeError("No se pudo extraer el split nacional Keiko/Sánchez")
 
-    actas_por_dep = _agregar_actas(client.mapa_calor_departamentos(eid))
+    mapa_calor = client.mapa_calor_departamentos(eid)
+    actas_por_dep = _agregar_actas(mapa_calor)
     if len(actas_por_dep) < 25:
         raise OnpeError(f"mapa-calor devolvió sólo {len(actas_por_dep)} departamentos (<25)")
 
@@ -146,4 +183,5 @@ def construir_snapshot(client: OnpeClient | None = None) -> dict[str, Any]:
             "votos": nac_votos,
         },
         "regiones": regiones,
+        "exterior_paises": _exterior_paises(client, eid, mapa_calor),
     }

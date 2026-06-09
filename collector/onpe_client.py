@@ -193,6 +193,17 @@ class OnpeClient:
         )
         return data if isinstance(data, dict) else None
 
+    def participantes_pais_exterior(self, id_eleccion: int, ubigeo_n02: int) -> list[dict[str, Any]] | None:
+        """Split de candidatos para un país del exterior (ubigeoNivel02)."""
+        data = self._get(
+            "/resumen-general/participantes",
+            idEleccion=id_eleccion,
+            tipoFiltro="ubigeo_nivel_02",
+            idUbigeoProvincia=ubigeo_n02,
+            idAmbitoGeografico=2,
+        )
+        return data if isinstance(data, list) else None
+
     def mapa_calor_departamentos(self, id_eleccion: int) -> list[dict[str, Any]]:
         """Filas a nivel provincia; el caller las agrega por ubigeoNivel01."""
         data = self._get(

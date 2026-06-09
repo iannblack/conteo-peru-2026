@@ -184,6 +184,7 @@ async function tick() {
     renderExterior(latest);
     renderTable(latest); renderChart(history); renderUpdated(latest, ageMin > 20);
     if (geo) renderMap(latest);
+    if (worldGeo) renderWorldMap(latest);
   } catch (e) {
     console.error(e);
     $('updated').textContent = 'sin conexión con los datos';
@@ -269,6 +270,85 @@ async function initMap() {
   catch (e) { console.warn('mapa off:', e); $('mapCard').style.display = 'none'; }
 }
 
+// ---- mapa mundial del voto exterior (por país, ISO3) --------------------
+let worldGeo = null, worldPaths = {};
+
+async function initWorldMap() {
+  try { worldGeo = await getJSON('data/world-countries.geojson'); buildWorldMap(); }
+  catch (e) { console.warn('world map off:', e); $('worldCard').style.display = 'none'; }
+}
+
+function buildWorldMap() {
+  const feats = worldGeo.features.filter((f) => f.id !== 'ATA');  // sin Antártida
+  const each = (g, fn) => {
+    const ps = g.type === 'Polygon' ? [g.coordinates] : g.coordinates;
+    ps.forEach((p) => p.forEach((r) => r.forEach(fn)));
+  };
+  const lonMin = -180, lonMax = 180;
+  let latMin = 1e9, latMax = -1e9;
+  feats.forEach((f) => each(f.geometry, ([, la]) => {
+    if (la < -58) return; if (la < latMin) latMin = la; if (la > latMax) latMax = la;
+  }));
+  const pad = 4, W = 720, S = (W - 2 * pad) / (lonMax - lonMin);
+  const H = Math.round((latMax - latMin) * S + 2 * pad);
+  const proj = ([lo, la]) => [
+    ((lo - lonMin) * S + pad).toFixed(1),
+    ((latMax - Math.max(la, latMin)) * S + pad).toFixed(1),
+  ];
+  const ring = (r) => r.map((c, i) => (i ? 'L' : 'M') + proj(c).join(' ')).join('') + 'Z';
+  const path = (g) => {
+    const ps = g.type === 'Polygon' ? [g.coordinates] : g.coordinates;
+    return ps.map((p) => p.map(ring).join('')).join('');
+  };
+  let svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Mapa mundial del voto exterior">`;
+  feats.forEach((f) => {
+    const id = 'w_' + f.id; worldPaths[f.id] = id;
+    svg += `<path id="${id}" class="map-dep" d="${path(f.geometry)}" fill="#242a33"></path>`;
+  });
+  svg += '</svg>';
+  $('worldMap').innerHTML = svg;
+  $('worldMap').insertAdjacentHTML('beforeend', `<div class="map-tip" id="worldTip"></div>`);
+  const tip = $('worldTip');
+  $('worldMap').addEventListener('mousemove', (e) => {
+    const p = e.target.closest('.map-dep');
+    if (!p || !p._tip) { tip.style.display = 'none'; return; }
+    tip.innerHTML = p._tip; tip.style.display = 'block';
+    tip.style.left = (e.clientX + 14) + 'px'; tip.style.top = (e.clientY + 14) + 'px';
+  });
+  $('worldMap').addEventListener('mouseleave', () => { tip.style.display = 'none'; });
+  if (window._latest) renderWorldMap(window._latest);
+}
+
+function renderWorldMap(d) {
+  Object.values(worldPaths).forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) { el.setAttribute('fill', '#242a33'); el.removeAttribute('fill-opacity'); el._tip = null; }
+  });
+  (d.exterior_paises || []).forEach((p) => {
+    const id = worldPaths[p.iso3]; if (!id) return;
+    const el = document.getElementById(id); if (!el) return;
+    const n = p.votos.keiko + p.votos.sanchez; if (!n) return;
+    const ck = (p.votos.keiko / n) * 100;
+    const lider = ck >= 50 ? 'keiko' : 'sanchez';
+    const margen = Math.abs(2 * ck - 100);
+    el.setAttribute('fill', lider === 'keiko' ? KEIKO : SANCHEZ);
+    el.setAttribute('fill-opacity', (0.4 + Math.min(margen, 40) / 40 * 0.55).toFixed(2));
+    el._tip = `<strong>${p.nombre}</strong><br>${lider === 'keiko' ? 'Keiko' : 'Sánchez'} ${pct(Math.max(ck, 100 - ck))} · ${nf.format(n)} votos`;
+  });
+  // chips resumen por continente
+  const cont = (d.regiones || []).filter((x) => x.exterior);
+  $('worldConts').innerHTML = [...cont].sort((a, b) => b.actas_total - a.actas_total).map((r) => {
+    const n = r.votos.keiko + r.votos.sanchez;
+    const nombre = r.nombre.replace('Exterior – ', '');
+    if (!n) return `<span class="wchip"><b>${nombre}</b> <span class="muted">pendiente</span></span>`;
+    const ck = (r.votos.keiko / n) * 100;
+    const who = ck >= 50 ? 'K' : 'S';
+    const col = ck >= 50 ? KEIKO : SANCHEZ;
+    return `<span class="wchip"><b>${nombre}</b> <span style="color:${col}">${pct(Math.max(ck, 100 - ck))} ${who}</span></span>`;
+  }).join('');
+}
+
 tick();
 setInterval(tick, POLL_MS);
 initMap();
+initWorldMap();
