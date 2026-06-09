@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-09T19:19:25Z",
+  "timestamp_utc": "2026-06-09T20:05:37Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 95.985,
-    "actas_contabilizadas": 89041,
+    "actas_pct": 96.024,
+    "actas_contabilizadas": 89078,
     "actas_total": 92766,
-    "votos_emitidos": 19050077,
-    "votos_validos": 17803458,
-    "participacion": 69.716,
+    "votos_emitidos": 19054637,
+    "votos_validos": 17807780,
+    "participacion": 69.732,
     "votos": {
-      "keiko": 8891534,
-      "sanchez": 8911924
+      "keiko": 8893751,
+      "sanchez": 8914029
     }
   },
   "regiones": [
@@ -199,24 +199,24 @@
       "ubigeo": 150000,
       "nombre": "Loreto",
       "exterior": false,
-      "actas_contabilizadas": 2445,
+      "actas_contabilizadas": 2455,
       "actas_total": 2697,
-      "pct_actas": 90.66,
+      "pct_actas": 91.03,
       "votos": {
-        "sanchez": 172800,
-        "keiko": 204026
+        "sanchez": 173018,
+        "keiko": 204541
       }
     },
     {
       "ubigeo": 160000,
       "nombre": "Madre de Dios",
       "exterior": false,
-      "actas_contabilizadas": 499,
+      "actas_contabilizadas": 502,
       "actas_total": 507,
-      "pct_actas": 98.42,
+      "pct_actas": 99.01,
       "votos": {
-        "keiko": 29039,
-        "sanchez": 65081
+        "keiko": 29115,
+        "sanchez": 65432
       }
     },
     {
@@ -343,12 +343,12 @@
       "ubigeo": 920000,
       "nombre": "Exterior – América",
       "exterior": true,
-      "actas_contabilizadas": 638,
+      "actas_contabilizadas": 662,
       "actas_total": 1570,
-      "pct_actas": 40.64,
+      "pct_actas": 42.17,
       "votos": {
-        "sanchez": 21516,
-        "keiko": 48195
+        "sanchez": 23052,
+        "keiko": 49821
       }
     },
     {
@@ -433,10 +433,10 @@
       "ubigeo": 920500,
       "iso3": "BRA",
       "nombre": "Brasil",
-      "actas_contabilizadas": 10,
+      "actas_contabilizadas": 34,
       "votos": {
-        "sanchez": 299,
-        "keiko": 644
+        "sanchez": 1835,
+        "keiko": 2270
       }
     },
     {
@@ -764,12 +764,12 @@
     "metodo": "beta-binomial-pooling-parcial-actas-v1",
     "n_samples": 20000,
     "kappa": 4.0,
-    "frac_faltante": 0.0402,
-    "sigma_sistematico_pts": 0.241,
+    "frac_faltante": 0.0398,
+    "sigma_sistematico_pts": 0.239,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
-      "keiko": 0.6491,
-      "sanchez": 0.3509
+      "keiko": 0.6449,
+      "sanchez": 0.3551
     },
     "share_actual_2via": {
       "keiko": 49.943,
@@ -777,45 +777,45 @@
     },
     "proyeccion_2via_pct": {
       "keiko": {
-        "media": 50.116,
-        "lo": 49.544,
-        "mediana": 50.114,
-        "hi": 50.697
+        "media": 50.111,
+        "lo": 49.547,
+        "mediana": 50.108,
+        "hi": 50.683
       },
       "sanchez": {
-        "media": 49.884,
-        "lo": 49.303,
-        "mediana": 49.886,
-        "hi": 50.456
+        "media": 49.889,
+        "lo": 49.317,
+        "mediana": 49.892,
+        "hi": 50.453
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9295651,
-        "lo": 9189510,
-        "mediana": 9295185,
-        "hi": 9403339
+        "media": 9293044,
+        "lo": 9188443,
+        "mediana": 9292625,
+        "hi": 9399130
       },
       "sanchez": {
-        "media": 9252608,
-        "lo": 9144921,
-        "mediana": 9253074,
-        "hi": 9358749
+        "media": 9252012,
+        "lo": 9145926,
+        "mediana": 9252431,
+        "hi": 9356613
       },
       "total_2via": {
-        "media": 18548260,
-        "lo": 18548260,
-        "mediana": 18548260,
-        "hi": 18548260
+        "media": 18545056,
+        "lo": 18545056,
+        "mediana": 18545056,
+        "hi": 18545056
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 42111,
-      "media": 43043,
-      "lo": -169239,
-      "hi": 258418,
-      "abs_mediana": 42111
+      "mediana": 40194,
+      "media": 41032,
+      "lo": -168170,
+      "hi": 253204,
+      "abs_mediana": 40194
     },
     "votos_por_acta_nacional": 199.9,
     "por_region": [
@@ -1019,28 +1019,28 @@
         "ubigeo": 150000,
         "nombre": "Loreto",
         "exterior": false,
-        "pct_actas": 90.66,
+        "pct_actas": 91.03,
         "lider": "keiko",
-        "margen": 8.29,
-        "share_keiko_actual": 54.14,
-        "share_keiko_proyectado": 54.14,
+        "margen": 8.35,
+        "share_keiko_actual": 54.17,
+        "share_keiko_proyectado": 54.17,
         "votos": {
-          "sanchez": 172800,
-          "keiko": 204026
+          "sanchez": 173018,
+          "keiko": 204541
         }
       },
       {
         "ubigeo": 160000,
         "nombre": "Madre de Dios",
         "exterior": false,
-        "pct_actas": 98.42,
+        "pct_actas": 99.01,
         "lider": "sanchez",
-        "margen": 38.29,
-        "share_keiko_actual": 30.85,
-        "share_keiko_proyectado": 31.0,
+        "margen": 38.41,
+        "share_keiko_actual": 30.79,
+        "share_keiko_proyectado": 30.94,
         "votos": {
-          "keiko": 29039,
-          "sanchez": 65081
+          "keiko": 29115,
+          "sanchez": 65432
         }
       },
       {
@@ -1187,14 +1187,14 @@
         "ubigeo": 920000,
         "nombre": "Exterior – América",
         "exterior": true,
-        "pct_actas": 40.64,
+        "pct_actas": 42.17,
         "lider": "keiko",
-        "margen": 38.27,
-        "share_keiko_actual": 69.14,
-        "share_keiko_proyectado": 69.03,
+        "margen": 36.73,
+        "share_keiko_actual": 68.37,
+        "share_keiko_proyectado": 68.27,
         "votos": {
-          "sanchez": 21516,
-          "keiko": 48195
+          "sanchez": 23052,
+          "keiko": 49821
         }
       },
       {
