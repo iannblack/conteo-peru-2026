@@ -49,21 +49,42 @@ function renderBar(d) {
 }
 
 function renderExterior(d) {
-  const r = (d.regiones || []).find((x) => x.ubigeo === 900000 || x.exterior);
-  if (!r) { $('extCard').style.display = 'none'; return; }
-  const k = r.votos.keiko, s = r.votos.sanchez, n = k + s;
-  if (n === 0) { $('extCard').style.display = 'none'; return; }
-  const kPct = (k / n) * 100;
+  const cont = (d.regiones || []).filter((x) => x.exterior);
+  if (!cont.length) { $('extCard').style.display = 'none'; return; }
+
+  // agregado (suma de continentes)
+  const aggK = cont.reduce((a, r) => a + r.votos.keiko, 0);
+  const aggS = cont.reduce((a, r) => a + r.votos.sanchez, 0);
+  const aggN = aggK + aggS;
+  const totActas = cont.reduce((a, r) => a + r.actas_total, 0);
+  const contabActas = cont.reduce((a, r) => a + r.actas_contabilizadas, 0);
+  if (aggN === 0) { $('extCard').style.display = 'none'; return; }
+  const kPct = (aggK / aggN) * 100;
   $('extKeiko').textContent = pct(kPct, 1);
   $('extSanchez').textContent = pct(100 - kPct, 1);
   $('extBar').style.width = kPct + '%';
-  $('extActas').textContent = `${pct(r.pct_actas)} escrutado · ${nf.format(r.actas_contabilizadas)}/${nf.format(r.actas_total)} actas`;
-  // votos pendientes estimados: escalar lo contado por las actas que faltan
-  const pend = r.actas_contabilizadas > 0
-    ? Math.round(n * (r.actas_total / r.actas_contabilizadas - 1))
-    : 0;
+  const escPct = totActas ? (100 * contabActas / totActas) : 0;
+  $('extActas').textContent = `${pct(escPct)} escrutado · ${nf.format(contabActas)}/${nf.format(totActas)} actas`;
+
+  // desglose por continente (mayor padrón primero)
+  const rows = [...cont].sort((a, b) => b.actas_total - a.actas_total).map((r) => {
+    const n = r.votos.keiko + r.votos.sanchez;
+    const nombre = r.nombre.replace('Exterior – ', '');
+    if (n === 0) {
+      return `<div class="ext-cont"><span class="ext-cont-name">${nombre}</span>`
+        + `<div class="ext-cont-bar empty"></div>`
+        + `<span class="ext-cont-meta">${pct(r.pct_actas)} esc. · pendiente</span></div>`;
+    }
+    const ck = (r.votos.keiko / n) * 100;
+    return `<div class="ext-cont"><span class="ext-cont-name">${nombre}</span>`
+      + `<div class="ext-cont-bar"><i style="width:${ck}%"></i></div>`
+      + `<span class="ext-cont-meta">${pct(ck)} K · ${pct(r.pct_actas)} esc.</span></div>`;
+  }).join('');
+  $('extConts').innerHTML = rows;
+
+  const pend = contabActas > 0 ? Math.round(aggN * (totActas / contabActas - 1)) : 0;
   const lider = kPct >= 50 ? 'Keiko' : 'Sánchez';
-  $('extNote').innerHTML = `${nf.format(n)} votos contados · faltan ~<strong>${nf.format(pend)}</strong> por contar. `
+  $('extNote').innerHTML = `${nf.format(aggN)} votos contados · faltan ~<strong>${nf.format(pend)}</strong> por contar. `
     + `El extranjero lidera <strong>${lider}</strong> y ya está incorporado en la proyección nacional.`;
 }
 

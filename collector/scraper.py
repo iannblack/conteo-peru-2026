@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 from typing import Any
 
 from onpe_client import OnpeClient, OnpeError
-from ubigeo import es_exterior, nombre_departamento
+from ubigeo import EXTERIOR, es_exterior, nombre_departamento
 
 COD_KEIKO = 8
 COD_SANCHEZ = 10
@@ -95,30 +95,35 @@ def construir_snapshot(client: OnpeClient | None = None) -> dict[str, Any]:
             }
         )
 
-    # --- Exterior como UNA región agregada ---------------------------------
+    # --- Exterior, desglosado POR CONTINENTE -------------------------------
     # No se puede agregar desde mapa-calor: las provincias del exterior a 0% son
-    # invisibles (total = contab/pct → 0), así que el total de actas sale absurdo.
-    # ONPE sí expone el ámbito exterior (idAmbitoGeografico=2) con su total real,
-    # que es lo que el modelo necesita para pesar los ~cientos de miles de votos
-    # del extranjero que aún faltan (históricamente pro-Keiko).
-    ext_tot = client.totales_ambito(eid, 2)
-    ext_part = client.participantes_ambito(eid, 2)
-    ext_votos = _split_votos(ext_part) if ext_part else None
-    if ext_tot and ext_votos is not None:
-        ext_total_actas = int(ext_tot.get("totalActas") or 0)
-        ext_contab = int(ext_tot.get("contabilizadas") or 0)
-        if ext_total_actas > 0:
-            regiones.append(
-                {
-                    "ubigeo": 900000,
-                    "nombre": "Extranjero",
-                    "exterior": True,
-                    "actas_contabilizadas": ext_contab,
-                    "actas_total": ext_total_actas,
-                    "pct_actas": round(100 * ext_contab / ext_total_actas, 2),
-                    "votos": ext_votos,
-                }
-            )
+    # invisibles (total = contab/pct → 0). Pero ONPE expone el totalActas REAL por
+    # continente vía idAmbitoGeografico=2 (suman 2543). Cada continente entra como
+    # su propia región: el modelo lo pesa por su tamaño y su propia inclinación
+    # (América y Europa concentran ~95% del padrón exterior, pro-Keiko).
+    for code in EXTERIOR:
+        ctot = client.totales_continente_exterior(eid, code)
+        if not ctot:
+            continue
+        total_actas = int(ctot.get("totalActas") or 0)
+        if total_actas == 0:
+            continue
+        contab = int(ctot.get("contabilizadas") or 0)
+        part = client.participantes_departamento(eid, code)
+        votos = _split_votos(part) if part else None
+        if votos is None:
+            votos = {"keiko": 0, "sanchez": 0}
+        regiones.append(
+            {
+                "ubigeo": code,
+                "nombre": nombre_departamento(code),
+                "exterior": True,
+                "actas_contabilizadas": contab,
+                "actas_total": total_actas,
+                "pct_actas": round(100 * contab / total_actas, 2),
+                "votos": votos,
+            }
+        )
 
     # sanity: la suma regional debe acercarse al nacional
     suma_keiko = sum(r["votos"]["keiko"] for r in regiones)

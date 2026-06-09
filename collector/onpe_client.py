@@ -180,6 +180,19 @@ class OnpeClient:
         )
         return data if isinstance(data, list) else None
 
+    def totales_continente_exterior(self, id_eleccion: int, ubigeo_n01: int) -> dict[str, Any] | None:
+        """Totales (incl. totalActas REAL) de un continente del exterior.
+        A diferencia de los totales por depto del Perú (rotos), este SÍ filtra bien
+        cuando se pasa idAmbitoGeografico=2; los totales por continente suman 2543."""
+        data = self._get(
+            "/resumen-general/totales",
+            idEleccion=id_eleccion,
+            tipoFiltro="ubigeo_nivel_01",
+            idUbigeoDepartamento=ubigeo_n01,
+            idAmbitoGeografico=2,
+        )
+        return data if isinstance(data, dict) else None
+
     def mapa_calor_departamentos(self, id_eleccion: int) -> list[dict[str, Any]]:
         """Filas a nivel provincia; el caller las agrega por ubigeoNivel01."""
         data = self._get(

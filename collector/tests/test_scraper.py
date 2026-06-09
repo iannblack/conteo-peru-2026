@@ -74,10 +74,13 @@ class FakeClient:
         return _part(*d["votos"])
 
     def totales_ambito(self, eid, ambito):
-        return None  # sin exterior en los fixtures
+        return None
 
     def participantes_ambito(self, eid, ambito):
         return None
+
+    def totales_continente_exterior(self, eid, code):
+        return None  # sin exterior en los fixtures base
 
 
 def _deps_25():
@@ -101,26 +104,34 @@ def test_pocos_departamentos_lanza_error():
 
 
 class FakeClientExt(FakeClient):
-    """Cliente con ámbito exterior poblado (2543 actas, 158 contadas)."""
+    """Cliente con exterior por continente (totalActas real por continente)."""
 
-    def totales_ambito(self, eid, ambito):
-        if ambito == 2:
-            return {"totalActas": 2543, "contabilizadas": 158, "totalVotosValidos": 20699}
-        return None
+    EXT = {
+        910000: {"total": 6, "contab": 1, "votos": (0, 0)},
+        920000: {"total": 1570, "contab": 141, "votos": (11159, 8336)},  # América, pro-Keiko
+        930000: {"total": 107, "contab": 2, "votos": (0, 0)},
+        940000: {"total": 839, "contab": 17, "votos": (664, 540)},       # Europa
+        950000: {"total": 21, "contab": 0, "votos": (0, 0)},
+    }
 
-    def participantes_ambito(self, eid, ambito):
-        if ambito == 2:
-            return _part(11823, 8876)  # exterior pro-Keiko
-        return None
+    def totales_continente_exterior(self, eid, code):
+        e = self.EXT.get(code)
+        return {"totalActas": e["total"], "contabilizadas": e["contab"]} if e else None
+
+    def participantes_departamento(self, eid, ub):
+        if ub in self.EXT:
+            v = self.EXT[ub]["votos"]
+            return _part(*v) if (v[0] + v[1]) else None
+        return super().participantes_departamento(eid, ub)
 
 
-def test_exterior_se_agrega_con_total_real():
+def test_exterior_por_continente_con_total_real():
     snap = construir_snapshot(FakeClientExt(_deps_25()))
-    ext = [r for r in snap["regiones"] if r["exterior"]]
-    assert len(ext) == 1
-    e = ext[0]
-    assert e["nombre"] == "Extranjero"
-    assert e["actas_total"] == 2543          # total REAL del ámbito, no inferido
-    assert e["actas_contabilizadas"] == 158
-    assert e["pct_actas"] == 6.21
-    assert e["votos"]["keiko"] == 11823
+    ext = {r["nombre"]: r for r in snap["regiones"] if r["exterior"]}
+    assert len(ext) == 5  # 5 continentes
+    am = ext["Exterior – América"]
+    assert am["actas_total"] == 1570         # total REAL del continente
+    assert am["actas_contabilizadas"] == 141
+    assert am["votos"]["keiko"] == 11159
+    # los 5 totales suman el total exterior conocido (2543)
+    assert sum(r["actas_total"] for r in ext.values()) == 2543
