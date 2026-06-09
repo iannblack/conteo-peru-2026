@@ -15,9 +15,13 @@ if [ ! -x "$PY" ]; then
   exit 0
 fi
 
-if ! "$PY" collector/build_outputs.py >>"$LOG" 2>&1; then
-  echo "$(date '+%FT%T') build FAILED (se conserva el último dato)" >>"$LOG"
-  exit 0
+build() { "$PY" collector/build_outputs.py >>"$LOG" 2>&1; }
+if ! build; then
+  sleep 25   # la red puede estar reconectando (DNS); reintentar una vez antes de rendirse
+  if ! build; then
+    echo "$(date '+%FT%T') build FAILED tras reintento (se conserva el último dato)" >>"$LOG"
+    exit 0
+  fi
 fi
 
 "$GIT" add docs/data/latest.json docs/data/history.json
