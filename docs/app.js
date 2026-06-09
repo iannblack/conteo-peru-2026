@@ -103,6 +103,16 @@ function renderProb(d) {
   const p = Math.max(pr.keiko, pr.sanchez);
   let verb = p >= 0.95 ? 'favorito claro' : p >= 0.75 ? 'favorito' : p >= 0.6 ? 'ligera ventaja' : 'empate técnico';
   $('winner').innerHTML = `Proyección actual: <b style="color:${g === 'keiko' ? KEIKO : SANCHEZ}">${name}</b> — ${verb} (${fmtP(p)}).`;
+
+  // margen proyectado en votos
+  const mv = d.proyeccion.margen_votos;
+  if (mv) {
+    const lname = mv.lider === 'keiko' ? 'Keiko' : 'Sánchez';
+    const lcol = mv.lider === 'keiko' ? KEIKO : SANCHEZ;
+    const side = (v) => (v >= 0 ? `Keiko +${nf.format(v)}` : `Sánchez +${nf.format(-v)}`);
+    $('margenVotos').innerHTML = `Ganaría por <b style="color:${lcol}">≈ ${nf.format(mv.abs_mediana)} votos</b> `
+      + `<span class="muted">(${lname}). Rango 95%: ${side(mv.lo)} ↔ ${side(mv.hi)}.</span>`;
+  }
 }
 
 function renderChart(history) {

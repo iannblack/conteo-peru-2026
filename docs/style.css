@@ -111,6 +111,8 @@ main{padding:20px 0 60px}
 .prob-val{text-align:right; font-weight:680; font-variant-numeric:tabular-nums; font-size:15px}
 .winner{margin-top:12px; padding-top:12px; border-top:1px solid var(--line); font-size:13.5px}
 .winner b{font-size:15px}
+.margenv{margin-top:7px; font-size:13px; line-height:1.5}
+.margenv b{font-size:14px}
 
 /* tabla */
 .table-head{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:10px}

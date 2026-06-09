@@ -4,13 +4,18 @@
 # ONPE bloquea las IPs de GitHub Actions, por eso la recolección vive aquí.
 
 REPO="$(cd "$(dirname "$0")/.." && pwd)"
-UV="${UV_BIN:-$HOME/.local/bin/uv}"
+PY="$REPO/.venv/bin/python3"        # venv con deps preinstaladas: NO toca pypi por corrida
 GIT=/usr/bin/git
 LOG=/tmp/conteo_collector.log
 
 cd "$REPO" || exit 1
 
-if ! "$UV" run --with curl_cffi --with numpy python3 collector/build_outputs.py >>"$LOG" 2>&1; then
+if [ ! -x "$PY" ]; then
+  echo "$(date '+%FT%T') FALTA el venv ($PY). Crear: uv venv .venv && uv pip install --python .venv/bin/python3 curl_cffi numpy" >>"$LOG"
+  exit 0
+fi
+
+if ! "$PY" collector/build_outputs.py >>"$LOG" 2>&1; then
   echo "$(date '+%FT%T') build FAILED (se conserva el último dato)" >>"$LOG"
   exit 0
 fi

@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-09T04:28:16Z",
+  "timestamp_utc": "2026-06-09T04:28:41Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -568,6 +568,34 @@
         "mediana": 49.958,
         "hi": 50.641
       }
+    },
+    "proyeccion_votos": {
+      "keiko": {
+        "media": 9313545,
+        "lo": 9185981,
+        "mediana": 9313110,
+        "hi": 9441491
+      },
+      "sanchez": {
+        "media": 9297034,
+        "lo": 9169089,
+        "mediana": 9297469,
+        "hi": 9424598
+      },
+      "total_2via": {
+        "media": 18610579,
+        "lo": 18610579,
+        "mediana": 18610579,
+        "hi": 18610579
+      }
+    },
+    "margen_votos": {
+      "lider": "keiko",
+      "mediana": 15641,
+      "media": 16511,
+      "lo": -238617,
+      "hi": 272402,
+      "abs_mediana": 15641
     },
     "votos_por_acta_nacional": 200.6,
     "por_region": [

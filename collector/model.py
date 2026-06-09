@@ -126,6 +126,20 @@ def proyectar(
 
     win_keiko = (share_keiko > 0.5).mean()
 
+    # Proyección en VOTOS absolutos (2 vías) y margen del ganador.
+    total_votos = keiko_tot + sanchez_tot          # volumen total proyectado por sim
+    keiko_votos = share_keiko * total_votos        # usa el share ya ajustado
+    sanchez_votos = total_votos - keiko_votos
+    margen = keiko_votos - sanchez_votos           # signo +: gana Keiko
+
+    def _band_int(x):
+        lo, med, hi = np.percentile(x, [2.5, 50, 97.5])
+        return {"media": int(round(float(x.mean()))), "lo": int(round(lo)),
+                "mediana": int(round(med)), "hi": int(round(hi))}
+
+    mg = _band_int(margen)
+    lider_votos = "keiko" if mg["mediana"] >= 0 else "sanchez"
+
     # resumen por región (determinístico, sobre lo contado)
     por_region = []
     cur_share_keiko = np.where(n > 0, a / np.maximum(n, 1), 0.5)
@@ -165,6 +179,20 @@ def proyectar(
         "proyeccion_2via_pct": {
             "keiko": _band(share_keiko * 100),
             "sanchez": _band((1 - share_keiko) * 100),
+        },
+        "proyeccion_votos": {
+            "keiko": _band_int(keiko_votos),
+            "sanchez": _band_int(sanchez_votos),
+            "total_2via": _band_int(total_votos),
+        },
+        # margen = votos de Keiko − votos de Sánchez (signo +: gana Keiko)
+        "margen_votos": {
+            "lider": lider_votos,
+            "mediana": mg["mediana"],
+            "media": mg["media"],
+            "lo": mg["lo"],
+            "hi": mg["hi"],
+            "abs_mediana": abs(mg["mediana"]),
         },
         "votos_por_acta_nacional": round(float(vpa_nac), 1),
         "por_region": por_region,
