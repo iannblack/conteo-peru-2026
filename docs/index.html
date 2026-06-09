@@ -112,8 +112,9 @@
       <div class="sec-head"><span class="sec-num">5</span><h2>Detalle por departamento</h2></div>
       <input id="filtro" type="search" placeholder="Buscar departamento…" autocomplete="off" />
     </div>
-    <p class="hint">En la barra de reparto, <span style="color:var(--keiko)">■ naranja</span> son los votos de Keiko
-       y <span style="color:var(--sanchez)">■ azul</span> los de Sánchez.
+    <p class="hint">La columna Resultado muestra cuánto sacó cada uno:
+       <span style="color:var(--keiko)">■ naranja Keiko</span> ·
+       <span style="color:var(--sanchez)">■ azul Sánchez</span>.
        Toca los títulos de las columnas para ordenar.</p>
     <div class="table-scroll">
       <table id="tabla">
@@ -122,8 +123,7 @@
             <th data-k="nombre">Departamento</th>
             <th data-k="pct_actas" class="num">Contado</th>
             <th data-k="lider">Va ganando</th>
-            <th data-k="margen" class="num">Ventaja</th>
-            <th class="barcol">Reparto</th>
+            <th data-k="margen" class="barcol">Resultado</th>
           </tr>
         </thead>
         <tbody id="tbody"></tbody>

@@ -137,11 +137,17 @@ th,td{padding:8px 6px; text-align:left; border-bottom:1px solid var(--line);
   white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
 th{font-size:11px; text-transform:uppercase; letter-spacing:.04em; color:var(--faint); font-weight:600; cursor:pointer; user-select:none}
 th.num,td.num{text-align:right; font-variant-numeric:tabular-nums}
-th:nth-child(1){width:28%}
-th:nth-child(2){width:13%}
+th:nth-child(1){width:25%}
+th:nth-child(2){width:15%}
 th:nth-child(3){width:18%}
-th:nth-child(4){width:15%}
-th.barcol{width:26%; cursor:default}
+th.barcol{width:42%}
+
+/* celda Resultado: porcentajes de ambos candidatos + barra de refuerzo */
+.rep{display:flex; flex-direction:column; gap:3px; padding:3px 0}
+.rep-nums{display:flex; justify-content:space-between; font-size:12px; font-weight:680;
+  font-variant-numeric:tabular-nums; line-height:1}
+.rep-nums .rk{color:var(--keiko)}
+.rep-nums .rs{color:var(--sanchez)}
 tbody tr:hover{background:var(--panel2)}
 .tag{display:inline-block; padding:1px 8px; border-radius:20px; font-size:11.5px; font-weight:600}
 .tag-keiko{background:var(--keiko-soft); color:#ffcf9b}

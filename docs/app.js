@@ -188,15 +188,22 @@ function drawTable() {
     });
   const tb = $('tbody');
   tb.innerHTML = rows.map((r) => {
+    const sinVotos = (r.votos.keiko + r.votos.sanchez) === 0;
     const lider = r.lider === 'keiko' ? 'Keiko' : 'Sánchez';
     const tagcls = r.lider === 'keiko' ? 'tag-keiko' : 'tag-sanchez';
     const kshare = r.share_keiko_actual;
+    // Resultado = los dos porcentajes en números + la barra debajo como refuerzo
+    const resultado = sinVotos
+      ? `<span class="muted">aún sin votos contados</span>`
+      : `<div class="rep">
+           <div class="rep-nums"><span class="rk">${pct(kshare, 1)}</span><span class="rs">${pct(100 - kshare, 1)}</span></div>
+           <div class="minibar ${r.exterior ? 'exterior' : ''}"><i style="width:${kshare}%"></i></div>
+         </div>`;
     return `<tr>
       <td>${r.exterior ? r.nombre.replace('Exterior – ', '') + ' <span class="tag tag-ext">extranjero</span>' : r.nombre}</td>
       <td class="num">${pct(r.pct_actas)}</td>
-      <td><span class="tag ${tagcls}">${lider}</span></td>
-      <td class="num">+${Number(r.margen).toFixed(1)} pts</td>
-      <td><div class="minibar ${r.exterior ? 'exterior' : ''}"><i style="width:${kshare}%"></i></div></td>
+      <td>${sinVotos ? '<span class="muted">—</span>' : `<span class="tag ${tagcls}">${lider}</span>`}</td>
+      <td>${resultado}</td>
     </tr>`;
   }).join('');
 }
