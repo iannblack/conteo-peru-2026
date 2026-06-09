@@ -133,6 +133,59 @@ function renderProb(d) {
     + `<span class="muted">(Keiko podría terminar entre ${pct(proj.keiko.lo)} y ${pct(proj.keiko.hi)}).</span>`;
 }
 
+// ---- sección 4: "viaje en el tiempo" del pronóstico ----------------------
+let evoPts = [];
+
+// línea vertical punteada que marca el momento elegido con el slider
+const evoMarker = {
+  id: 'evoMarker',
+  afterDatasetsDraw(c) {
+    const i = window._evoIdx;
+    if (i == null || !evoPts.length) return;
+    const x = c.scales.x.getPixelForValue(Math.min(i, evoPts.length - 1));
+    const { top, bottom } = c.chartArea;
+    const ctx = c.ctx;
+    ctx.save();
+    ctx.strokeStyle = '#ffffff'; ctx.globalAlpha = .75; ctx.lineWidth = 1.5; ctx.setLineDash([5, 5]);
+    ctx.beginPath(); ctx.moveTo(x, top); ctx.lineTo(x, bottom); ctx.stroke();
+    ctx.restore();
+  },
+};
+
+function evoFmtWhen(iso) {
+  const t = new Date(iso.endsWith('Z') ? iso : iso + 'Z');
+  return t.toLocaleString('es-PE', { weekday: 'long', hour: '2-digit', minute: '2-digit' });
+}
+
+function updateEvoCard(i) {
+  const p = evoPts[i];
+  if (!p) return;
+  window._evoIdx = i;
+  const k = p.keiko.media, s = p.sanchez.media;
+  const esAhora = i === evoPts.length - 1;
+  $('evoWhen').textContent = esAhora ? `Ahora mismo (${evoFmtWhen(p.t)})` : evoFmtWhen(p.t);
+  $('evoK').textContent = `Keiko ${k.toFixed(1)}%`;
+  $('evoS').textContent = `Sánchez ${s.toFixed(1)}%`;
+  const lider = k >= s ? 'Keiko' : 'Sánchez';
+  let frase;
+  if (Math.abs(k - s) < 0.3) frase = esAhora ? 'El pronóstico está prácticamente empatado.' : 'En ese momento estaba prácticamente empatado.';
+  else frase = esAhora ? `Hoy el pronóstico favorece a ${lider}.` : `En ese momento el pronóstico favorecía a ${lider}.`;
+  $('evoVerdict').textContent = frase;
+  if (chart) chart.update('none');
+}
+
+function evoSummaryText() {
+  if (evoPts.length < 2) return 'Aún hay pocos datos para mostrar la evolución.';
+  const lider = (p) => (p.keiko.media >= 50 ? 'Keiko' : 'Sánchez');
+  const primero = lider(evoPts[0]), ultimo = lider(evoPts[evoPts.length - 1]);
+  let cruce = -1;
+  for (let i = 1; i < evoPts.length; i++) {
+    if (lider(evoPts[i - 1]) !== lider(evoPts[i])) cruce = i;
+  }
+  if (cruce === -1) return `En resumen: ${ultimo} ha ido adelante en el pronóstico durante todo el conteo.`;
+  return `En resumen: al inicio del conteo iba adelante ${primero}. Desde el ${evoFmtWhen(evoPts[cruce].t)}, el pronóstico favorece a ${ultimo}.`;
+}
+
 function renderChart(history) {
   if (!history || !history.length) return;
   const pts = history.slice(-200);
@@ -169,7 +222,16 @@ function renderChart(history) {
     },
   };
   if (chart) { chart.data.labels = labels; chart.data.datasets = ds; chart.update(); }
-  else chart = new Chart($('chart'), { type: 'line', data: { labels, datasets: ds }, options: opts });
+  else chart = new Chart($('chart'), { type: 'line', data: { labels, datasets: ds }, options: opts, plugins: [evoMarker] });
+
+  // sincronizar el slider de tiempo: si estaba en "ahora", se queda en "ahora"
+  const slider = $('evoSlider');
+  const estabaAlFinal = +slider.value >= +slider.max;
+  slider.max = pts.length - 1;
+  if (estabaAlFinal) slider.value = pts.length - 1;
+  evoPts = pts;
+  $('evoSummary').textContent = evoSummaryText();
+  updateEvoCard(+slider.value);
 }
 
 function renderTable(d) {
@@ -236,6 +298,7 @@ async function tick() {
 }
 
 // interacciones
+$('evoSlider').addEventListener('input', (e) => updateEvoCard(+e.target.value));
 $('filtro').addEventListener('input', drawTable);
 document.querySelectorAll('th[data-k]').forEach((th) => th.addEventListener('click', () => {
   const k = th.dataset.k;

@@ -99,11 +99,25 @@
   <!-- 4 · EVOLUCIÓN -->
   <section class="card" id="s4">
     <div class="sec-head"><span class="sec-num">4</span><h2>¿Cómo ha cambiado el pronóstico?</h2></div>
-    <p class="hint">Cada línea es el resultado final estimado de un candidato, hora a hora.
+    <p class="hint" id="evoSummary">—</p>
+    <div class="evo-card" id="evoCard">
+      <div class="evo-when" id="evoWhen">—</div>
+      <div class="evo-nums">
+        <span class="evo-k" id="evoK">—</span>
+        <span class="evo-vs">·</span>
+        <span class="evo-s" id="evoS">—</span>
+      </div>
+      <div class="evo-verdict" id="evoVerdict">—</div>
+    </div>
+    <input type="range" id="evoSlider" min="0" max="0" value="0" step="1" aria-label="Momento del conteo" />
+    <div class="evo-slider-labels"><span>← inicio del conteo</span><span>ahora →</span></div>
+    <p class="hint" style="margin-top:8px">Arrastra el círculo blanco para volver atrás en el tiempo.
+       La línea punteada blanca del gráfico marca el momento que elegiste.</p>
+    <div class="chartwrap"><canvas id="chart"></canvas></div>
+    <p class="hint" style="margin-top:8px">
        <span style="color:var(--keiko)">■ Keiko</span> ·
        <span style="color:var(--sanchez)">■ Sánchez</span> ·
-       la línea punteada gris es el 50% (la meta para ganar).</p>
-    <div class="chartwrap"><canvas id="chart"></canvas></div>
+       la línea gris del medio es el 50%: quien está por encima, va ganando.</p>
   </section>
 
   <!-- 5 · TABLA -->
