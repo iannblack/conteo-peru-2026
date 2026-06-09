@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-08T23:57:11Z",
+  "timestamp_utc": "2026-06-09T00:02:04Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 94.935,
-    "actas_contabilizadas": 88067,
+    "actas_pct": 94.936,
+    "actas_contabilizadas": 88068,
     "actas_total": 92766,
-    "votos_emitidos": 18934667,
-    "votos_validos": 17694430,
-    "participacion": 69.293,
+    "votos_emitidos": 18934871,
+    "votos_validos": 17694620,
+    "participacion": 69.294,
     "votos": {
-      "keiko": 8829215,
-      "sanchez": 8865215
+      "keiko": 8829292,
+      "sanchez": 8865328
     }
   },
   "regiones": [
@@ -31,9 +31,9 @@
       "ubigeo": 10000,
       "nombre": "Amazonas",
       "exterior": false,
-      "actas_contabilizadas": 1209,
+      "actas_contabilizadas": 1210,
       "actas_total": 1278,
-      "pct_actas": 94.6,
+      "pct_actas": 94.68,
       "votos": {
         "keiko": 68252,
         "sanchez": 119440
@@ -396,8 +396,8 @@
     "sigma_sistematico_pts": 0.304,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
-      "keiko": 0.536,
-      "sanchez": 0.464
+      "keiko": 0.5362,
+      "sanchez": 0.4638
     },
     "share_actual_2via": {
       "keiko": 49.898,
@@ -423,7 +423,7 @@
         "ubigeo": 10000,
         "nombre": "Amazonas",
         "exterior": false,
-        "pct_actas": 94.6,
+        "pct_actas": 94.68,
         "lider": "sanchez",
         "margen": 27.27,
         "share_keiko_actual": 36.36,
