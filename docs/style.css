@@ -110,28 +110,14 @@ main{padding:20px 0 60px}
 .ext-card .hint{margin:14px 0 0}
 @media(max-width:720px){ .ext-cont{grid-template-columns:70px 1fr 160px} .ext-cont-meta{font-size:11px} }
 
-/* sección 4: la historia del conteo (línea de tiempo en palabras) */
-.tline{margin:10px 0 16px; position:relative; padding-left:6px}
-.tl-item{display:flex; gap:14px; align-items:flex-start; position:relative; padding-bottom:22px}
-.tl-item::before{content:''; position:absolute; left:8px; top:20px; bottom:-2px;
-  width:2px; background:var(--line)}
-.tl-item:last-child{padding-bottom:0}
-.tl-item:last-child::before{display:none}
-.tl-dot{width:18px; height:18px; border-radius:50%; flex:none; margin-top:2px;
-  border:3px solid var(--bg); box-shadow:0 0 0 2px var(--line); z-index:1}
-.tl-when{font-size:13px; color:var(--muted)}
-.tl-when::first-letter{text-transform:uppercase}
-.tl-what{font-size:16.5px; line-height:1.45; margin-top:2px}
-.tl-now{background:var(--panel2); border:1px solid var(--line); border-radius:12px;
-  padding:12px 14px 12px 12px; margin-left:-12px}
-.tl-now .tl-when{font-weight:700; color:var(--ink)}
-.tl-now .tl-what{font-size:18px}
-.evo-toggle{background:var(--panel2); border:1px solid var(--line); color:var(--muted);
-  border-radius:10px; padding:9px 16px; font-size:13.5px; cursor:pointer; width:100%}
-.evo-toggle:hover{color:var(--ink); border-color:#3a4350}
-#evoDetail{margin-top:14px}
-
-.chartwrap{position:relative; height:220px}
+/* sección 4: qué falta para conocer al ganador */
+.falta-big{font-size:19px; font-weight:650; margin:8px 0 8px; line-height:1.45}
+.falta-list{display:flex; flex-direction:column; gap:15px; margin:12px 0 4px}
+.fl-top{display:flex; justify-content:space-between; align-items:baseline; gap:10px;
+  font-size:14.5px; margin-bottom:5px; flex-wrap:wrap}
+.fl-bar{height:11px; border-radius:6px; background:var(--panel2); overflow:hidden}
+.fl-bar i{display:block; height:100%; border-radius:6px; transition:width .6s cubic-bezier(.4,0,.2,1)}
+.fl-quien{font-size:13px; color:var(--muted); margin-top:4px}
 .grid2{display:grid; grid-template-columns:1fr 1fr; gap:14px}
 .grid2 .card{margin:0}
 

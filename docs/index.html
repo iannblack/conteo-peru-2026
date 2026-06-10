@@ -97,20 +97,14 @@
     <p class="hint" id="extNote">—</p>
   </section>
 
-  <!-- 4 · LA HISTORIA DEL CONTEO -->
+  <!-- 4 · QUÉ FALTA -->
   <section class="card" id="s4">
-    <div class="sec-head"><span class="sec-num">4</span><h2>La historia del pronóstico</h2></div>
-    <p class="hint">Qué decía nuestro pronóstico en cada momento. Ojo: el pronóstico estima el
-       <strong>resultado final</strong>, no quién va adelante en los votos contados.</p>
-    <div class="tline" id="tline"></div>
-    <button class="evo-toggle" id="evoToggle" aria-expanded="false">Ver el gráfico detallado ▾</button>
-    <div id="evoDetail" hidden>
-      <div class="chartwrap"><canvas id="chart"></canvas></div>
-      <p class="hint" style="margin-top:8px">
-         <span style="color:var(--keiko)">■ Keiko</span> ·
-         <span style="color:var(--sanchez)">■ Sánchez</span> ·
-         la línea gris del medio es el 50%: quien está por encima, va ganando.</p>
-    </div>
+    <div class="sec-head"><span class="sec-num">4</span><h2>¿Qué falta para conocer al ganador?</h2></div>
+    <div class="falta-big" id="faltaBig">—</div>
+    <p class="hint" id="faltaVerdict">—</p>
+    <p class="hint" style="margin-bottom:.5em"><strong>¿Y dónde están esos votos que faltan?</strong>
+       Estos son los lugares con más actas sin contar:</p>
+    <div class="falta-list" id="faltaList"></div>
   </section>
 
   <!-- 5 · TABLA -->
@@ -162,7 +156,6 @@
   </footer>
 </main>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

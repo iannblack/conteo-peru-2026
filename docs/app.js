@@ -4,7 +4,7 @@
 
 const POLL_MS = 60_000;
 const KEIKO = '#f5871f', SANCHEZ = '#3b8ee0';
-let chart = null, lastRegions = [], sortKey = 'nombre', sortDir = 1, geo = null;
+let lastRegions = [], sortKey = 'nombre', sortDir = 1, geo = null;
 
 const $ = (id) => document.getElementById(id);
 const pct = (x, d = 1) => (x == null ? '—' : Number(x).toFixed(d) + '%');
@@ -150,122 +150,72 @@ function renderProb(d) {
     + `<span class="muted">(Keiko podría terminar entre ${pct(proj.keiko.lo)} y ${pct(proj.keiko.hi)}).</span>`;
 }
 
-// ---- sección 4: la historia del conteo, en palabras ----------------------
-// Una línea de tiempo de momentos clave (inicio, cambios de líder, ahora),
-// escrita como la contaría un noticiero. Nada que manipular ni interpretar.
+// ---- sección 4: qué falta para conocer al ganador -------------------------
+// La pregunta del momento: cuántos votos faltan, DÓNDE están, y si alcanzan
+// para voltear el resultado. Todo en cifras simples y palabras.
 
-function horaAmigable(iso) {
-  const t = new Date(iso.endsWith('Z') ? iso : iso + 'Z');
-  const dia = t.toLocaleDateString('es-PE', { weekday: 'long' });
-  let h = t.getHours(), m = t.getMinutes();
-  let tramo;
-  if (h < 6) tramo = 'de la madrugada';
-  else if (h < 12) tramo = 'de la mañana';
-  else if (h === 12 && m === 0) return `${dia} al mediodía`;
-  else if (h < 19) tramo = 'de la tarde';
-  else tramo = 'de la noche';
-  const h12 = h % 12 === 0 ? 12 : h % 12;
-  return `${dia} a las ${h12}:${String(m).padStart(2, '0')} ${tramo}`;
-}
-
-function liderDe(p) { return p.keiko.media >= 50 ? 'keiko' : 'sanchez'; }
 function nombreDe(l) { return l === 'keiko' ? 'Keiko' : 'Sánchez'; }
 function colorDe(l) { return l === 'keiko' ? KEIKO : SANCHEZ; }
+const miles = (x) => (Math.abs(x) >= 10000 ? `${nf.format(Math.round(Math.abs(x) / 1000))} mil` : nf.format(Math.abs(x)));
 
-function renderTimeline(pts) {
-  if (!pts || pts.length < 1) return;
-  // hitos: inicio + cambios de líder SOSTENIDOS (3+ puntos seguidos) + ahora
-  const hitos = [{ tipo: 'inicio', i: 0 }];
-  let cur = liderDe(pts[0]);
-  for (let i = 1; i < pts.length; i++) {
-    const l = liderDe(pts[i]);
-    if (l !== cur) {
-      const fin = Math.min(i + 3, pts.length);
-      let sostenido = true;
-      for (let j = i; j < fin; j++) if (liderDe(pts[j]) !== l) { sostenido = false; break; }
-      if (sostenido) { hitos.push({ tipo: 'cambio', i }); cur = l; }
-    }
+function renderFalta(d) {
+  const nac = d.nacional;
+  const vpa = d.proyeccion.votos_por_acta_nacional || 200;
+  const actasPend = Math.max(0, nac.actas_total - nac.actas_contabilizadas);
+  const votosPend = Math.round(actasPend * vpa);
+  const v = nac.votos;
+  const diff = Math.abs(v.keiko - v.sanchez);
+  const liderC = v.keiko >= v.sanchez ? 'keiko' : 'sanchez';
+
+  $('faltaBig').innerHTML = `Faltan por contar <b>${nf.format(actasPend)}</b> actas — `
+    + `unos <b>${miles(votosPend)} votos</b>.`;
+
+  let verdict;
+  if (votosPend > diff * 2) {
+    verdict = `La ventaja de ${nombreDe(liderC)} en los votos contados es de apenas `
+      + `<strong>${miles(diff)} votos</strong>, y falta mucho más que eso por contar: `
+      + `<strong>la elección todavía puede ir para cualquiera de los dos.</strong>`;
+  } else if (votosPend > diff) {
+    verdict = `La ventaja de ${nombreDe(liderC)} es de ${miles(diff)} votos y queda poco más que eso `
+      + `por contar: <strong>todavía podría voltearse, pero cada vez es más difícil.</strong>`;
+  } else {
+    verdict = `La ventaja de ${nombreDe(liderC)} (${miles(diff)} votos) ya es mayor que todo lo que `
+      + `falta por contar (${miles(votosPend)}): <strong>el resultado está prácticamente definido.</strong>`;
   }
-  const cambios = hitos.filter((h) => h.tipo === 'cambio').slice(-3); // sin ruido infinito
-  const lista = [hitos[0], ...cambios, { tipo: 'ahora', i: pts.length - 1 }];
+  $('faltaVerdict').innerHTML = verdict;
 
-  const cercania = (p) => {
-    const d = Math.abs(p.keiko.media - p.sanchez.media);
-    if (d < 0.4) return 'están casi empatados';
-    if (d < 1.5) return 'por poco';
-    return 'con ventaja clara';
-  };
+  // dónde está lo pendiente: extranjero como un bloque + departamentos
+  const ext = d.regiones.filter((r) => r.exterior);
+  const extPend = ext.reduce((a, r) => a + (r.actas_total - r.actas_contabilizadas), 0);
+  const extTot = ext.reduce((a, r) => a + r.actas_total, 0);
+  const extK = ext.reduce((a, r) => a + r.votos.keiko, 0);
+  const extS = ext.reduce((a, r) => a + r.votos.sanchez, 0);
+  const items = d.regiones.filter((r) => !r.exterior).map((r) => ({
+    nombre: r.nombre,
+    pend: r.actas_total - r.actas_contabilizadas,
+    pctPend: Math.max(0, 100 - r.pct_actas),
+    k: r.votos.keiko, s: r.votos.sanchez,
+  }));
+  if (extPend > 0) {
+    items.push({ nombre: 'El extranjero', pend: extPend,
+      pctPend: extTot ? (100 * extPend) / extTot : 0, k: extK, s: extS });
+  }
+  const top = items.filter((i) => i.pend > 0).sort((a, b) => b.pend - a.pend).slice(0, 5);
+  const maxPend = top[0]?.pend || 1;
 
-  $('tline').innerHTML = lista.map((h) => {
-    const p = pts[h.i];
-    const l = liderDe(p);
-    const nom = nombreDe(l), col = colorDe(l);
-    let cuando, que;
-    if (h.tipo === 'inicio') {
-      cuando = `${horaAmigable(p.t)} — empezó el conteo`;
-      que = `El pronóstico decía: ganaría <b style="color:${col}">${nom}</b> <span class="muted">(${cercania(p)})</span>`;
-    } else if (h.tipo === 'cambio') {
-      cuando = horaAmigable(p.t);
-      que = `<b>¡Cambio!</b> El pronóstico pasó a favorecer a <b style="color:${col}">${nom}</b>`;
-    } else {
-      // AHORA: separar las dos verdades para no contradecir lo que se ve en ONPE
-      cuando = `AHORA (${horaAmigable(p.t)})`;
-      que = `Pronóstico del final: ganaría <b style="color:${col}">${nom}</b> <span class="muted">(${cercania(p)})</span>`;
-      const v = window._latest?.nacional?.votos;
-      if (v) {
-        const cl = v.keiko >= v.sanchez ? 'keiko' : 'sanchez';
-        const cn = nombreDe(cl), cc = colorDe(cl);
-        const cpct = (100 * Math.max(v.keiko, v.sanchez) / (v.keiko + v.sanchez)).toFixed(1);
-        que = `En votos contados va adelante <b style="color:${cc}">${cn}</b> (${cpct}%).<br>`
-          + `Pronóstico del final: ganaría <b style="color:${col}">${nom}</b> <span class="muted">(${cercania(p)})</span>`;
-      }
-    }
-    return `<div class="tl-item ${h.tipo === 'ahora' ? 'tl-now' : ''}">
-      <span class="tl-dot" style="background:${col}"></span>
-      <div class="tl-body"><div class="tl-when">${cuando}</div><div class="tl-what">${que}</div></div>
+  $('faltaList').innerHTML = top.map((i) => {
+    const n = i.k + i.s;
+    const l = i.k >= i.s ? 'keiko' : 'sanchez';
+    const quien = n
+      ? `ahí viene ganando <b style="color:${colorDe(l)}">${nombreDe(l)}</b> (${pct((100 * Math.max(i.k, i.s)) / n, 0)})`
+      : `<span class="muted">aún no se sabe hacia dónde se inclina</span>`;
+    return `<div class="fl-row">
+      <div class="fl-top"><b>${i.nombre}</b>
+        <span class="muted">faltan ${nf.format(i.pend)} actas (${i.pctPend.toFixed(0)}% sin contar)</span></div>
+      <div class="fl-bar"><i style="width:${((100 * i.pend) / maxPend).toFixed(1)}%; background:${n ? colorDe(l) : '#525c6a'}"></i></div>
+      <div class="fl-quien">${quien}</div>
     </div>`;
   }).join('');
-}
-
-function renderChart(history) {
-  if (!history || !history.length) return;
-  const pts = history.slice(-200);
-  const labels = pts.map((p) => {
-    const t = new Date(p.t.endsWith('Z') ? p.t : p.t + 'Z');
-    // con día incluido: el conteo cruza la medianoche y "01:12 a.m." solo confunde
-    return t.toLocaleString('es-PE', { weekday: 'short', hour: '2-digit', minute: '2-digit' });
-  });
-  // Dos líneas (una por candidato) + línea punteada del 50%: lo que cualquiera
-  // entiende de un vistazo. La sombra naranja tenue es el rango posible de Keiko.
-  const kHi = pts.map((p) => p.keiko.hi), kLo = pts.map((p) => p.keiko.lo);
-  const kMed = pts.map((p) => p.keiko.media), sMed = pts.map((p) => p.sanchez.media);
-  const meta50 = pts.map(() => 50);
-  const ds = [
-    { label: '_hi', data: kHi, borderColor: 'transparent', backgroundColor: 'rgba(245,135,31,.10)', fill: '+1', pointRadius: 0, tension: .3 },
-    { label: '_lo', data: kLo, borderColor: 'transparent', backgroundColor: 'transparent', fill: false, pointRadius: 0, tension: .3 },
-    { label: 'Keiko', data: kMed, borderColor: KEIKO, borderWidth: 2.5, fill: false, pointRadius: 0, tension: .3 },
-    { label: 'Sánchez', data: sMed, borderColor: SANCHEZ, borderWidth: 2.5, fill: false, pointRadius: 0, tension: .3 },
-    { label: '_meta', data: meta50, borderColor: '#7d8794', borderWidth: 1, borderDash: [6, 6], fill: false, pointRadius: 0 },
-  ];
-  const opts = {
-    responsive: true, maintainAspectRatio: false, animation: false,
-    interaction: { mode: 'index', intersect: false },
-    scales: {
-      y: { grid: { color: '#262c36' }, ticks: { color: '#8b95a4', callback: (v) => v + '%' },
-           suggestedMin: 47, suggestedMax: 53 },
-      x: { grid: { display: false }, ticks: { color: '#8b95a4', maxTicksLimit: 7 } },
-    },
-    plugins: {
-      legend: { display: false },
-      annotation: false,
-      tooltip: { filter: (i) => !i.dataset.label.startsWith('_'),
-        callbacks: { label: (i) => `${i.dataset.label}: ${i.parsed.y.toFixed(2)}%` } },
-    },
-  };
-  if (chart) { chart.data.labels = labels; chart.data.datasets = ds; chart.update(); }
-  else chart = new Chart($('chart'), { type: 'line', data: { labels, datasets: ds }, options: opts });
-
-  renderTimeline(pts);
 }
 
 function renderTable(d) {
@@ -313,15 +263,12 @@ function renderUpdated(d, stale) {
 
 async function tick() {
   try {
-    const [latest, history] = await Promise.all([
-      getJSON('data/latest.json'),
-      getJSON('data/history.json').catch(() => []),
-    ]);
+    const latest = await getJSON('data/latest.json');
     const ageMin = (Date.now() - new Date(latest.timestamp_utc.replace(/Z?$/, 'Z')).getTime()) / 60000;
     window._latest = latest;
     renderHeadline(latest); renderBar(latest); renderProb(latest);
-    renderExterior(latest);
-    renderTable(latest); renderChart(history); renderUpdated(latest, ageMin > 20);
+    renderExterior(latest); renderFalta(latest);
+    renderTable(latest); renderUpdated(latest, ageMin > 20);
     if (geo) renderMap(latest);
     if (worldGeo) renderWorldMap(latest);
   } catch (e) {
@@ -332,14 +279,6 @@ async function tick() {
 }
 
 // interacciones
-$('evoToggle').addEventListener('click', () => {
-  const det = $('evoDetail');
-  const abrir = det.hidden;
-  det.hidden = !abrir;
-  $('evoToggle').setAttribute('aria-expanded', String(abrir));
-  $('evoToggle').textContent = abrir ? 'Ocultar el gráfico detallado ▴' : 'Ver el gráfico detallado ▾';
-  if (abrir && chart) chart.resize();  // el canvas estaba oculto: recalcular tamaño
-});
 $('filtro').addEventListener('input', drawTable);
 document.querySelectorAll('th[data-k]').forEach((th) => th.addEventListener('click', () => {
   const k = th.dataset.k;
