@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-10T16:28:33Z",
+  "timestamp_utc": "2026-06-10T16:33:53Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 97.804,
-    "actas_contabilizadas": 90729,
+    "actas_pct": 97.806,
+    "actas_contabilizadas": 90731,
     "actas_total": 92766,
-    "votos_emitidos": 19276628,
-    "votos_validos": 18017177,
-    "participacion": 70.545,
+    "votos_emitidos": 19276938,
+    "votos_validos": 18017470,
+    "participacion": 70.546,
     "votos": {
-      "keiko": 9006152,
-      "sanchez": 9011025
+      "keiko": 9006326,
+      "sanchez": 9011144
     }
   },
   "regiones": [
@@ -307,9 +307,9 @@
       "ubigeo": 240000,
       "nombre": "Callao",
       "exterior": false,
-      "actas_contabilizadas": 2830,
+      "actas_contabilizadas": 2831,
       "actas_total": 2898,
-      "pct_actas": 97.65,
+      "pct_actas": 97.69,
       "votos": {
         "sanchez": 206963,
         "keiko": 394631
@@ -343,12 +343,12 @@
       "ubigeo": 920000,
       "nombre": "Exterior – América",
       "exterior": true,
-      "actas_contabilizadas": 1268,
+      "actas_contabilizadas": 1269,
       "actas_total": 1570,
-      "pct_actas": 80.76,
+      "pct_actas": 80.83,
       "votos": {
-        "sanchez": 46058,
-        "keiko": 96408
+        "sanchez": 46067,
+        "keiko": 96459
       }
     },
     {
@@ -543,10 +543,10 @@
       "ubigeo": 921300,
       "iso3": "USA",
       "nombre": "Estados Unidos",
-      "actas_contabilizadas": 717,
+      "actas_contabilizadas": 718,
       "votos": {
-        "sanchez": 13598,
-        "keiko": 44389
+        "sanchez": 13607,
+        "keiko": 44440
       }
     },
     {
@@ -1094,7 +1094,7 @@
     "metodo": "beta-binomial-pooling-parcial-actas-v1",
     "n_samples": 20000,
     "kappa": 4.0,
-    "frac_faltante": 0.022,
+    "frac_faltante": 0.0219,
     "sigma_sistematico_pts": 0.132,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
@@ -1110,42 +1110,42 @@
         "media": 50.129,
         "lo": 49.863,
         "mediana": 50.128,
-        "hi": 50.394
+        "hi": 50.393
       },
       "sanchez": {
         "media": 49.871,
-        "lo": 49.606,
+        "lo": 49.607,
         "mediana": 49.872,
         "hi": 50.137
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9234807,
-        "lo": 9185753,
-        "mediana": 9234563,
-        "hi": 9283476
+        "media": 9234603,
+        "lo": 9185603,
+        "mediana": 9234357,
+        "hi": 9283233
       },
       "sanchez": {
-        "media": 9187120,
-        "lo": 9138452,
-        "mediana": 9187364,
-        "hi": 9236174
+        "media": 9186980,
+        "lo": 9138349,
+        "mediana": 9187226,
+        "hi": 9235980
       },
       "total_2via": {
-        "media": 18421927,
-        "lo": 18421927,
-        "mediana": 18421927,
-        "hi": 18421927
+        "media": 18421583,
+        "lo": 18421583,
+        "mediana": 18421583,
+        "hi": 18421583
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 47199,
-      "media": 47687,
-      "lo": -50421,
-      "hi": 145024,
-      "abs_mediana": 47199
+      "mediana": 47131,
+      "media": 47623,
+      "lo": -50377,
+      "hi": 144884,
+      "abs_mediana": 47131
     },
     "votos_por_acta_nacional": 198.6,
     "por_region": [
@@ -1475,7 +1475,7 @@
         "ubigeo": 240000,
         "nombre": "Callao",
         "exterior": false,
-        "pct_actas": 97.65,
+        "pct_actas": 97.69,
         "lider": "keiko",
         "margen": 31.2,
         "share_keiko_actual": 65.6,
@@ -1517,14 +1517,14 @@
         "ubigeo": 920000,
         "nombre": "Exterior – América",
         "exterior": true,
-        "pct_actas": 80.76,
+        "pct_actas": 80.83,
         "lider": "keiko",
-        "margen": 35.34,
-        "share_keiko_actual": 67.67,
-        "share_keiko_proyectado": 67.61,
+        "margen": 35.36,
+        "share_keiko_actual": 67.68,
+        "share_keiko_proyectado": 67.62,
         "votos": {
-          "sanchez": 46058,
-          "keiko": 96408
+          "sanchez": 46067,
+          "keiko": 96459
         }
       },
       {
