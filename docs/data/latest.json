@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-10T02:15:40Z",
+  "timestamp_utc": "2026-06-10T02:38:06Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 96.441,
-    "actas_contabilizadas": 89464,
+    "actas_pct": 96.512,
+    "actas_contabilizadas": 89530,
     "actas_total": 92766,
-    "votos_emitidos": 19110199,
-    "votos_validos": 17860774,
-    "participacion": 69.936,
+    "votos_emitidos": 19120671,
+    "votos_validos": 17870707,
+    "participacion": 69.974,
     "votos": {
-      "keiko": 8909906,
-      "sanchez": 8950868
+      "keiko": 8915051,
+      "sanchez": 8955656
     }
   },
   "regiones": [
@@ -367,12 +367,12 @@
       "ubigeo": 940000,
       "nombre": "Exterior – Europa",
       "exterior": true,
-      "actas_contabilizadas": 200,
+      "actas_contabilizadas": 266,
       "actas_total": 839,
-      "pct_actas": 23.84,
+      "pct_actas": 31.7,
       "votos": {
-        "sanchez": 14403,
-        "keiko": 16489
+        "sanchez": 19541,
+        "keiko": 22180
       }
     },
     {
@@ -843,10 +843,10 @@
       "ubigeo": 941700,
       "iso3": "ITA",
       "nombre": "Italia",
-      "actas_contabilizadas": 89,
+      "actas_contabilizadas": 129,
       "votos": {
-        "keiko": 7776,
-        "sanchez": 7869
+        "sanchez": 12997,
+        "keiko": 13458
       }
     },
     {
@@ -867,6 +867,16 @@
       "votos": {
         "sanchez": 71,
         "keiko": 78
+      }
+    },
+    {
+      "ubigeo": 942100,
+      "iso3": "MLT",
+      "nombre": "Malta",
+      "actas_contabilizadas": 1,
+      "votos": {
+        "keiko": 9,
+        "sanchez": 10
       }
     },
     {
@@ -954,58 +964,58 @@
     "metodo": "beta-binomial-pooling-parcial-actas-v1",
     "n_samples": 20000,
     "kappa": 4.0,
-    "frac_faltante": 0.0356,
-    "sigma_sistematico_pts": 0.214,
+    "frac_faltante": 0.0349,
+    "sigma_sistematico_pts": 0.209,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
-      "keiko": 0.6583,
-      "sanchez": 0.3417
+      "keiko": 0.6599,
+      "sanchez": 0.3401
     },
     "share_actual_2via": {
-      "keiko": 49.886,
-      "sanchez": 50.114
+      "keiko": 49.887,
+      "sanchez": 50.113
     },
     "proyeccion_2via_pct": {
       "keiko": {
-        "media": 50.108,
-        "lo": 49.6,
-        "mediana": 50.106,
-        "hi": 50.611
+        "media": 50.106,
+        "lo": 49.615,
+        "mediana": 50.105,
+        "hi": 50.595
       },
       "sanchez": {
-        "media": 49.892,
-        "lo": 49.389,
-        "mediana": 49.894,
-        "hi": 50.4
+        "media": 49.894,
+        "lo": 49.405,
+        "mediana": 49.895,
+        "hi": 50.385
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9282097,
-        "lo": 9188041,
-        "mediana": 9281750,
-        "hi": 9375304
+        "media": 9280613,
+        "lo": 9189634,
+        "mediana": 9280347,
+        "hi": 9371195
       },
       "sanchez": {
-        "media": 9242149,
-        "lo": 9148942,
-        "mediana": 9242497,
-        "hi": 9336205
+        "media": 9241198,
+        "lo": 9150616,
+        "mediana": 9241465,
+        "hi": 9332177
       },
       "total_2via": {
-        "media": 18524246,
-        "lo": 18524246,
-        "mediana": 18524246,
-        "hi": 18524246
+        "media": 18521811,
+        "lo": 18521811,
+        "mediana": 18521811,
+        "hi": 18521811
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 39253,
-      "media": 39948,
-      "lo": -148164,
-      "hi": 226362,
-      "abs_mediana": 39253
+      "mediana": 38882,
+      "media": 39415,
+      "lo": -142544,
+      "hi": 220579,
+      "abs_mediana": 38882
     },
     "votos_por_acta_nacional": 199.7,
     "por_region": [
@@ -1059,7 +1069,7 @@
         "lider": "sanchez",
         "margen": 27.19,
         "share_keiko_actual": 36.41,
-        "share_keiko_proyectado": 36.42,
+        "share_keiko_proyectado": 36.43,
         "votos": {
           "keiko": 332286,
           "sanchez": 580426
@@ -1073,7 +1083,7 @@
         "lider": "sanchez",
         "margen": 58.63,
         "share_keiko_actual": 20.68,
-        "share_keiko_proyectado": 20.74,
+        "share_keiko_proyectado": 20.75,
         "votos": {
           "keiko": 66849,
           "sanchez": 256362
@@ -1171,7 +1181,7 @@
         "lider": "keiko",
         "margen": 15.05,
         "share_keiko_actual": 57.52,
-        "share_keiko_proyectado": 57.52,
+        "share_keiko_proyectado": 57.53,
         "votos": {
           "sanchez": 442801,
           "keiko": 599677
@@ -1269,7 +1279,7 @@
         "lider": "keiko",
         "margen": 13.95,
         "share_keiko_actual": 56.97,
-        "share_keiko_proyectado": 56.97,
+        "share_keiko_proyectado": 56.96,
         "votos": {
           "sanchez": 440425,
           "keiko": 583221
@@ -1283,7 +1293,7 @@
         "lider": "sanchez",
         "margen": 72.84,
         "share_keiko_actual": 13.58,
-        "share_keiko_proyectado": 13.61,
+        "share_keiko_proyectado": 13.62,
         "votos": {
           "keiko": 95674,
           "sanchez": 608930
@@ -1297,7 +1307,7 @@
         "lider": "sanchez",
         "margen": 9.25,
         "share_keiko_actual": 45.38,
-        "share_keiko_proyectado": 45.39,
+        "share_keiko_proyectado": 45.38,
         "votos": {
           "keiko": 218127,
           "sanchez": 262583
@@ -1367,7 +1377,7 @@
         "lider": "keiko",
         "margen": 31.71,
         "share_keiko_actual": 65.85,
-        "share_keiko_proyectado": 58.91,
+        "share_keiko_proyectado": 58.95,
         "votos": {
           "sanchez": 14,
           "keiko": 27
@@ -1395,7 +1405,7 @@
         "lider": "keiko",
         "margen": 32.86,
         "share_keiko_actual": 66.43,
-        "share_keiko_proyectado": 63.01,
+        "share_keiko_proyectado": 63.03,
         "votos": {
           "sanchez": 94,
           "keiko": 186
@@ -1405,14 +1415,14 @@
         "ubigeo": 940000,
         "nombre": "Exterior – Europa",
         "exterior": true,
-        "pct_actas": 23.84,
+        "pct_actas": 31.7,
         "lider": "keiko",
-        "margen": 6.75,
-        "share_keiko_actual": 53.38,
-        "share_keiko_proyectado": 53.3,
+        "margen": 6.33,
+        "share_keiko_actual": 53.16,
+        "share_keiko_proyectado": 53.11,
         "votos": {
-          "sanchez": 14403,
-          "keiko": 16489
+          "sanchez": 19541,
+          "keiko": 22180
         }
       },
       {
