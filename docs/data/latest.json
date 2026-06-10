@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-10T17:32:28Z",
+  "timestamp_utc": "2026-06-10T17:37:49Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 97.822,
-    "actas_contabilizadas": 90746,
+    "actas_pct": 97.824,
+    "actas_contabilizadas": 90747,
     "actas_total": 92766,
-    "votos_emitidos": 19278976,
-    "votos_validos": 18019415,
-    "participacion": 70.553,
+    "votos_emitidos": 19279157,
+    "votos_validos": 18019583,
+    "participacion": 70.554,
     "votos": {
-      "keiko": 9006801,
-      "sanchez": 9012614
+      "keiko": 9006906,
+      "sanchez": 9012677
     }
   },
   "regiones": [
@@ -343,9 +343,9 @@
       "ubigeo": 920000,
       "nombre": "Exterior – América",
       "exterior": true,
-      "actas_contabilizadas": 1270,
+      "actas_contabilizadas": 1271,
       "actas_total": 1570,
-      "pct_actas": 80.89,
+      "pct_actas": 80.96,
       "votos": {
         "sanchez": 46175,
         "keiko": 96677
@@ -1121,31 +1121,31 @@
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9233580,
-        "lo": 9185050,
-        "mediana": 9233316,
-        "hi": 9281803
+        "media": 9233454,
+        "lo": 9184948,
+        "mediana": 9233194,
+        "hi": 9281661
       },
       "sanchez": {
-        "media": 9187118,
-        "lo": 9138895,
-        "mediana": 9187382,
-        "hi": 9235648
+        "media": 9187040,
+        "lo": 9138833,
+        "mediana": 9187301,
+        "hi": 9235547
       },
       "total_2via": {
-        "media": 18420698,
-        "lo": 18420698,
-        "mediana": 18420698,
-        "hi": 18420698
+        "media": 18420495,
+        "lo": 18420495,
+        "mediana": 18420495,
+        "hi": 18420495
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 45933,
-      "media": 46462,
+      "mediana": 45893,
+      "media": 46414,
       "lo": -50599,
-      "hi": 142907,
-      "abs_mediana": 45933
+      "hi": 142828,
+      "abs_mediana": 45893
     },
     "votos_por_acta_nacional": 198.6,
     "por_region": [
@@ -1517,7 +1517,7 @@
         "ubigeo": 920000,
         "nombre": "Exterior – América",
         "exterior": true,
-        "pct_actas": 80.89,
+        "pct_actas": 80.96,
         "lider": "keiko",
         "margen": 35.35,
         "share_keiko_actual": 67.68,
