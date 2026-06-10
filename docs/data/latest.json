@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-10T22:02:14Z",
+  "timestamp_utc": "2026-06-10T22:07:36Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 97.911,
-    "actas_contabilizadas": 90828,
+    "actas_pct": 97.912,
+    "actas_contabilizadas": 90829,
     "actas_total": 92766,
-    "votos_emitidos": 19287100,
-    "votos_validos": 18027089,
+    "votos_emitidos": 19287137,
+    "votos_validos": 18027122,
     "participacion": 70.583,
     "votos": {
-      "keiko": 9008782,
-      "sanchez": 9018307
+      "keiko": 9008785,
+      "sanchez": 9018337
     }
   },
   "regiones": [
@@ -199,12 +199,12 @@
       "ubigeo": 150000,
       "nombre": "Loreto",
       "exterior": false,
-      "actas_contabilizadas": 2645,
+      "actas_contabilizadas": 2646,
       "actas_total": 2697,
-      "pct_actas": 98.07,
+      "pct_actas": 98.11,
       "votos": {
-        "sanchez": 186805,
-        "keiko": 210942
+        "sanchez": 186959,
+        "keiko": 210955
       }
     },
     {
@@ -1098,54 +1098,54 @@
     "sigma_sistematico_pts": 0.125,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
-      "keiko": 0.8401,
-      "sanchez": 0.1599
+      "keiko": 0.8394,
+      "sanchez": 0.1606
     },
     "share_actual_2via": {
-      "keiko": 49.974,
-      "sanchez": 50.026
+      "keiko": 49.973,
+      "sanchez": 50.027
     },
     "proyeccion_2via_pct": {
       "keiko": {
         "media": 50.126,
         "lo": 49.874,
-        "mediana": 50.125,
-        "hi": 50.377
+        "mediana": 50.124,
+        "hi": 50.376
       },
       "sanchez": {
         "media": 49.874,
-        "lo": 49.623,
-        "mediana": 49.875,
+        "lo": 49.624,
+        "mediana": 49.876,
         "hi": 50.126
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9229107,
-        "lo": 9182671,
-        "mediana": 9228872,
-        "hi": 9275290
+        "media": 9229014,
+        "lo": 9182621,
+        "mediana": 9228777,
+        "hi": 9275171
       },
       "sanchez": {
-        "media": 9182660,
-        "lo": 9136477,
-        "mediana": 9182895,
-        "hi": 9229096
+        "media": 9182721,
+        "lo": 9136564,
+        "mediana": 9182958,
+        "hi": 9229114
       },
       "total_2via": {
-        "media": 18411767,
-        "lo": 18411767,
-        "mediana": 18411767,
-        "hi": 18411767
+        "media": 18411735,
+        "lo": 18411735,
+        "mediana": 18411735,
+        "hi": 18411735
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 45977,
-      "media": 46447,
-      "lo": -46425,
-      "hi": 138813,
-      "abs_mediana": 45977
+      "mediana": 45818,
+      "media": 46294,
+      "lo": -46494,
+      "hi": 138607,
+      "abs_mediana": 45818
     },
     "votos_por_acta_nacional": 198.5,
     "por_region": [
@@ -1349,14 +1349,14 @@
         "ubigeo": 150000,
         "nombre": "Loreto",
         "exterior": false,
-        "pct_actas": 98.07,
+        "pct_actas": 98.11,
         "lider": "keiko",
-        "margen": 6.07,
-        "share_keiko_actual": 53.03,
-        "share_keiko_proyectado": 53.02,
+        "margen": 6.03,
+        "share_keiko_actual": 53.02,
+        "share_keiko_proyectado": 53.0,
         "votos": {
-          "sanchez": 186805,
-          "keiko": 210942
+          "sanchez": 186959,
+          "keiko": 210955
         }
       },
       {
