@@ -100,13 +100,30 @@ function renderProb(d) {
   const name = g === 'keiko' ? 'Keiko Fujimori' : 'Roberto Sánchez';
   const gcol = g === 'keiko' ? KEIKO : SANCHEZ;
   const p = Math.max(pk, ps);
+  // SIEMPRE en condicional ("ganaría"): es un pronóstico del final, no el conteo.
   let frase;
-  if (p >= 95) frase = 'es casi segura ganadora';
-  else if (p >= 75) frase = 'es la clara favorita';
-  else if (p >= 60) frase = 'lleva la delantera, pero aún no es seguro';
-  else frase = 'va apenas adelante — esto sigue siendo un empate';
-  if (g === 'sanchez') frase = frase.replace('segura ganadora', 'seguro ganador').replace('la clara favorita', 'el claro favorito');
+  if (p >= 95) frase = 'ganaría la elección, con casi total seguridad';
+  else if (p >= 75) frase = 'ganaría la elección cuando se termine de contar — es quien tiene más opciones';
+  else if (p >= 60) frase = 'terminaría ganando cuando se cuente todo, aunque aún no es seguro';
+  else frase = 'tiene una ligerísima ventaja para el final — sigue siendo un empate';
   $('winner').innerHTML = `<b style="color:${gcol}">${name}</b> ${frase}.`;
+
+  // Cuando el pronóstico contradice el conteo visible en ONPE, hay que explicarlo
+  // o parece mentira ("en ONPE va ganando el otro").
+  const v = d.nacional.votos;
+  const curLider = v.keiko >= v.sanchez ? 'keiko' : 'sanchez';
+  const ctr = $('contraste');
+  if (curLider !== g) {
+    const curName = curLider === 'keiko' ? 'Keiko' : 'Sánchez';
+    const curCol = curLider === 'keiko' ? KEIKO : SANCHEZ;
+    const gShort = g === 'keiko' ? 'Keiko' : 'Sánchez';
+    ctr.innerHTML = `¿Por qué, si en ONPE va adelante <b style="color:${curCol}">${curName}</b>? `
+      + `Porque los votos que <b>faltan por contar</b> — sobre todo los del extranjero — `
+      + `vienen favoreciendo a <b style="color:${gcol}">${gShort}</b>, y eso voltearía el resultado al final.`;
+    ctr.hidden = false;
+  } else {
+    ctr.hidden = true;
+  }
 
   $('probHint').textContent = `¿Cómo leer esto? Simulamos la elección ${nf.format(d.proyeccion.n_samples)} veces `
     + `con los datos de hoy: ${g === 'keiko' ? 'Keiko' : 'Sánchez'} gana en ${p} de cada 100 escenarios.`;
@@ -186,13 +203,22 @@ function renderTimeline(pts) {
     let cuando, que;
     if (h.tipo === 'inicio') {
       cuando = `${horaAmigable(p.t)} — empezó el conteo`;
-      que = `Iba adelante <b style="color:${col}">${nom}</b> <span class="muted">(${cercania(p)})</span>`;
+      que = `El pronóstico decía: ganaría <b style="color:${col}">${nom}</b> <span class="muted">(${cercania(p)})</span>`;
     } else if (h.tipo === 'cambio') {
       cuando = horaAmigable(p.t);
-      que = `<b>¡Cambio!</b> <b style="color:${col}">${nom}</b> pasó adelante`;
+      que = `<b>¡Cambio!</b> El pronóstico pasó a favorecer a <b style="color:${col}">${nom}</b>`;
     } else {
+      // AHORA: separar las dos verdades para no contradecir lo que se ve en ONPE
       cuando = `AHORA (${horaAmigable(p.t)})`;
-      que = `Va ganando <b style="color:${col}">${nom}</b> <span class="muted">(${cercania(p)})</span>`;
+      que = `Pronóstico del final: ganaría <b style="color:${col}">${nom}</b> <span class="muted">(${cercania(p)})</span>`;
+      const v = window._latest?.nacional?.votos;
+      if (v) {
+        const cl = v.keiko >= v.sanchez ? 'keiko' : 'sanchez';
+        const cn = nombreDe(cl), cc = colorDe(cl);
+        const cpct = (100 * Math.max(v.keiko, v.sanchez) / (v.keiko + v.sanchez)).toFixed(1);
+        que = `En votos contados va adelante <b style="color:${cc}">${cn}</b> (${cpct}%).<br>`
+          + `Pronóstico del final: ganaría <b style="color:${col}">${nom}</b> <span class="muted">(${cercania(p)})</span>`;
+      }
     }
     return `<div class="tl-item ${h.tipo === 'ahora' ? 'tl-now' : ''}">
       <span class="tl-dot" style="background:${col}"></span>
