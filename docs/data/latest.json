@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-10T18:47:07Z",
+  "timestamp_utc": "2026-06-10T18:52:26Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -107,8 +107,8 @@
       "actas_total": 3983,
       "pct_actas": 97.67,
       "votos": {
-        "keiko": 163777,
-        "sanchez": 585901
+        "keiko": 163792,
+        "sanchez": 585959
       }
     },
     {
@@ -1098,8 +1098,8 @@
     "sigma_sistematico_pts": 0.13,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
-      "keiko": 0.8283,
-      "sanchez": 0.1717
+      "keiko": 0.8282,
+      "sanchez": 0.1718
     },
     "share_actual_2via": {
       "keiko": 49.983,
@@ -1121,31 +1121,31 @@
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9233145,
-        "lo": 9184710,
-        "mediana": 9232900,
-        "hi": 9281276
+        "media": 9233160,
+        "lo": 9184725,
+        "mediana": 9232915,
+        "hi": 9281291
       },
       "sanchez": {
-        "media": 9186960,
-        "lo": 9138829,
-        "mediana": 9187205,
-        "hi": 9235395
+        "media": 9187019,
+        "lo": 9138888,
+        "mediana": 9187264,
+        "hi": 9235454
       },
       "total_2via": {
-        "media": 18420105,
-        "lo": 18420105,
-        "mediana": 18420105,
-        "hi": 18420105
+        "media": 18420179,
+        "lo": 18420179,
+        "mediana": 18420179,
+        "hi": 18420179
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 45695,
-      "media": 46185,
-      "lo": -50685,
-      "hi": 142447,
-      "abs_mediana": 45695
+      "mediana": 45651,
+      "media": 46141,
+      "lo": -50729,
+      "hi": 142403,
+      "abs_mediana": 45651
     },
     "votos_por_acta_nacional": 198.6,
     "por_region": [
@@ -1243,8 +1243,8 @@
         "share_keiko_actual": 21.85,
         "share_keiko_proyectado": 21.88,
         "votos": {
-          "keiko": 163777,
-          "sanchez": 585901
+          "keiko": 163792,
+          "sanchez": 585959
         }
       },
       {
