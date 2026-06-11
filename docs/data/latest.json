@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-11T16:25:19Z",
+  "timestamp_utc": "2026-06-11T16:30:39Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -323,8 +323,8 @@
       "actas_total": 1564,
       "pct_actas": 97.63,
       "votos": {
-        "sanchez": 126237,
-        "keiko": 139809
+        "sanchez": 126251,
+        "keiko": 139870
       }
     },
     {
@@ -1128,8 +1128,8 @@
     "sigma_sistematico_pts": 0.108,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
-      "keiko": 0.8732,
-      "sanchez": 0.1268
+      "keiko": 0.8734,
+      "sanchez": 0.1266
     },
     "share_actual_2via": {
       "keiko": 50.002,
@@ -1151,31 +1151,31 @@
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9220789,
-        "lo": 9181516,
-        "mediana": 9220880,
-        "hi": 9259874
+        "media": 9220852,
+        "lo": 9181578,
+        "mediana": 9220942,
+        "hi": 9259936
       },
       "sanchez": {
-        "media": 9175076,
-        "lo": 9135992,
-        "mediana": 9174986,
-        "hi": 9214349
+        "media": 9175090,
+        "lo": 9136006,
+        "mediana": 9175000,
+        "hi": 9214364
       },
       "total_2via": {
-        "media": 18395865,
-        "lo": 18395865,
-        "mediana": 18395865,
-        "hi": 18395865
+        "media": 18395942,
+        "lo": 18395942,
+        "mediana": 18395942,
+        "hi": 18395942
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 45894,
-      "media": 45714,
-      "lo": -32833,
-      "hi": 123882,
-      "abs_mediana": 45894
+      "mediana": 45942,
+      "media": 45762,
+      "lo": -32786,
+      "hi": 123931,
+      "abs_mediana": 45942
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1521,12 +1521,12 @@
         "exterior": false,
         "pct_actas": 97.63,
         "lider": "keiko",
-        "margen": 5.1,
-        "share_keiko_actual": 52.55,
-        "share_keiko_proyectado": 52.53,
+        "margen": 5.12,
+        "share_keiko_actual": 52.56,
+        "share_keiko_proyectado": 52.54,
         "votos": {
-          "sanchez": 126237,
-          "keiko": 139809
+          "sanchez": 126251,
+          "keiko": 139870
         }
       },
       {
