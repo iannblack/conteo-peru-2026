@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-11T18:06:38Z",
+  "timestamp_utc": "2026-06-11T18:12:39Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -191,8 +191,8 @@
       "actas_total": 29247,
       "pct_actas": 96.88,
       "votos": {
-        "sanchez": 2267500,
-        "keiko": 3944650
+        "sanchez": 2267612,
+        "keiko": 3944726
       }
     },
     {
@@ -1128,12 +1128,12 @@
     "sigma_sistematico_pts": 0.107,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
-      "keiko": 0.8734,
-      "sanchez": 0.1266
+      "keiko": 0.8732,
+      "sanchez": 0.1268
     },
     "share_actual_2via": {
-      "keiko": 50.003,
-      "sanchez": 49.997
+      "keiko": 50.002,
+      "sanchez": 49.998
     },
     "proyeccion_2via_pct": {
       "keiko": {
@@ -1151,31 +1151,31 @@
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9220560,
-        "lo": 9181476,
-        "mediana": 9220647,
-        "hi": 9259453
+        "media": 9220638,
+        "lo": 9181553,
+        "mediana": 9220725,
+        "hi": 9259532
       },
       "sanchez": {
-        "media": 9175031,
-        "lo": 9136138,
-        "mediana": 9174944,
-        "hi": 9214115
+        "media": 9175146,
+        "lo": 9136253,
+        "mediana": 9175059,
+        "hi": 9214231
       },
       "total_2via": {
-        "media": 18395591,
-        "lo": 18395591,
-        "mediana": 18395591,
-        "hi": 18395591
+        "media": 18395785,
+        "lo": 18395785,
+        "mediana": 18395785,
+        "hi": 18395785
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 45703,
-      "media": 45529,
-      "lo": -32639,
-      "hi": 123315,
-      "abs_mediana": 45703
+      "mediana": 45666,
+      "media": 45492,
+      "lo": -32678,
+      "hi": 123280,
+      "abs_mediana": 45666
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1371,8 +1371,8 @@
         "share_keiko_actual": 63.5,
         "share_keiko_proyectado": 63.49,
         "votos": {
-          "sanchez": 2267500,
-          "keiko": 3944650
+          "sanchez": 2267612,
+          "keiko": 3944726
         }
       },
       {
