@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-12T21:44:12Z",
+  "timestamp_utc": "2026-06-12T21:52:46Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 98.282,
-    "actas_contabilizadas": 91172,
+    "actas_pct": 98.289,
+    "actas_contabilizadas": 91179,
     "actas_total": 92766,
-    "votos_emitidos": 19339151,
-    "votos_validos": 18075257,
-    "participacion": 70.773,
+    "votos_emitidos": 19340824,
+    "votos_validos": 18076848,
+    "participacion": 70.78,
     "votos": {
-      "sanchez": 9036741,
-      "keiko": 9038516
+      "sanchez": 9037070,
+      "keiko": 9039778
     }
   },
   "regiones": [
@@ -187,12 +187,12 @@
       "ubigeo": 140000,
       "nombre": "Lima",
       "exterior": false,
-      "actas_contabilizadas": 28348,
+      "actas_contabilizadas": 28360,
       "actas_total": 29247,
-      "pct_actas": 96.93,
+      "pct_actas": 96.97,
       "votos": {
-        "sanchez": 2268536,
-        "keiko": 3946381
+        "sanchez": 2269080,
+        "keiko": 3948591
       }
     },
     {
@@ -1124,58 +1124,58 @@
     "metodo": "beta-binomial-pooling-parcial-actas-v1",
     "n_samples": 20000,
     "kappa": 4.0,
-    "frac_faltante": 0.0174,
-    "sigma_sistematico_pts": 0.104,
+    "frac_faltante": 0.0172,
+    "sigma_sistematico_pts": 0.103,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
-      "keiko": 0.877,
-      "sanchez": 0.123
+      "keiko": 0.8846,
+      "sanchez": 0.1154
     },
     "share_actual_2via": {
-      "keiko": 50.005,
-      "sanchez": 49.995
+      "keiko": 50.01,
+      "sanchez": 49.99
     },
     "proyeccion_2via_pct": {
       "keiko": {
-        "media": 50.122,
-        "lo": 49.916,
-        "mediana": 50.122,
-        "hi": 50.328
+        "media": 50.125,
+        "lo": 49.92,
+        "mediana": 50.125,
+        "hi": 50.329
       },
       "sanchez": {
-        "media": 49.878,
-        "lo": 49.672,
-        "mediana": 49.878,
-        "hi": 50.084
+        "media": 49.875,
+        "lo": 49.671,
+        "mediana": 49.875,
+        "hi": 50.08
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9219960,
-        "lo": 9181984,
-        "mediana": 9220053,
-        "hi": 9257774
+        "media": 9220518,
+        "lo": 9182854,
+        "mediana": 9220609,
+        "hi": 9258016
       },
       "sanchez": {
-        "media": 9175082,
-        "lo": 9137269,
-        "mediana": 9174990,
-        "hi": 9213059
+        "media": 9174652,
+        "lo": 9137153,
+        "mediana": 9174560,
+        "hi": 9212316
       },
       "total_2via": {
-        "media": 18395043,
-        "lo": 18395043,
-        "mediana": 18395043,
-        "hi": 18395043
+        "media": 18395170,
+        "lo": 18395170,
+        "mediana": 18395170,
+        "hi": 18395170
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 45063,
-      "media": 44878,
-      "lo": -31074,
-      "hi": 120505,
-      "abs_mediana": 45063
+      "mediana": 46049,
+      "media": 45866,
+      "lo": -29462,
+      "hi": 120863,
+      "abs_mediana": 46049
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1365,14 +1365,14 @@
         "ubigeo": 140000,
         "nombre": "Lima",
         "exterior": false,
-        "pct_actas": 96.93,
+        "pct_actas": 96.97,
         "lider": "keiko",
-        "margen": 27.0,
-        "share_keiko_actual": 63.5,
-        "share_keiko_proyectado": 63.49,
+        "margen": 27.01,
+        "share_keiko_actual": 63.51,
+        "share_keiko_proyectado": 63.5,
         "votos": {
-          "sanchez": 2268536,
-          "keiko": 3946381
+          "sanchez": 2269080,
+          "keiko": 3948591
         }
       },
       {
@@ -1537,7 +1537,7 @@
         "lider": "keiko",
         "margen": 20.0,
         "share_keiko_actual": 60.0,
-        "share_keiko_proyectado": 55.93,
+        "share_keiko_proyectado": 55.94,
         "votos": {
           "sanchez": 20,
           "keiko": 30
