@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-12T22:39:13Z",
+  "timestamp_utc": "2026-06-12T22:46:27Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 98.302,
-    "actas_contabilizadas": 91191,
+    "actas_pct": 98.303,
+    "actas_contabilizadas": 91192,
     "actas_total": 92766,
-    "votos_emitidos": 19343684,
-    "votos_validos": 18079567,
-    "participacion": 70.79,
+    "votos_emitidos": 19343830,
+    "votos_validos": 18079699,
+    "participacion": 70.791,
     "votos": {
-      "sanchez": 9038003,
-      "keiko": 9041564
+      "sanchez": 9038095,
+      "keiko": 9041604
     }
   },
   "regiones": [
@@ -31,12 +31,12 @@
       "ubigeo": 10000,
       "nombre": "Amazonas",
       "exterior": false,
-      "actas_contabilizadas": 1275,
+      "actas_contabilizadas": 1276,
       "actas_total": 1278,
-      "pct_actas": 99.77,
+      "pct_actas": 99.84,
       "votos": {
-        "keiko": 69119,
-        "sanchez": 125348
+        "keiko": 69159,
+        "sanchez": 125440
       }
     },
     {
@@ -1151,31 +1151,31 @@
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9220548,
-        "lo": 9183062,
-        "mediana": 9220637,
-        "hi": 9257861
+        "media": 9220533,
+        "lo": 9183067,
+        "mediana": 9220623,
+        "hi": 9257830
       },
       "sanchez": {
-        "media": 9174620,
-        "lo": 9137306,
-        "mediana": 9174531,
-        "hi": 9212106
+        "media": 9174614,
+        "lo": 9137317,
+        "mediana": 9174524,
+        "hi": 9212080
       },
       "total_2via": {
-        "media": 18395168,
-        "lo": 18395168,
-        "mediana": 18395168,
-        "hi": 18395168
+        "media": 18395147,
+        "lo": 18395147,
+        "mediana": 18395147,
+        "hi": 18395147
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 46106,
-      "media": 45928,
-      "lo": -29043,
-      "hi": 120555,
-      "abs_mediana": 46106
+      "mediana": 46099,
+      "media": 45920,
+      "lo": -29014,
+      "hi": 120513,
+      "abs_mediana": 46099
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1183,14 +1183,14 @@
         "ubigeo": 10000,
         "nombre": "Amazonas",
         "exterior": false,
-        "pct_actas": 99.77,
+        "pct_actas": 99.84,
         "lider": "sanchez",
-        "margen": 28.91,
+        "margen": 28.92,
         "share_keiko_actual": 35.54,
         "share_keiko_proyectado": 35.57,
         "votos": {
-          "keiko": 69119,
-          "sanchez": 125348
+          "keiko": 69159,
+          "sanchez": 125440
         }
       },
       {
