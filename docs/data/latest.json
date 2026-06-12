@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-12T21:21:42Z",
+  "timestamp_utc": "2026-06-12T21:27:17Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -151,12 +151,12 @@
       "ubigeo": 110000,
       "nombre": "Junín",
       "exterior": false,
-      "actas_contabilizadas": 3664,
+      "actas_contabilizadas": 3665,
       "actas_total": 3691,
-      "pct_actas": 99.27,
+      "pct_actas": 99.3,
       "votos": {
-        "keiko": 321539,
-        "sanchez": 391973
+        "keiko": 321609,
+        "sanchez": 392093
       }
     },
     {
@@ -1151,31 +1151,31 @@
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9219994,
-        "lo": 9181796,
-        "mediana": 9220087,
-        "hi": 9258019
+        "media": 9219976,
+        "lo": 9181801,
+        "mediana": 9220070,
+        "hi": 9257980
       },
       "sanchez": {
-        "media": 9175259,
-        "lo": 9137234,
-        "mediana": 9175166,
-        "hi": 9213457
+        "media": 9175272,
+        "lo": 9137269,
+        "mediana": 9175179,
+        "hi": 9213447
       },
       "total_2via": {
-        "media": 18395253,
-        "lo": 18395253,
-        "mediana": 18395253,
-        "hi": 18395253
+        "media": 18395248,
+        "lo": 18395248,
+        "mediana": 18395248,
+        "hi": 18395248
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 44921,
-      "media": 44735,
-      "lo": -31662,
-      "hi": 120785,
-      "abs_mediana": 44921
+      "mediana": 44891,
+      "media": 44704,
+      "lo": -31645,
+      "hi": 120711,
+      "abs_mediana": 44891
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1323,14 +1323,14 @@
         "ubigeo": 110000,
         "nombre": "Junín",
         "exterior": false,
-        "pct_actas": 99.27,
+        "pct_actas": 99.3,
         "lider": "sanchez",
-        "margen": 9.87,
+        "margen": 9.88,
         "share_keiko_actual": 45.06,
         "share_keiko_proyectado": 45.07,
         "votos": {
-          "keiko": 321539,
-          "sanchez": 391973
+          "keiko": 321609,
+          "sanchez": 392093
         }
       },
       {
