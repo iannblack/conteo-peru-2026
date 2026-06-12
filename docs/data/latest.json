@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-12T20:38:55Z",
+  "timestamp_utc": "2026-06-12T21:10:48Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -235,12 +235,12 @@
       "ubigeo": 180000,
       "nombre": "Pasco",
       "exterior": false,
-      "actas_contabilizadas": 788,
+      "actas_contabilizadas": 787,
       "actas_total": 802,
-      "pct_actas": 98.25,
+      "pct_actas": 98.13,
       "votos": {
-        "keiko": 50699,
-        "sanchez": 78518
+        "keiko": 50606,
+        "sanchez": 78478
       }
     },
     {
@@ -1128,8 +1128,8 @@
     "sigma_sistematico_pts": 0.105,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
-      "keiko": 0.8756,
-      "sanchez": 0.1244
+      "keiko": 0.875,
+      "sanchez": 0.125
     },
     "share_actual_2via": {
       "keiko": 50.004,
@@ -1151,31 +1151,31 @@
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9220023,
-        "lo": 9181843,
-        "mediana": 9220113,
-        "hi": 9258027
+        "media": 9219994,
+        "lo": 9181796,
+        "mediana": 9220087,
+        "hi": 9258019
       },
       "sanchez": {
-        "media": 9175198,
-        "lo": 9137194,
-        "mediana": 9175108,
-        "hi": 9213379
+        "media": 9175259,
+        "lo": 9137234,
+        "mediana": 9175166,
+        "hi": 9213457
       },
       "total_2via": {
-        "media": 18395221,
-        "lo": 18395221,
-        "mediana": 18395221,
-        "hi": 18395221
+        "media": 18395253,
+        "lo": 18395253,
+        "mediana": 18395253,
+        "hi": 18395253
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 45005,
-      "media": 44825,
-      "lo": -31536,
-      "hi": 120833,
-      "abs_mediana": 45005
+      "mediana": 44921,
+      "media": 44735,
+      "lo": -31662,
+      "hi": 120785,
+      "abs_mediana": 44921
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1421,14 +1421,14 @@
         "ubigeo": 180000,
         "nombre": "Pasco",
         "exterior": false,
-        "pct_actas": 98.25,
+        "pct_actas": 98.13,
         "lider": "sanchez",
-        "margen": 21.53,
-        "share_keiko_actual": 39.24,
-        "share_keiko_proyectado": 39.29,
+        "margen": 21.59,
+        "share_keiko_actual": 39.2,
+        "share_keiko_proyectado": 39.26,
         "votos": {
-          "keiko": 50699,
-          "sanchez": 78518
+          "keiko": 50606,
+          "sanchez": 78478
         }
       },
       {
