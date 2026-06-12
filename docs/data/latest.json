@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-12T22:21:49Z",
+  "timestamp_utc": "2026-06-12T22:27:15Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -139,12 +139,12 @@
       "ubigeo": 100000,
       "nombre": "Ica",
       "exterior": false,
-      "actas_contabilizadas": 2421,
+      "actas_contabilizadas": 2425,
       "actas_total": 2443,
-      "pct_actas": 99.1,
+      "pct_actas": 99.26,
       "votos": {
-        "sanchez": 259131,
-        "keiko": 279728
+        "sanchez": 259541,
+        "keiko": 280196
       }
     },
     {
@@ -1128,8 +1128,8 @@
     "sigma_sistematico_pts": 0.103,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
-      "keiko": 0.8846,
-      "sanchez": 0.1154
+      "keiko": 0.885,
+      "sanchez": 0.115
     },
     "share_actual_2via": {
       "keiko": 50.01,
@@ -1138,44 +1138,44 @@
     "proyeccion_2via_pct": {
       "keiko": {
         "media": 50.125,
-        "lo": 49.92,
+        "lo": 49.921,
         "mediana": 50.125,
-        "hi": 50.329
+        "hi": 50.328
       },
       "sanchez": {
         "media": 49.875,
-        "lo": 49.671,
+        "lo": 49.672,
         "mediana": 49.875,
-        "hi": 50.08
+        "hi": 50.079
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9220518,
-        "lo": 9182854,
-        "mediana": 9220609,
-        "hi": 9258016
+        "media": 9220524,
+        "lo": 9182962,
+        "mediana": 9220614,
+        "hi": 9257919
       },
       "sanchez": {
-        "media": 9174652,
-        "lo": 9137153,
-        "mediana": 9174560,
-        "hi": 9212316
+        "media": 9174633,
+        "lo": 9137239,
+        "mediana": 9174543,
+        "hi": 9212195
       },
       "total_2via": {
-        "media": 18395170,
-        "lo": 18395170,
-        "mediana": 18395170,
-        "hi": 18395170
+        "media": 18395157,
+        "lo": 18395157,
+        "mediana": 18395157,
+        "hi": 18395157
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 46049,
-      "media": 45866,
-      "lo": -29462,
-      "hi": 120863,
-      "abs_mediana": 46049
+      "mediana": 46072,
+      "media": 45890,
+      "lo": -29233,
+      "hi": 120680,
+      "abs_mediana": 46072
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1309,14 +1309,14 @@
         "ubigeo": 100000,
         "nombre": "Ica",
         "exterior": false,
-        "pct_actas": 99.1,
+        "pct_actas": 99.26,
         "lider": "keiko",
-        "margen": 3.82,
+        "margen": 3.83,
         "share_keiko_actual": 51.91,
         "share_keiko_proyectado": 51.9,
         "votos": {
-          "sanchez": 259131,
-          "keiko": 279728
+          "sanchez": 259541,
+          "keiko": 280196
         }
       },
       {
