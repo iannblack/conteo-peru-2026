@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-12T21:32:57Z",
+  "timestamp_utc": "2026-06-12T21:38:38Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 98.273,
-    "actas_contabilizadas": 91164,
+    "actas_pct": 98.28,
+    "actas_contabilizadas": 91170,
     "actas_total": 92766,
-    "votos_emitidos": 19337595,
-    "votos_validos": 18073806,
-    "participacion": 70.768,
+    "votos_emitidos": 19338676,
+    "votos_validos": 18074811,
+    "participacion": 70.772,
     "votos": {
-      "sanchez": 9036179,
-      "keiko": 9037627
+      "sanchez": 9036624,
+      "keiko": 9038187
     }
   },
   "regiones": [
