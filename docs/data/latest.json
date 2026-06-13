@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-13T02:48:06Z",
+  "timestamp_utc": "2026-06-13T02:53:51Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -307,12 +307,12 @@
       "ubigeo": 240000,
       "nombre": "Callao",
       "exterior": false,
-      "actas_contabilizadas": 2847,
+      "actas_contabilizadas": 2848,
       "actas_total": 2898,
-      "pct_actas": 98.24,
+      "pct_actas": 98.27,
       "votos": {
-        "sanchez": 208172,
-        "keiko": 396594
+        "sanchez": 208256,
+        "keiko": 396757
       }
     },
     {
@@ -1128,8 +1128,8 @@
     "sigma_sistematico_pts": 0.102,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
-      "keiko": 0.889,
-      "sanchez": 0.111
+      "keiko": 0.8891,
+      "sanchez": 0.1109
     },
     "share_actual_2via": {
       "keiko": 50.012,
@@ -1151,31 +1151,31 @@
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9220347,
-        "lo": 9183280,
-        "mediana": 9220441,
-        "hi": 9257239
+        "media": 9220371,
+        "lo": 9183327,
+        "mediana": 9220464,
+        "hi": 9257236
       },
       "sanchez": {
-        "media": 9174230,
-        "lo": 9137337,
-        "mediana": 9174135,
-        "hi": 9211296
+        "media": 9174241,
+        "lo": 9137376,
+        "mediana": 9174148,
+        "hi": 9211284
       },
       "total_2via": {
-        "media": 18394576,
-        "lo": 18394576,
-        "mediana": 18394576,
-        "hi": 18394576
+        "media": 18394611,
+        "lo": 18394611,
+        "mediana": 18394611,
+        "hi": 18394611
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 46306,
-      "media": 46117,
-      "lo": -28016,
-      "hi": 119903,
-      "abs_mediana": 46306
+      "mediana": 46316,
+      "media": 46130,
+      "lo": -27957,
+      "hi": 119860,
+      "abs_mediana": 46316
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1505,14 +1505,14 @@
         "ubigeo": 240000,
         "nombre": "Callao",
         "exterior": false,
-        "pct_actas": 98.24,
+        "pct_actas": 98.27,
         "lider": "keiko",
         "margen": 31.16,
         "share_keiko_actual": 65.58,
         "share_keiko_proyectado": 65.55,
         "votos": {
-          "sanchez": 208172,
-          "keiko": 396594
+          "sanchez": 208256,
+          "keiko": 396757
         }
       },
       {
