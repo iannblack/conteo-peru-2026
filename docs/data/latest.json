@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-13T21:26:07Z",
+  "timestamp_utc": "2026-06-13T21:31:28Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -67,12 +67,12 @@
       "ubigeo": 40000,
       "nombre": "Arequipa",
       "exterior": false,
-      "actas_contabilizadas": 4196,
+      "actas_contabilizadas": 4197,
       "actas_total": 4215,
-      "pct_actas": 99.55,
+      "pct_actas": 99.57,
       "votos": {
-        "keiko": 332893,
-        "sanchez": 581382
+        "keiko": 333040,
+        "sanchez": 581453
       }
     },
     {
@@ -1125,11 +1125,11 @@
     "n_samples": 20000,
     "kappa": 4.0,
     "frac_faltante": 0.0156,
-    "sigma_sistematico_pts": 0.094,
+    "sigma_sistematico_pts": 0.093,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
-      "keiko": 0.9223,
-      "sanchez": 0.0777
+      "keiko": 0.9232,
+      "sanchez": 0.0768
     },
     "share_actual_2via": {
       "keiko": 50.034,
@@ -1137,30 +1137,30 @@
     },
     "proyeccion_2via_pct": {
       "keiko": {
-        "media": 50.133,
-        "lo": 49.948,
+        "media": 50.134,
+        "lo": 49.949,
         "mediana": 50.134,
         "hi": 50.318
       },
       "sanchez": {
-        "media": 49.867,
+        "media": 49.866,
         "lo": 49.682,
         "mediana": 49.866,
-        "hi": 50.052
+        "hi": 50.051
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9221583,
-        "lo": 9187513,
-        "mediana": 9221662,
-        "hi": 9255480
+        "media": 9221651,
+        "lo": 9187607,
+        "mediana": 9221731,
+        "hi": 9255522
       },
       "sanchez": {
-        "media": 9172474,
-        "lo": 9138578,
-        "mediana": 9172396,
-        "hi": 9206545
+        "media": 9172406,
+        "lo": 9138536,
+        "mediana": 9172327,
+        "hi": 9206451
       },
       "total_2via": {
         "media": 18394058,
@@ -1171,11 +1171,11 @@
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 49266,
-      "media": 49109,
-      "lo": -19032,
-      "hi": 116902,
-      "abs_mediana": 49266
+      "mediana": 49404,
+      "media": 49245,
+      "lo": -18844,
+      "hi": 116986,
+      "abs_mediana": 49404
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1225,14 +1225,14 @@
         "ubigeo": 40000,
         "nombre": "Arequipa",
         "exterior": false,
-        "pct_actas": 99.55,
+        "pct_actas": 99.57,
         "lider": "sanchez",
-        "margen": 27.18,
-        "share_keiko_actual": 36.41,
-        "share_keiko_proyectado": 36.42,
+        "margen": 27.16,
+        "share_keiko_actual": 36.42,
+        "share_keiko_proyectado": 36.43,
         "votos": {
-          "keiko": 332893,
-          "sanchez": 581382
+          "keiko": 333040,
+          "sanchez": 581453
         }
       },
       {
