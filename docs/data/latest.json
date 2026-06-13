@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-13T21:04:36Z",
+  "timestamp_utc": "2026-06-13T21:10:01Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 98.449,
-    "actas_contabilizadas": 91327,
+    "actas_pct": 98.451,
+    "actas_contabilizadas": 91329,
     "actas_total": 92766,
-    "votos_emitidos": 19371585,
-    "votos_validos": 18105785,
-    "participacion": 70.892,
+    "votos_emitidos": 19371933,
+    "votos_validos": 18106111,
+    "participacion": 70.893,
     "votos": {
-      "sanchez": 9046697,
-      "keiko": 9059088
+      "sanchez": 9046884,
+      "keiko": 9059227
     }
   },
   "regiones": [
@@ -67,12 +67,12 @@
       "ubigeo": 40000,
       "nombre": "Arequipa",
       "exterior": false,
-      "actas_contabilizadas": 4193,
+      "actas_contabilizadas": 4194,
       "actas_total": 4215,
-      "pct_actas": 99.48,
+      "pct_actas": 99.5,
       "votos": {
-        "keiko": 332677,
-        "sanchez": 580954
+        "keiko": 332728,
+        "sanchez": 581071
       }
     },
     {
@@ -151,12 +151,12 @@
       "ubigeo": 110000,
       "nombre": "Junín",
       "exterior": false,
-      "actas_contabilizadas": 3673,
+      "actas_contabilizadas": 3674,
       "actas_total": 3691,
-      "pct_actas": 99.51,
+      "pct_actas": 99.54,
       "votos": {
-        "keiko": 322123,
-        "sanchez": 392760
+        "keiko": 322211,
+        "sanchez": 392830
       }
     },
     {
@@ -1128,8 +1128,8 @@
     "sigma_sistematico_pts": 0.094,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
-      "keiko": 0.9205,
-      "sanchez": 0.0795
+      "keiko": 0.9211,
+      "sanchez": 0.0789
     },
     "share_actual_2via": {
       "keiko": 50.034,
@@ -1140,42 +1140,42 @@
         "media": 50.133,
         "lo": 49.947,
         "mediana": 50.134,
-        "hi": 50.319
+        "hi": 50.318
       },
       "sanchez": {
         "media": 49.867,
-        "lo": 49.681,
+        "lo": 49.682,
         "mediana": 49.866,
         "hi": 50.053
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9221594,
-        "lo": 9187337,
-        "mediana": 9221677,
-        "hi": 9255679
+        "media": 9221565,
+        "lo": 9187357,
+        "mediana": 9221649,
+        "hi": 9255603
       },
       "sanchez": {
-        "media": 9172531,
-        "lo": 9138445,
-        "mediana": 9172448,
-        "hi": 9206788
+        "media": 9172472,
+        "lo": 9138435,
+        "mediana": 9172389,
+        "hi": 9206681
       },
       "total_2via": {
-        "media": 18394125,
-        "lo": 18394125,
-        "mediana": 18394125,
-        "hi": 18394125
+        "media": 18394038,
+        "lo": 18394038,
+        "mediana": 18394038,
+        "hi": 18394038
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 49228,
-      "media": 49062,
-      "lo": -19451,
-      "hi": 117234,
-      "abs_mediana": 49228
+      "mediana": 49260,
+      "media": 49093,
+      "lo": -19324,
+      "hi": 117169,
+      "abs_mediana": 49260
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1225,14 +1225,14 @@
         "ubigeo": 40000,
         "nombre": "Arequipa",
         "exterior": false,
-        "pct_actas": 99.48,
+        "pct_actas": 99.5,
         "lider": "sanchez",
-        "margen": 27.17,
+        "margen": 27.18,
         "share_keiko_actual": 36.41,
         "share_keiko_proyectado": 36.42,
         "votos": {
-          "keiko": 332677,
-          "sanchez": 580954
+          "keiko": 332728,
+          "sanchez": 581071
         }
       },
       {
@@ -1323,14 +1323,14 @@
         "ubigeo": 110000,
         "nombre": "Junín",
         "exterior": false,
-        "pct_actas": 99.51,
+        "pct_actas": 99.54,
         "lider": "sanchez",
         "margen": 9.88,
         "share_keiko_actual": 45.06,
         "share_keiko_proyectado": 45.07,
         "votos": {
-          "keiko": 322123,
-          "sanchez": 392760
+          "keiko": 322211,
+          "sanchez": 392830
         }
       },
       {
