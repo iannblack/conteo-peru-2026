@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-13T23:28:54Z",
+  "timestamp_utc": "2026-06-13T23:34:13Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 98.529,
-    "actas_contabilizadas": 91401,
+    "actas_pct": 98.532,
+    "actas_contabilizadas": 91404,
     "actas_total": 92766,
-    "votos_emitidos": 19388700,
-    "votos_validos": 18121826,
-    "participacion": 70.955,
+    "votos_emitidos": 19389324,
+    "votos_validos": 18122402,
+    "participacion": 70.957,
     "votos": {
-      "sanchez": 9052386,
-      "keiko": 9069440
+      "sanchez": 9052621,
+      "keiko": 9069781
     }
   },
   "regiones": [
@@ -163,12 +163,12 @@
       "ubigeo": 120000,
       "nombre": "La Libertad",
       "exterior": false,
-      "actas_contabilizadas": 5277,
+      "actas_contabilizadas": 5280,
       "actas_total": 5302,
-      "pct_actas": 99.53,
+      "pct_actas": 99.59,
       "votos": {
-        "sanchez": 443684,
-        "keiko": 601280
+        "sanchez": 443919,
+        "keiko": 601621
       }
     },
     {
@@ -1128,8 +1128,8 @@
     "sigma_sistematico_pts": 0.089,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
-      "keiko": 0.9414,
-      "sanchez": 0.0586
+      "keiko": 0.9417,
+      "sanchez": 0.0583
     },
     "share_actual_2via": {
       "keiko": 50.047,
@@ -1138,44 +1138,44 @@
     "proyeccion_2via_pct": {
       "keiko": {
         "media": 50.14,
-        "lo": 49.964,
+        "lo": 49.965,
         "mediana": 50.141,
-        "hi": 50.316
+        "hi": 50.315
       },
       "sanchez": {
         "media": 49.86,
-        "lo": 49.684,
+        "lo": 49.685,
         "mediana": 49.859,
-        "hi": 50.036
+        "hi": 50.035
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9223178,
-        "lo": 9190741,
-        "mediana": 9223263,
-        "hi": 9255423
+        "media": 9223177,
+        "lo": 9190812,
+        "mediana": 9223264,
+        "hi": 9255358
       },
       "sanchez": {
-        "media": 9171506,
-        "lo": 9139262,
-        "mediana": 9171421,
-        "hi": 9203943
+        "media": 9171489,
+        "lo": 9139308,
+        "mediana": 9171402,
+        "hi": 9203854
       },
       "total_2via": {
-        "media": 18394684,
-        "lo": 18394684,
-        "mediana": 18394684,
-        "hi": 18394684
+        "media": 18394666,
+        "lo": 18394666,
+        "mediana": 18394666,
+        "hi": 18394666
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 51842,
-      "media": 51672,
-      "lo": -13202,
-      "hi": 116161,
-      "abs_mediana": 51842
+      "mediana": 51862,
+      "media": 51689,
+      "lo": -13042,
+      "hi": 116049,
+      "abs_mediana": 51862
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1337,14 +1337,14 @@
         "ubigeo": 120000,
         "nombre": "La Libertad",
         "exterior": false,
-        "pct_actas": 99.53,
+        "pct_actas": 99.59,
         "lider": "keiko",
         "margen": 15.08,
         "share_keiko_actual": 57.54,
-        "share_keiko_proyectado": 57.53,
+        "share_keiko_proyectado": 57.54,
         "votos": {
-          "sanchez": 443684,
-          "keiko": 601280
+          "sanchez": 443919,
+          "keiko": 601621
         }
       },
       {
