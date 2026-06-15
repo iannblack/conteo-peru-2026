@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-15T18:56:41Z",
+  "timestamp_utc": "2026-06-15T19:02:00Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 98.644,
-    "actas_contabilizadas": 91508,
+    "actas_pct": 98.647,
+    "actas_contabilizadas": 91511,
     "actas_total": 92766,
-    "votos_emitidos": 19409023,
-    "votos_validos": 18140746,
-    "participacion": 71.029,
+    "votos_emitidos": 19409472,
+    "votos_validos": 18141162,
+    "participacion": 71.031,
     "votos": {
-      "sanchez": 9060934,
-      "keiko": 9079812
+      "sanchez": 9061246,
+      "keiko": 9079916
     }
   },
   "regiones": [
@@ -91,9 +91,9 @@
       "ubigeo": 60000,
       "nombre": "Cajamarca",
       "exterior": false,
-      "actas_contabilizadas": 4232,
+      "actas_contabilizadas": 4235,
       "actas_total": 4240,
-      "pct_actas": 99.81,
+      "pct_actas": 99.88,
       "votos": {
         "keiko": 245484,
         "sanchez": 493275
@@ -1128,8 +1128,8 @@
     "sigma_sistematico_pts": 0.083,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
-      "keiko": 0.9557,
-      "sanchez": 0.0443
+      "keiko": 0.9564,
+      "sanchez": 0.0436
     },
     "share_actual_2via": {
       "keiko": 50.051,
@@ -1137,45 +1137,45 @@
     },
     "proyeccion_2via_pct": {
       "keiko": {
-        "media": 50.142,
-        "lo": 49.978,
+        "media": 50.143,
+        "lo": 49.979,
         "mediana": 50.143,
         "hi": 50.305
       },
       "sanchez": {
-        "media": 49.858,
+        "media": 49.857,
         "lo": 49.695,
         "mediana": 49.857,
-        "hi": 50.022
+        "hi": 50.021
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9223584,
-        "lo": 9193419,
-        "mediana": 9223659,
-        "hi": 9253570
+        "media": 9223410,
+        "lo": 9193315,
+        "mediana": 9223489,
+        "hi": 9253333
       },
       "sanchez": {
-        "media": 9171230,
-        "lo": 9141243,
-        "mediana": 9171154,
-        "hi": 9201394
+        "media": 9170879,
+        "lo": 9140956,
+        "mediana": 9170800,
+        "hi": 9200974
       },
       "total_2via": {
-        "media": 18394813,
-        "lo": 18394813,
-        "mediana": 18394813,
-        "hi": 18394813
+        "media": 18394289,
+        "lo": 18394289,
+        "mediana": 18394289,
+        "hi": 18394289
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 52505,
-      "media": 52354,
-      "lo": -7976,
-      "hi": 112328,
-      "abs_mediana": 52505
+      "mediana": 52688,
+      "media": 52530,
+      "lo": -7659,
+      "hi": 112378,
+      "abs_mediana": 52688
     },
     "votos_por_acta_nacional": 198.2,
     "por_region": [
@@ -1253,7 +1253,7 @@
         "ubigeo": 60000,
         "nombre": "Cajamarca",
         "exterior": false,
-        "pct_actas": 99.81,
+        "pct_actas": 99.88,
         "lider": "sanchez",
         "margen": 33.54,
         "share_keiko_actual": 33.23,
