@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-15T16:33:53Z",
+  "timestamp_utc": "2026-06-15T18:01:30Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 98.6,
-    "actas_contabilizadas": 91467,
+    "actas_pct": 98.626,
+    "actas_contabilizadas": 91491,
     "actas_total": 92766,
-    "votos_emitidos": 19400316,
-    "votos_validos": 18132697,
-    "participacion": 70.997,
+    "votos_emitidos": 19405460,
+    "votos_validos": 18137460,
+    "participacion": 71.016,
     "votos": {
-      "sanchez": 9057202,
-      "keiko": 9075495
+      "sanchez": 9059279,
+      "keiko": 9078181
     }
   },
   "regiones": [
@@ -31,24 +31,24 @@
       "ubigeo": 10000,
       "nombre": "Amazonas",
       "exterior": false,
-      "actas_contabilizadas": 1276,
+      "actas_contabilizadas": 1278,
       "actas_total": 1278,
-      "pct_actas": 99.84,
+      "pct_actas": 100.0,
       "votos": {
-        "keiko": 69159,
-        "sanchez": 125440
+        "keiko": 69220,
+        "sanchez": 125555
       }
     },
     {
       "ubigeo": 20000,
       "nombre": "Áncash",
       "exterior": false,
-      "actas_contabilizadas": 3440,
+      "actas_contabilizadas": 3441,
       "actas_total": 3472,
-      "pct_actas": 99.08,
+      "pct_actas": 99.11,
       "votos": {
-        "keiko": 268648,
-        "sanchez": 350203
+        "keiko": 268740,
+        "sanchez": 350328
       }
     },
     {
@@ -79,12 +79,12 @@
       "ubigeo": 50000,
       "nombre": "Ayacucho",
       "exterior": false,
-      "actas_contabilizadas": 1885,
+      "actas_contabilizadas": 1886,
       "actas_total": 1900,
-      "pct_actas": 99.21,
+      "pct_actas": 99.26,
       "votos": {
-        "keiko": 66849,
-        "sanchez": 256362
+        "keiko": 66872,
+        "sanchez": 256394
       }
     },
     {
@@ -151,24 +151,24 @@
       "ubigeo": 110000,
       "nombre": "Junín",
       "exterior": false,
-      "actas_contabilizadas": 3678,
+      "actas_contabilizadas": 3683,
       "actas_total": 3691,
-      "pct_actas": 99.65,
+      "pct_actas": 99.78,
       "votos": {
-        "keiko": 322573,
-        "sanchez": 393226
+        "keiko": 323043,
+        "sanchez": 393806
       }
     },
     {
       "ubigeo": 120000,
       "nombre": "La Libertad",
       "exterior": false,
-      "actas_contabilizadas": 5284,
+      "actas_contabilizadas": 5287,
       "actas_total": 5302,
-      "pct_actas": 99.66,
+      "pct_actas": 99.72,
       "votos": {
-        "sanchez": 444194,
-        "keiko": 602111
+        "sanchez": 444431,
+        "keiko": 602530
       }
     },
     {
@@ -247,12 +247,12 @@
       "ubigeo": 190000,
       "nombre": "Piura",
       "exterior": false,
-      "actas_contabilizadas": 5224,
+      "actas_contabilizadas": 5236,
       "actas_total": 5281,
-      "pct_actas": 98.92,
+      "pct_actas": 99.15,
       "votos": {
-        "sanchez": 440425,
-        "keiko": 583221
+        "sanchez": 441413,
+        "keiko": 584842
       }
     },
     {
@@ -1124,58 +1124,58 @@
     "metodo": "beta-binomial-pooling-parcial-actas-v1",
     "n_samples": 20000,
     "kappa": 4.0,
-    "frac_faltante": 0.0142,
-    "sigma_sistematico_pts": 0.085,
+    "frac_faltante": 0.014,
+    "sigma_sistematico_pts": 0.084,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
-      "keiko": 0.9474,
-      "sanchez": 0.0526
+      "keiko": 0.9527,
+      "sanchez": 0.0473
     },
     "share_actual_2via": {
-      "keiko": 50.05,
-      "sanchez": 49.95
+      "keiko": 50.052,
+      "sanchez": 49.948
     },
     "proyeccion_2via_pct": {
       "keiko": {
-        "media": 50.14,
-        "lo": 49.97,
-        "mediana": 50.14,
-        "hi": 50.308
+        "media": 50.141,
+        "lo": 49.975,
+        "mediana": 50.142,
+        "hi": 50.307
       },
       "sanchez": {
-        "media": 49.86,
-        "lo": 49.692,
-        "mediana": 49.86,
-        "hi": 50.03
+        "media": 49.859,
+        "lo": 49.693,
+        "mediana": 49.858,
+        "hi": 50.025
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9223032,
-        "lo": 9191859,
-        "mediana": 9223104,
-        "hi": 9253997
+        "media": 9223380,
+        "lo": 9192745,
+        "mediana": 9223460,
+        "hi": 9253802
       },
       "sanchez": {
-        "media": 9171576,
-        "lo": 9140610,
-        "mediana": 9171503,
-        "hi": 9202748
+        "media": 9171418,
+        "lo": 9140995,
+        "mediana": 9171337,
+        "hi": 9202053
       },
       "total_2via": {
-        "media": 18394607,
-        "lo": 18394607,
-        "mediana": 18394607,
-        "hi": 18394607
+        "media": 18394797,
+        "lo": 18394797,
+        "mediana": 18394797,
+        "hi": 18394797
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 51601,
-      "media": 51456,
-      "lo": -10890,
-      "hi": 113387,
-      "abs_mediana": 51601
+      "mediana": 52123,
+      "media": 51962,
+      "lo": -9308,
+      "hi": 112806,
+      "abs_mediana": 52123
     },
     "votos_por_acta_nacional": 198.2,
     "por_region": [
@@ -1183,28 +1183,28 @@
         "ubigeo": 10000,
         "nombre": "Amazonas",
         "exterior": false,
-        "pct_actas": 99.84,
+        "pct_actas": 100.0,
         "lider": "sanchez",
         "margen": 28.92,
         "share_keiko_actual": 35.54,
         "share_keiko_proyectado": 35.57,
         "votos": {
-          "keiko": 69159,
-          "sanchez": 125440
+          "keiko": 69220,
+          "sanchez": 125555
         }
       },
       {
         "ubigeo": 20000,
         "nombre": "Áncash",
         "exterior": false,
-        "pct_actas": 99.08,
+        "pct_actas": 99.11,
         "lider": "sanchez",
         "margen": 13.18,
         "share_keiko_actual": 43.41,
         "share_keiko_proyectado": 43.41,
         "votos": {
-          "keiko": 268648,
-          "sanchez": 350203
+          "keiko": 268740,
+          "sanchez": 350328
         }
       },
       {
@@ -1239,14 +1239,14 @@
         "ubigeo": 50000,
         "nombre": "Ayacucho",
         "exterior": false,
-        "pct_actas": 99.21,
+        "pct_actas": 99.26,
         "lider": "sanchez",
         "margen": 58.63,
-        "share_keiko_actual": 20.68,
-        "share_keiko_proyectado": 20.75,
+        "share_keiko_actual": 20.69,
+        "share_keiko_proyectado": 20.76,
         "votos": {
-          "keiko": 66849,
-          "sanchez": 256362
+          "keiko": 66872,
+          "sanchez": 256394
         }
       },
       {
@@ -1323,28 +1323,28 @@
         "ubigeo": 110000,
         "nombre": "Junín",
         "exterior": false,
-        "pct_actas": 99.65,
+        "pct_actas": 99.78,
         "lider": "sanchez",
         "margen": 9.87,
         "share_keiko_actual": 45.06,
         "share_keiko_proyectado": 45.07,
         "votos": {
-          "keiko": 322573,
-          "sanchez": 393226
+          "keiko": 323043,
+          "sanchez": 393806
         }
       },
       {
         "ubigeo": 120000,
         "nombre": "La Libertad",
         "exterior": false,
-        "pct_actas": 99.66,
+        "pct_actas": 99.72,
         "lider": "keiko",
-        "margen": 15.09,
+        "margen": 15.1,
         "share_keiko_actual": 57.55,
         "share_keiko_proyectado": 57.54,
         "votos": {
-          "sanchez": 444194,
-          "keiko": 602111
+          "sanchez": 444431,
+          "keiko": 602530
         }
       },
       {
@@ -1435,14 +1435,14 @@
         "ubigeo": 190000,
         "nombre": "Piura",
         "exterior": false,
-        "pct_actas": 98.92,
+        "pct_actas": 99.15,
         "lider": "keiko",
-        "margen": 13.95,
-        "share_keiko_actual": 56.97,
-        "share_keiko_proyectado": 56.97,
+        "margen": 13.98,
+        "share_keiko_actual": 56.99,
+        "share_keiko_proyectado": 56.99,
         "votos": {
-          "sanchez": 440425,
-          "keiko": 583221
+          "sanchez": 441413,
+          "keiko": 584842
         }
       },
       {
