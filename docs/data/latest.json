@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-15T19:39:19Z",
+  "timestamp_utc": "2026-06-15T19:44:38Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 98.669,
-    "actas_contabilizadas": 91531,
+    "actas_pct": 98.67,
+    "actas_contabilizadas": 91532,
     "actas_total": 92766,
-    "votos_emitidos": 19413776,
-    "votos_validos": 18145176,
+    "votos_emitidos": 19413950,
+    "votos_validos": 18145339,
     "participacion": 71.047,
     "votos": {
-      "sanchez": 9062935,
-      "keiko": 9082241
+      "sanchez": 9063048,
+      "keiko": 9082291
     }
   },
   "regiones": [
@@ -235,12 +235,12 @@
       "ubigeo": 180000,
       "nombre": "Pasco",
       "exterior": false,
-      "actas_contabilizadas": 787,
+      "actas_contabilizadas": 788,
       "actas_total": 802,
-      "pct_actas": 98.13,
+      "pct_actas": 98.25,
       "votos": {
-        "keiko": 50606,
-        "sanchez": 78478
+        "keiko": 50656,
+        "sanchez": 78591
       }
     },
     {
@@ -1140,42 +1140,42 @@
         "media": 50.143,
         "lo": 49.982,
         "mediana": 50.143,
-        "hi": 50.304
+        "hi": 50.303
       },
       "sanchez": {
         "media": 49.857,
-        "lo": 49.696,
+        "lo": 49.697,
         "mediana": 49.857,
         "hi": 50.018
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9223694,
-        "lo": 9194031,
-        "mediana": 9223771,
-        "hi": 9253207
+        "media": 9223680,
+        "lo": 9194042,
+        "mediana": 9223756,
+        "hi": 9253170
       },
       "sanchez": {
-        "media": 9171061,
-        "lo": 9141548,
-        "mediana": 9170984,
-        "hi": 9200725
+        "media": 9171075,
+        "lo": 9141584,
+        "mediana": 9170999,
+        "hi": 9200712
       },
       "total_2via": {
-        "media": 18394755,
-        "lo": 18394755,
-        "mediana": 18394755,
-        "hi": 18394755
+        "media": 18394754,
+        "lo": 18394754,
+        "mediana": 18394754,
+        "hi": 18394754
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 52786,
-      "media": 52633,
-      "lo": -6694,
-      "hi": 111660,
-      "abs_mediana": 52786
+      "mediana": 52757,
+      "media": 52605,
+      "lo": -6671,
+      "hi": 111586,
+      "abs_mediana": 52757
     },
     "votos_por_acta_nacional": 198.2,
     "por_region": [
@@ -1421,14 +1421,14 @@
         "ubigeo": 180000,
         "nombre": "Pasco",
         "exterior": false,
-        "pct_actas": 98.13,
+        "pct_actas": 98.25,
         "lider": "sanchez",
-        "margen": 21.59,
-        "share_keiko_actual": 39.2,
-        "share_keiko_proyectado": 39.26,
+        "margen": 21.61,
+        "share_keiko_actual": 39.19,
+        "share_keiko_proyectado": 39.25,
         "votos": {
-          "keiko": 50606,
-          "sanchez": 78478
+          "keiko": 50656,
+          "sanchez": 78591
         }
       },
       {
