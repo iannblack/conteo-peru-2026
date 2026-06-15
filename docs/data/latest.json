@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-15T21:15:04Z",
+  "timestamp_utc": "2026-06-15T21:20:34Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 98.768,
-    "actas_contabilizadas": 91623,
+    "actas_pct": 98.769,
+    "actas_contabilizadas": 91624,
     "actas_total": 92766,
-    "votos_emitidos": 19434434,
-    "votos_validos": 18164488,
-    "participacion": 71.122,
+    "votos_emitidos": 19434634,
+    "votos_validos": 18164674,
+    "participacion": 71.123,
     "votos": {
-      "sanchez": 9070940,
-      "keiko": 9093548
+      "sanchez": 9071048,
+      "keiko": 9093626
     }
   },
   "regiones": [
@@ -43,9 +43,9 @@
       "ubigeo": 20000,
       "nombre": "Áncash",
       "exterior": false,
-      "actas_contabilizadas": 3445,
+      "actas_contabilizadas": 3447,
       "actas_total": 3472,
-      "pct_actas": 99.22,
+      "pct_actas": 99.28,
       "votos": {
         "keiko": 268999,
         "sanchez": 350756
@@ -151,12 +151,12 @@
       "ubigeo": 110000,
       "nombre": "Junín",
       "exterior": false,
-      "actas_contabilizadas": 3690,
+      "actas_contabilizadas": 3691,
       "actas_total": 3691,
-      "pct_actas": 99.97,
+      "pct_actas": 100.0,
       "votos": {
-        "keiko": 323746,
-        "sanchez": 394610
+        "keiko": 323824,
+        "sanchez": 394718
       }
     },
     {
@@ -347,8 +347,8 @@
       "actas_total": 1570,
       "pct_actas": 96.75,
       "votos": {
-        "sanchez": 58857,
-        "keiko": 117592
+        "sanchez": 58926,
+        "keiko": 117699
       }
     },
     {
@@ -371,8 +371,8 @@
       "actas_total": 839,
       "pct_actas": 94.87,
       "votos": {
-        "sanchez": 48128,
-        "keiko": 60794
+        "sanchez": 48159,
+        "keiko": 60841
       }
     },
     {
@@ -523,10 +523,10 @@
       "ubigeo": 921000,
       "iso3": "CHL",
       "nombre": "Chile",
-      "actas_contabilizadas": 260,
+      "actas_contabilizadas": 261,
       "votos": {
-        "sanchez": 18974,
-        "keiko": 26801
+        "sanchez": 19043,
+        "keiko": 26908
       }
     },
     {
@@ -893,10 +893,10 @@
       "ubigeo": 940900,
       "iso3": "ESP",
       "nombre": "España",
-      "actas_contabilizadas": 423,
+      "actas_contabilizadas": 424,
       "votos": {
-        "sanchez": 21571,
-        "keiko": 32510
+        "sanchez": 21602,
+        "keiko": 32557
       }
     },
     {
@@ -1128,8 +1128,8 @@
     "sigma_sistematico_pts": 0.075,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
-      "keiko": 0.9694,
-      "sanchez": 0.0306
+      "keiko": 0.97,
+      "sanchez": 0.03
     },
     "share_actual_2via": {
       "keiko": 50.062,
@@ -1138,7 +1138,7 @@
     "proyeccion_2via_pct": {
       "keiko": {
         "media": 50.143,
-        "lo": 49.994,
+        "lo": 49.995,
         "mediana": 50.143,
         "hi": 50.291
       },
@@ -1146,36 +1146,36 @@
         "media": 49.857,
         "lo": 49.709,
         "mediana": 49.857,
-        "hi": 50.006
+        "hi": 50.005
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9223705,
-        "lo": 9196343,
-        "mediana": 9223772,
-        "hi": 9250939
+        "media": 9223699,
+        "lo": 9196396,
+        "mediana": 9223770,
+        "hi": 9250868
       },
       "sanchez": {
-        "media": 9171167,
-        "lo": 9143933,
-        "mediana": 9171100,
-        "hi": 9198530
+        "media": 9171067,
+        "lo": 9143897,
+        "mediana": 9170995,
+        "hi": 9198369
       },
       "total_2via": {
-        "media": 18394872,
-        "lo": 18394872,
-        "mediana": 18394872,
-        "hi": 18394872
+        "media": 18394765,
+        "lo": 18394765,
+        "mediana": 18394765,
+        "hi": 18394765
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 52673,
-      "media": 52539,
-      "lo": -2187,
-      "hi": 107007,
-      "abs_mediana": 52673
+      "mediana": 52774,
+      "media": 52632,
+      "lo": -1973,
+      "hi": 106971,
+      "abs_mediana": 52774
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1197,7 +1197,7 @@
         "ubigeo": 20000,
         "nombre": "Áncash",
         "exterior": false,
-        "pct_actas": 99.22,
+        "pct_actas": 99.28,
         "lider": "sanchez",
         "margen": 13.19,
         "share_keiko_actual": 43.4,
@@ -1323,14 +1323,14 @@
         "ubigeo": 110000,
         "nombre": "Junín",
         "exterior": false,
-        "pct_actas": 99.97,
+        "pct_actas": 100.0,
         "lider": "sanchez",
-        "margen": 9.86,
+        "margen": 9.87,
         "share_keiko_actual": 45.07,
         "share_keiko_proyectado": 45.07,
         "votos": {
-          "keiko": 323746,
-          "sanchez": 394610
+          "keiko": 323824,
+          "sanchez": 394718
         }
       },
       {
@@ -1549,12 +1549,12 @@
         "exterior": true,
         "pct_actas": 96.75,
         "lider": "keiko",
-        "margen": 33.29,
+        "margen": 33.28,
         "share_keiko_actual": 66.64,
-        "share_keiko_proyectado": 66.6,
+        "share_keiko_proyectado": 66.59,
         "votos": {
-          "sanchez": 58857,
-          "keiko": 117592
+          "sanchez": 58926,
+          "keiko": 117699
         }
       },
       {
@@ -1578,11 +1578,11 @@
         "pct_actas": 94.87,
         "lider": "keiko",
         "margen": 11.63,
-        "share_keiko_actual": 55.81,
+        "share_keiko_actual": 55.82,
         "share_keiko_proyectado": 55.79,
         "votos": {
-          "sanchez": 48128,
-          "keiko": 60794
+          "sanchez": 48159,
+          "keiko": 60841
         }
       },
       {
