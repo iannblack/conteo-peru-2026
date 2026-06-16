@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-16T16:06:42Z",
+  "timestamp_utc": "2026-06-16T16:56:48Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 99.068,
-    "actas_contabilizadas": 91901,
+    "actas_pct": 99.073,
+    "actas_contabilizadas": 91906,
     "actas_total": 92766,
-    "votos_emitidos": 19494352,
-    "votos_validos": 18220467,
-    "participacion": 71.341,
+    "votos_emitidos": 19495480,
+    "votos_validos": 18221513,
+    "participacion": 71.346,
     "votos": {
-      "sanchez": 9092750,
-      "keiko": 9127717
+      "sanchez": 9093120,
+      "keiko": 9128393
     }
   },
   "regiones": [
@@ -187,12 +187,12 @@
       "ubigeo": 140000,
       "nombre": "Lima",
       "exterior": false,
-      "actas_contabilizadas": 28747,
+      "actas_contabilizadas": 28752,
       "actas_total": 29247,
-      "pct_actas": 98.29,
+      "pct_actas": 98.31,
       "votos": {
-        "sanchez": 2296170,
-        "keiko": 4006451
+        "sanchez": 2296674,
+        "keiko": 4007333
       }
     },
     {
@@ -1128,54 +1128,54 @@
     "sigma_sistematico_pts": 0.057,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
-      "keiko": 0.9956,
-      "sanchez": 0.0044
+      "keiko": 0.9957,
+      "sanchez": 0.0043
     },
     "share_actual_2via": {
-      "keiko": 50.096,
-      "sanchez": 49.904
+      "keiko": 50.097,
+      "sanchez": 49.903
     },
     "proyeccion_2via_pct": {
       "keiko": {
         "media": 50.15,
-        "lo": 50.037,
-        "mediana": 50.15,
-        "hi": 50.263
+        "lo": 50.038,
+        "mediana": 50.151,
+        "hi": 50.262
       },
       "sanchez": {
         "media": 49.85,
-        "lo": 49.737,
-        "mediana": 49.85,
-        "hi": 49.963
+        "lo": 49.738,
+        "mediana": 49.849,
+        "hi": 49.962
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9225439,
-        "lo": 9204609,
-        "mediana": 9225493,
-        "hi": 9246168
+        "media": 9225628,
+        "lo": 9204928,
+        "mediana": 9225681,
+        "hi": 9246225
       },
       "sanchez": {
-        "media": 9170221,
-        "lo": 9149493,
-        "mediana": 9170167,
-        "hi": 9191051
+        "media": 9170327,
+        "lo": 9149730,
+        "mediana": 9170274,
+        "hi": 9191027
       },
       "total_2via": {
-        "media": 18395660,
-        "lo": 18395660,
-        "mediana": 18395660,
-        "hi": 18395660
+        "media": 18395955,
+        "lo": 18395955,
+        "mediana": 18395955,
+        "hi": 18395955
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 55326,
-      "media": 55217,
-      "lo": 13558,
-      "hi": 96675,
-      "abs_mediana": 55326
+      "mediana": 55406,
+      "media": 55300,
+      "lo": 13900,
+      "hi": 96495,
+      "abs_mediana": 55406
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1365,14 +1365,14 @@
         "ubigeo": 140000,
         "nombre": "Lima",
         "exterior": false,
-        "pct_actas": 98.29,
+        "pct_actas": 98.31,
         "lider": "keiko",
         "margen": 27.14,
         "share_keiko_actual": 63.57,
         "share_keiko_proyectado": 63.56,
         "votos": {
-          "sanchez": 2296170,
-          "keiko": 4006451
+          "sanchez": 2296674,
+          "keiko": 4007333
         }
       },
       {
