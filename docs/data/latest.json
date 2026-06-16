@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-16T23:15:19Z",
+  "timestamp_utc": "2026-06-16T23:20:50Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 99.12,
-    "actas_contabilizadas": 91950,
+    "actas_pct": 99.124,
+    "actas_contabilizadas": 91953,
     "actas_total": 92766,
-    "votos_emitidos": 19505450,
-    "votos_validos": 18230702,
-    "participacion": 71.382,
+    "votos_emitidos": 19506069,
+    "votos_validos": 18231285,
+    "participacion": 71.384,
     "votos": {
-      "sanchez": 9097522,
-      "keiko": 9133180
+      "sanchez": 9097881,
+      "keiko": 9133404
     }
   },
   "regiones": [
@@ -127,12 +127,12 @@
       "ubigeo": 90000,
       "nombre": "Huánuco",
       "exterior": false,
-      "actas_contabilizadas": 2330,
+      "actas_contabilizadas": 2331,
       "actas_total": 2341,
-      "pct_actas": 99.53,
+      "pct_actas": 99.57,
       "votos": {
-        "keiko": 140131,
-        "sanchez": 251106
+        "keiko": 140226,
+        "sanchez": 251238
       }
     },
     {
@@ -1124,7 +1124,7 @@
     "metodo": "beta-binomial-pooling-parcial-actas-v1",
     "n_samples": 20000,
     "kappa": 4.0,
-    "frac_faltante": 0.009,
+    "frac_faltante": 0.0089,
     "sigma_sistematico_pts": 0.054,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
@@ -1151,31 +1151,31 @@
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9225394,
-        "lo": 9205826,
-        "mediana": 9225445,
-        "hi": 9244878
+        "media": 9225429,
+        "lo": 9205880,
+        "mediana": 9225480,
+        "hi": 9244893
       },
       "sanchez": {
-        "media": 9170523,
-        "lo": 9151039,
-        "mediana": 9170473,
-        "hi": 9190092
+        "media": 9170547,
+        "lo": 9151084,
+        "mediana": 9170497,
+        "hi": 9190097
       },
       "total_2via": {
-        "media": 18395918,
-        "lo": 18395918,
-        "mediana": 18395918,
-        "hi": 18395918
+        "media": 18395977,
+        "lo": 18395977,
+        "mediana": 18395977,
+        "hi": 18395977
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 54972,
-      "media": 54871,
-      "lo": 15734,
-      "hi": 93839,
-      "abs_mediana": 54972
+      "mediana": 54983,
+      "media": 54882,
+      "lo": 15784,
+      "hi": 93809,
+      "abs_mediana": 54983
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1295,14 +1295,14 @@
         "ubigeo": 90000,
         "nombre": "Huánuco",
         "exterior": false,
-        "pct_actas": 99.53,
+        "pct_actas": 99.57,
         "lider": "sanchez",
-        "margen": 28.37,
+        "margen": 28.36,
         "share_keiko_actual": 35.82,
         "share_keiko_proyectado": 35.84,
         "votos": {
-          "keiko": 140131,
-          "sanchez": 251106
+          "keiko": 140226,
+          "sanchez": 251238
         }
       },
       {
