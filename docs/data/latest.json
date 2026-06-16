@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-16T21:51:48Z",
+  "timestamp_utc": "2026-06-16T21:57:06Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 99.091,
-    "actas_contabilizadas": 91923,
+    "actas_pct": 99.094,
+    "actas_contabilizadas": 91926,
     "actas_total": 92766,
-    "votos_emitidos": 19499277,
-    "votos_validos": 18225023,
-    "participacion": 71.359,
+    "votos_emitidos": 19499993,
+    "votos_validos": 18225684,
+    "participacion": 71.362,
     "votos": {
-      "sanchez": 9094623,
-      "keiko": 9130400
+      "sanchez": 9094983,
+      "keiko": 9130701
     }
   },
   "regiones": [
@@ -43,12 +43,12 @@
       "ubigeo": 20000,
       "nombre": "Áncash",
       "exterior": false,
-      "actas_contabilizadas": 3453,
+      "actas_contabilizadas": 3454,
       "actas_total": 3472,
-      "pct_actas": 99.45,
+      "pct_actas": 99.48,
       "votos": {
-        "keiko": 269414,
-        "sanchez": 351245
+        "keiko": 269715,
+        "sanchez": 351605
       }
     },
     {
@@ -1151,31 +1151,31 @@
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9225281,
-        "lo": 9205069,
-        "mediana": 9225333,
-        "hi": 9245408
+        "media": 9225505,
+        "lo": 9205312,
+        "mediana": 9225557,
+        "hi": 9245612
       },
       "sanchez": {
-        "media": 9169837,
-        "lo": 9149710,
-        "mediana": 9169784,
-        "hi": 9190049
+        "media": 9170097,
+        "lo": 9149989,
+        "mediana": 9170045,
+        "hi": 9190289
       },
       "total_2via": {
-        "media": 18395118,
-        "lo": 18395118,
-        "mediana": 18395118,
-        "hi": 18395118
+        "media": 18395602,
+        "lo": 18395602,
+        "mediana": 18395602,
+        "hi": 18395602
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 55549,
-      "media": 55444,
-      "lo": 15019,
-      "hi": 95698,
-      "abs_mediana": 55549
+      "mediana": 55512,
+      "media": 55408,
+      "lo": 15023,
+      "hi": 95623,
+      "abs_mediana": 55512
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1197,14 +1197,14 @@
         "ubigeo": 20000,
         "nombre": "Áncash",
         "exterior": false,
-        "pct_actas": 99.45,
+        "pct_actas": 99.48,
         "lider": "sanchez",
         "margen": 13.18,
         "share_keiko_actual": 43.41,
         "share_keiko_proyectado": 43.41,
         "votos": {
-          "keiko": 269414,
-          "sanchez": 351245
+          "keiko": 269715,
+          "sanchez": 351605
         }
       },
       {
