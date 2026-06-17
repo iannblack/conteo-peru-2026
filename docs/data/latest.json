@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-17T17:03:25Z",
+  "timestamp_utc": "2026-06-17T17:08:45Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 99.173,
-    "actas_contabilizadas": 91999,
+    "actas_pct": 99.175,
+    "actas_contabilizadas": 92001,
     "actas_total": 92766,
-    "votos_emitidos": 19516146,
-    "votos_validos": 18240737,
-    "participacion": 71.421,
+    "votos_emitidos": 19516564,
+    "votos_validos": 18241117,
+    "participacion": 71.423,
     "votos": {
-      "sanchez": 9101776,
-      "keiko": 9138961
+      "sanchez": 9102114,
+      "keiko": 9139003
     }
   },
   "regiones": [
@@ -115,12 +115,12 @@
       "ubigeo": 80000,
       "nombre": "Huancavelica",
       "exterior": false,
-      "actas_contabilizadas": 1262,
+      "actas_contabilizadas": 1263,
       "actas_total": 1273,
-      "pct_actas": 99.14,
+      "pct_actas": 99.21,
       "votos": {
-        "keiko": 36707,
-        "sanchez": 160659
+        "keiko": 36750,
+        "sanchez": 160852
       }
     },
     {
@@ -1139,43 +1139,43 @@
       "keiko": {
         "media": 50.149,
         "lo": 50.049,
-        "mediana": 50.15,
+        "mediana": 50.149,
         "hi": 50.249
       },
       "sanchez": {
         "media": 49.851,
         "lo": 49.751,
-        "mediana": 49.85,
+        "mediana": 49.851,
         "hi": 49.951
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9225379,
-        "lo": 9206985,
-        "mediana": 9225425,
-        "hi": 9243682
+        "media": 9225393,
+        "lo": 9207016,
+        "mediana": 9225439,
+        "hi": 9243677
       },
       "sanchez": {
-        "media": 9170415,
-        "lo": 9152113,
-        "mediana": 9170369,
-        "hi": 9188809
+        "media": 9170482,
+        "lo": 9152198,
+        "mediana": 9170436,
+        "hi": 9188859
       },
       "total_2via": {
-        "media": 18395795,
-        "lo": 18395795,
-        "mediana": 18395795,
-        "hi": 18395795
+        "media": 18395875,
+        "lo": 18395875,
+        "mediana": 18395875,
+        "hi": 18395875
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 55056,
-      "media": 54964,
-      "lo": 18176,
-      "hi": 91569,
-      "abs_mediana": 55056
+      "mediana": 55004,
+      "media": 54912,
+      "lo": 18157,
+      "hi": 91479,
+      "abs_mediana": 55004
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1281,14 +1281,14 @@
         "ubigeo": 80000,
         "nombre": "Huancavelica",
         "exterior": false,
-        "pct_actas": 99.14,
+        "pct_actas": 99.21,
         "lider": "sanchez",
         "margen": 62.8,
         "share_keiko_actual": 18.6,
         "share_keiko_proyectado": 18.69,
         "votos": {
-          "keiko": 36707,
-          "sanchez": 160659
+          "keiko": 36750,
+          "sanchez": 160852
         }
       },
       {
