@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-17T20:37:18Z",
+  "timestamp_utc": "2026-06-17T20:42:36Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 99.203,
-    "actas_contabilizadas": 92027,
+    "actas_pct": 99.204,
+    "actas_contabilizadas": 92028,
     "actas_total": 92766,
-    "votos_emitidos": 19522055,
-    "votos_validos": 18246208,
+    "votos_emitidos": 19522194,
+    "votos_validos": 18246335,
     "participacion": 71.443,
     "votos": {
-      "sanchez": 9104981,
-      "keiko": 9141227
+      "sanchez": 9105085,
+      "keiko": 9141250
     }
   },
   "regiones": [
@@ -55,12 +55,12 @@
       "ubigeo": 30000,
       "nombre": "Apurímac",
       "exterior": false,
-      "actas_contabilizadas": 1316,
+      "actas_contabilizadas": 1317,
       "actas_total": 1317,
-      "pct_actas": 99.92,
+      "pct_actas": 100.0,
       "votos": {
-        "keiko": 43394,
-        "sanchez": 187148
+        "keiko": 43413,
+        "sanchez": 187285
       }
     },
     {
@@ -1140,42 +1140,42 @@
         "media": 50.148,
         "lo": 50.052,
         "mediana": 50.149,
-        "hi": 50.245
+        "hi": 50.244
       },
       "sanchez": {
         "media": 49.852,
-        "lo": 49.755,
+        "lo": 49.756,
         "mediana": 49.851,
         "hi": 49.948
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9225216,
-        "lo": 9207441,
-        "mediana": 9225262,
-        "hi": 9242907
+        "media": 9225202,
+        "lo": 9207449,
+        "mediana": 9225245,
+        "hi": 9242871
       },
       "sanchez": {
-        "media": 9170618,
-        "lo": 9152926,
-        "mediana": 9170572,
-        "hi": 9188393
+        "media": 9170613,
+        "lo": 9152943,
+        "mediana": 9170570,
+        "hi": 9188365
       },
       "total_2via": {
-        "media": 18395834,
-        "lo": 18395834,
-        "mediana": 18395834,
-        "hi": 18395834
+        "media": 18395815,
+        "lo": 18395815,
+        "mediana": 18395815,
+        "hi": 18395815
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 54690,
-      "media": 54598,
-      "lo": 19048,
-      "hi": 89981,
-      "abs_mediana": 54690
+      "mediana": 54675,
+      "media": 54589,
+      "lo": 19084,
+      "hi": 89928,
+      "abs_mediana": 54675
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1211,14 +1211,14 @@
         "ubigeo": 30000,
         "nombre": "Apurímac",
         "exterior": false,
-        "pct_actas": 99.92,
+        "pct_actas": 100.0,
         "lider": "sanchez",
-        "margen": 62.35,
+        "margen": 62.36,
         "share_keiko_actual": 18.82,
-        "share_keiko_proyectado": 18.93,
+        "share_keiko_proyectado": 18.92,
         "votos": {
-          "keiko": 43394,
-          "sanchez": 187148
+          "keiko": 43413,
+          "sanchez": 187285
         }
       },
       {
