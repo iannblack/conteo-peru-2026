@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-18T00:48:50Z",
+  "timestamp_utc": "2026-06-18T01:34:29Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 99.346,
-    "actas_contabilizadas": 92159,
+    "actas_pct": 99.383,
+    "actas_contabilizadas": 92194,
     "actas_total": 92766,
-    "votos_emitidos": 19548136,
-    "votos_validos": 18270687,
-    "participacion": 71.538,
+    "votos_emitidos": 19553984,
+    "votos_validos": 18276147,
+    "participacion": 71.56,
     "votos": {
-      "sanchez": 9115783,
-      "keiko": 9154904
+      "sanchez": 9118516,
+      "keiko": 9157631
     }
   },
   "regiones": [
@@ -79,12 +79,12 @@
       "ubigeo": 50000,
       "nombre": "Ayacucho",
       "exterior": false,
-      "actas_contabilizadas": 1895,
+      "actas_contabilizadas": 1900,
       "actas_total": 1900,
-      "pct_actas": 99.74,
+      "pct_actas": 100.0,
       "votos": {
-        "keiko": 67266,
-        "sanchez": 257695
+        "keiko": 67502,
+        "sanchez": 258505
       }
     },
     {
@@ -115,12 +115,12 @@
       "ubigeo": 80000,
       "nombre": "Huancavelica",
       "exterior": false,
-      "actas_contabilizadas": 1265,
+      "actas_contabilizadas": 1267,
       "actas_total": 1273,
-      "pct_actas": 99.37,
+      "pct_actas": 99.53,
       "votos": {
-        "keiko": 36770,
-        "sanchez": 161085
+        "keiko": 36808,
+        "sanchez": 161337
       }
     },
     {
@@ -343,36 +343,36 @@
       "ubigeo": 920000,
       "nombre": "Exterior – América",
       "exterior": true,
-      "actas_contabilizadas": 1548,
+      "actas_contabilizadas": 1561,
       "actas_total": 1570,
-      "pct_actas": 98.6,
+      "pct_actas": 99.43,
       "votos": {
-        "sanchez": 60294,
-        "keiko": 120077
+        "sanchez": 60831,
+        "keiko": 121059
       }
     },
     {
       "ubigeo": 930000,
       "nombre": "Exterior – Asia",
       "exterior": true,
-      "actas_contabilizadas": 106,
+      "actas_contabilizadas": 107,
       "actas_total": 107,
-      "pct_actas": 99.07,
+      "pct_actas": 100.0,
       "votos": {
-        "sanchez": 983,
-        "keiko": 8028
+        "sanchez": 989,
+        "keiko": 8135
       }
     },
     {
       "ubigeo": 940000,
       "nombre": "Exterior – Europa",
       "exterior": true,
-      "actas_contabilizadas": 832,
+      "actas_contabilizadas": 837,
       "actas_total": 839,
-      "pct_actas": 99.17,
+      "pct_actas": 99.76,
       "votos": {
-        "sanchez": 50264,
-        "keiko": 63519
+        "sanchez": 50649,
+        "keiko": 63910
       }
     },
     {
@@ -453,10 +453,10 @@
       "ubigeo": 920200,
       "iso3": "ARG",
       "nombre": "Argentina",
-      "actas_contabilizadas": 291,
+      "actas_contabilizadas": 297,
       "votos": {
-        "sanchez": 16682,
-        "keiko": 26366
+        "sanchez": 16866,
+        "keiko": 26671
       }
     },
     {
@@ -523,10 +523,10 @@
       "ubigeo": 921000,
       "iso3": "CHL",
       "nombre": "Chile",
-      "actas_contabilizadas": 274,
+      "actas_contabilizadas": 279,
       "votos": {
-        "sanchez": 19822,
-        "keiko": 28153
+        "sanchez": 20116,
+        "keiko": 28638
       }
     },
     {
@@ -553,10 +553,10 @@
       "ubigeo": 921300,
       "iso3": "USA",
       "nombre": "Estados Unidos",
-      "actas_contabilizadas": 743,
+      "actas_contabilizadas": 744,
       "votos": {
-        "sanchez": 14119,
-        "keiko": 45878
+        "sanchez": 14139,
+        "keiko": 45950
       }
     },
     {
@@ -613,10 +613,10 @@
       "ubigeo": 922200,
       "iso3": "PRY",
       "nombre": "Paraguay",
-      "actas_contabilizadas": 3,
+      "actas_contabilizadas": 4,
       "votos": {
-        "sanchez": 117,
-        "keiko": 397
+        "sanchez": 156,
+        "keiko": 517
       }
     },
     {
@@ -713,10 +713,10 @@
       "ubigeo": 930700,
       "iso3": "JPN",
       "nombre": "Japón",
-      "actas_contabilizadas": 80,
+      "actas_contabilizadas": 81,
       "votos": {
-        "sanchez": 782,
-        "keiko": 7546
+        "sanchez": 788,
+        "keiko": 7653
       }
     },
     {
@@ -893,10 +893,10 @@
       "ubigeo": 940900,
       "iso3": "ESP",
       "nombre": "España",
-      "actas_contabilizadas": 443,
+      "actas_contabilizadas": 444,
       "votos": {
-        "sanchez": 22506,
-        "keiko": 33983
+        "sanchez": 22565,
+        "keiko": 34060
       }
     },
     {
@@ -963,10 +963,10 @@
       "ubigeo": 941700,
       "iso3": "ITA",
       "nombre": "Italia",
-      "actas_contabilizadas": 247,
+      "actas_contabilizadas": 251,
       "votos": {
-        "sanchez": 20342,
-        "keiko": 20888
+        "sanchez": 20668,
+        "keiko": 21202
       }
     },
     {
@@ -1124,60 +1124,60 @@
     "metodo": "beta-binomial-pooling-parcial-actas-v1",
     "n_samples": 20000,
     "kappa": 4.0,
-    "frac_faltante": 0.0067,
-    "sigma_sistematico_pts": 0.04,
+    "frac_faltante": 0.0065,
+    "sigma_sistematico_pts": 0.039,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
       "keiko": 0.9999,
       "sanchez": 0.0001
     },
     "share_actual_2via": {
-      "keiko": 50.108,
-      "sanchez": 49.892
+      "keiko": 50.107,
+      "sanchez": 49.893
     },
     "proyeccion_2via_pct": {
       "keiko": {
-        "media": 50.15,
-        "lo": 50.071,
+        "media": 50.149,
+        "lo": 50.072,
         "mediana": 50.15,
-        "hi": 50.229
+        "hi": 50.227
       },
       "sanchez": {
-        "media": 49.85,
-        "lo": 49.771,
+        "media": 49.851,
+        "lo": 49.773,
         "mediana": 49.85,
-        "hi": 49.929
+        "hi": 49.928
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9225359,
-        "lo": 9210769,
-        "mediana": 9225404,
-        "hi": 9239970
+        "media": 9225414,
+        "lo": 9211214,
+        "mediana": 9225463,
+        "hi": 9239627
       },
       "sanchez": {
-        "media": 9170181,
-        "lo": 9155570,
-        "mediana": 9170137,
-        "hi": 9184771
+        "media": 9170417,
+        "lo": 9156203,
+        "mediana": 9170367,
+        "hi": 9184617
       },
       "total_2via": {
-        "media": 18395540,
-        "lo": 18395540,
-        "mediana": 18395540,
-        "hi": 18395540
+        "media": 18395831,
+        "lo": 18395831,
+        "mediana": 18395831,
+        "hi": 18395831
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 55267,
-      "media": 55178,
-      "lo": 25998,
-      "hi": 84400,
-      "abs_mediana": 55267
+      "mediana": 55096,
+      "media": 54997,
+      "lo": 26597,
+      "hi": 83424,
+      "abs_mediana": 55096
     },
-    "votos_por_acta_nacional": 198.3,
+    "votos_por_acta_nacional": 198.2,
     "por_region": [
       {
         "ubigeo": 10000,
@@ -1239,14 +1239,14 @@
         "ubigeo": 50000,
         "nombre": "Ayacucho",
         "exterior": false,
-        "pct_actas": 99.74,
+        "pct_actas": 100.0,
         "lider": "sanchez",
-        "margen": 58.6,
-        "share_keiko_actual": 20.7,
+        "margen": 58.59,
+        "share_keiko_actual": 20.71,
         "share_keiko_proyectado": 20.77,
         "votos": {
-          "keiko": 67266,
-          "sanchez": 257695
+          "keiko": 67502,
+          "sanchez": 258505
         }
       },
       {
@@ -1281,14 +1281,14 @@
         "ubigeo": 80000,
         "nombre": "Huancavelica",
         "exterior": false,
-        "pct_actas": 99.37,
+        "pct_actas": 99.53,
         "lider": "sanchez",
-        "margen": 62.83,
+        "margen": 62.85,
         "share_keiko_actual": 18.58,
         "share_keiko_proyectado": 18.67,
         "votos": {
-          "keiko": 36770,
-          "sanchez": 161085
+          "keiko": 36808,
+          "sanchez": 161337
         }
       },
       {
@@ -1547,42 +1547,42 @@
         "ubigeo": 920000,
         "nombre": "Exterior – América",
         "exterior": true,
-        "pct_actas": 98.6,
+        "pct_actas": 99.43,
         "lider": "keiko",
-        "margen": 33.14,
-        "share_keiko_actual": 66.57,
-        "share_keiko_proyectado": 66.53,
+        "margen": 33.11,
+        "share_keiko_actual": 66.56,
+        "share_keiko_proyectado": 66.51,
         "votos": {
-          "sanchez": 60294,
-          "keiko": 120077
+          "sanchez": 60831,
+          "keiko": 121059
         }
       },
       {
         "ubigeo": 930000,
         "nombre": "Exterior – Asia",
         "exterior": true,
-        "pct_actas": 99.07,
+        "pct_actas": 100.0,
         "lider": "keiko",
-        "margen": 78.18,
-        "share_keiko_actual": 89.09,
-        "share_keiko_proyectado": 87.65,
+        "margen": 78.32,
+        "share_keiko_actual": 89.16,
+        "share_keiko_proyectado": 87.73,
         "votos": {
-          "sanchez": 983,
-          "keiko": 8028
+          "sanchez": 989,
+          "keiko": 8135
         }
       },
       {
         "ubigeo": 940000,
         "nombre": "Exterior – Europa",
         "exterior": true,
-        "pct_actas": 99.17,
+        "pct_actas": 99.76,
         "lider": "keiko",
-        "margen": 11.65,
-        "share_keiko_actual": 55.82,
-        "share_keiko_proyectado": 55.82,
+        "margen": 11.58,
+        "share_keiko_actual": 55.79,
+        "share_keiko_proyectado": 55.78,
         "votos": {
-          "sanchez": 50264,
-          "keiko": 63519
+          "sanchez": 50649,
+          "keiko": 63910
         }
       },
       {
