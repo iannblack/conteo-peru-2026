@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-19T16:36:11Z",
+  "timestamp_utc": "2026-06-19T16:41:34Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 99.506,
-    "actas_contabilizadas": 92308,
+    "actas_pct": 99.507,
+    "actas_contabilizadas": 92309,
     "actas_total": 92766,
-    "votos_emitidos": 19580418,
-    "votos_validos": 18300917,
-    "participacion": 71.656,
+    "votos_emitidos": 19580666,
+    "votos_validos": 18301147,
+    "participacion": 71.657,
     "votos": {
-      "sanchez": 9128408,
-      "keiko": 9172509
+      "sanchez": 9128566,
+      "keiko": 9172581
     }
   },
   "regiones": [
@@ -283,12 +283,12 @@
       "ubigeo": 220000,
       "nombre": "Tacna",
       "exterior": false,
-      "actas_contabilizadas": 1032,
+      "actas_contabilizadas": 1033,
       "actas_total": 1041,
-      "pct_actas": 99.14,
+      "pct_actas": 99.23,
       "votos": {
-        "keiko": 65654,
-        "sanchez": 163709
+        "keiko": 65739,
+        "sanchez": 163863
       }
     },
     {
@@ -1124,7 +1124,7 @@
     "metodo": "beta-binomial-pooling-parcial-actas-v1",
     "n_samples": 20000,
     "kappa": 4.0,
-    "frac_faltante": 0.0052,
+    "frac_faltante": 0.0051,
     "sigma_sistematico_pts": 0.031,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
@@ -1139,43 +1139,43 @@
       "keiko": {
         "media": 50.146,
         "lo": 50.085,
-        "mediana": 50.146,
+        "mediana": 50.147,
         "hi": 50.207
       },
       "sanchez": {
         "media": 49.854,
         "lo": 49.793,
-        "mediana": 49.854,
+        "mediana": 49.853,
         "hi": 49.915
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9224885,
-        "lo": 9213653,
-        "mediana": 9224927,
-        "hi": 9236139
+        "media": 9224907,
+        "lo": 9213698,
+        "mediana": 9224949,
+        "hi": 9236133
       },
       "sanchez": {
-        "media": 9171070,
-        "lo": 9159816,
-        "mediana": 9171028,
-        "hi": 9182301
+        "media": 9171065,
+        "lo": 9159839,
+        "mediana": 9171023,
+        "hi": 9182273
       },
       "total_2via": {
-        "media": 18395955,
-        "lo": 18395955,
-        "mediana": 18395955,
-        "hi": 18395955
+        "media": 18395972,
+        "lo": 18395972,
+        "mediana": 18395972,
+        "hi": 18395972
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 53899,
-      "media": 53816,
-      "lo": 31352,
-      "hi": 76323,
-      "abs_mediana": 53899
+      "mediana": 53925,
+      "media": 53842,
+      "lo": 31425,
+      "hi": 76294,
+      "abs_mediana": 53925
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1477,14 +1477,14 @@
         "ubigeo": 220000,
         "nombre": "Tacna",
         "exterior": false,
-        "pct_actas": 99.14,
+        "pct_actas": 99.23,
         "lider": "sanchez",
-        "margen": 42.75,
-        "share_keiko_actual": 28.62,
-        "share_keiko_proyectado": 28.71,
+        "margen": 42.74,
+        "share_keiko_actual": 28.63,
+        "share_keiko_proyectado": 28.72,
         "votos": {
-          "keiko": 65654,
-          "sanchez": 163709
+          "keiko": 65739,
+          "sanchez": 163863
         }
       },
       {
