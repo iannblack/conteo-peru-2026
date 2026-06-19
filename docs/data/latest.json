@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-19T16:46:56Z",
+  "timestamp_utc": "2026-06-19T16:52:15Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -259,12 +259,12 @@
       "ubigeo": 200000,
       "nombre": "Puno",
       "exterior": false,
-      "actas_contabilizadas": 3385,
+      "actas_contabilizadas": 3386,
       "actas_total": 3397,
-      "pct_actas": 99.65,
+      "pct_actas": 99.68,
       "votos": {
-        "keiko": 96085,
-        "sanchez": 610937
+        "keiko": 96114,
+        "sanchez": 611104
       }
     },
     {
@@ -1138,7 +1138,7 @@
     "proyeccion_2via_pct": {
       "keiko": {
         "media": 50.146,
-        "lo": 50.085,
+        "lo": 50.086,
         "mediana": 50.147,
         "hi": 50.207
       },
@@ -1146,36 +1146,36 @@
         "media": 49.854,
         "lo": 49.793,
         "mediana": 49.853,
-        "hi": 49.915
+        "hi": 49.914
       }
     },
     "proyeccion_votos": {
       "keiko": {
         "media": 9224907,
-        "lo": 9213698,
-        "mediana": 9224949,
-        "hi": 9236133
+        "lo": 9213723,
+        "mediana": 9224948,
+        "hi": 9236109
       },
       "sanchez": {
-        "media": 9171065,
-        "lo": 9159839,
-        "mediana": 9171023,
-        "hi": 9182273
+        "media": 9171052,
+        "lo": 9159850,
+        "mediana": 9171010,
+        "hi": 9182236
       },
       "total_2via": {
-        "media": 18395972,
-        "lo": 18395972,
-        "mediana": 18395972,
-        "hi": 18395972
+        "media": 18395959,
+        "lo": 18395959,
+        "mediana": 18395959,
+        "hi": 18395959
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 53925,
-      "media": 53842,
-      "lo": 31425,
-      "hi": 76294,
-      "abs_mediana": 53925
+      "mediana": 53938,
+      "media": 53856,
+      "lo": 31488,
+      "hi": 76258,
+      "abs_mediana": 53938
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1449,14 +1449,14 @@
         "ubigeo": 200000,
         "nombre": "Puno",
         "exterior": false,
-        "pct_actas": 99.65,
+        "pct_actas": 99.68,
         "lider": "sanchez",
         "margen": 72.82,
         "share_keiko_actual": 13.59,
         "share_keiko_proyectado": 13.63,
         "votos": {
-          "keiko": 96085,
-          "sanchez": 610937
+          "keiko": 96114,
+          "sanchez": 611104
         }
       },
       {
