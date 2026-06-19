@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-19T16:57:34Z",
+  "timestamp_utc": "2026-06-19T17:02:54Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 99.51,
-    "actas_contabilizadas": 92311,
+    "actas_pct": 99.511,
+    "actas_contabilizadas": 92312,
     "actas_total": 92766,
-    "votos_emitidos": 19581175,
-    "votos_validos": 18301582,
-    "participacion": 71.659,
+    "votos_emitidos": 19581433,
+    "votos_validos": 18301829,
+    "participacion": 71.66,
     "votos": {
-      "sanchez": 9128887,
-      "keiko": 9172695
+      "sanchez": 9129086,
+      "keiko": 9172743
     }
   },
   "regiones": [
@@ -259,12 +259,12 @@
       "ubigeo": 200000,
       "nombre": "Puno",
       "exterior": false,
-      "actas_contabilizadas": 3387,
+      "actas_contabilizadas": 3389,
       "actas_total": 3397,
-      "pct_actas": 99.71,
+      "pct_actas": 99.76,
       "votos": {
-        "keiko": 96162,
-        "sanchez": 611303
+        "keiko": 96250,
+        "sanchez": 611704
       }
     },
     {
@@ -1132,8 +1132,8 @@
       "sanchez": 0.0
     },
     "share_actual_2via": {
-      "keiko": 50.119,
-      "sanchez": 49.881
+      "keiko": 50.118,
+      "sanchez": 49.882
     },
     "proyeccion_2via_pct": {
       "keiko": {
@@ -1151,31 +1151,31 @@
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9224927,
-        "lo": 9213767,
-        "mediana": 9224967,
-        "hi": 9236103
+        "media": 9224958,
+        "lo": 9213847,
+        "mediana": 9224999,
+        "hi": 9236089
       },
       "sanchez": {
-        "media": 9171070,
-        "lo": 9159894,
-        "mediana": 9171030,
-        "hi": 9182230
+        "media": 9171110,
+        "lo": 9159980,
+        "mediana": 9171070,
+        "hi": 9182221
       },
       "total_2via": {
-        "media": 18395997,
-        "lo": 18395997,
-        "mediana": 18395997,
-        "hi": 18395997
+        "media": 18396068,
+        "lo": 18396068,
+        "mediana": 18396068,
+        "hi": 18396068
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 53938,
-      "media": 53857,
-      "lo": 31538,
-      "hi": 76209,
-      "abs_mediana": 53938
+      "mediana": 53929,
+      "media": 53848,
+      "lo": 31626,
+      "hi": 76109,
+      "abs_mediana": 53929
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1449,14 +1449,14 @@
         "ubigeo": 200000,
         "nombre": "Puno",
         "exterior": false,
-        "pct_actas": 99.71,
+        "pct_actas": 99.76,
         "lider": "sanchez",
-        "margen": 72.82,
-        "share_keiko_actual": 13.59,
+        "margen": 72.81,
+        "share_keiko_actual": 13.6,
         "share_keiko_proyectado": 13.64,
         "votos": {
-          "keiko": 96162,
-          "sanchez": 611303
+          "keiko": 96250,
+          "sanchez": 611704
         }
       },
       {
