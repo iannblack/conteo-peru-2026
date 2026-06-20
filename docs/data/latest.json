@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-20T20:05:27Z",
+  "timestamp_utc": "2026-06-20T20:11:04Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -67,12 +67,12 @@
       "ubigeo": 40000,
       "nombre": "Arequipa",
       "exterior": false,
-      "actas_contabilizadas": 4206,
+      "actas_contabilizadas": 4207,
       "actas_total": 4215,
-      "pct_actas": 99.79,
+      "pct_actas": 99.81,
       "votos": {
-        "keiko": 333722,
-        "sanchez": 582615
+        "keiko": 333804,
+        "sanchez": 582758
       }
     },
     {
@@ -1139,43 +1139,43 @@
       "keiko": {
         "media": 50.145,
         "lo": 50.103,
-        "mediana": 50.146,
+        "mediana": 50.145,
         "hi": 50.188
       },
       "sanchez": {
         "media": 49.855,
         "lo": 49.812,
-        "mediana": 49.854,
+        "mediana": 49.855,
         "hi": 49.897
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9225271,
-        "lo": 9217402,
-        "mediana": 9225305,
-        "hi": 9233139
+        "media": 9225274,
+        "lo": 9217431,
+        "mediana": 9225308,
+        "hi": 9233114
       },
       "sanchez": {
-        "media": 9171803,
-        "lo": 9163936,
-        "mediana": 9171770,
-        "hi": 9179673
+        "media": 9171808,
+        "lo": 9163968,
+        "mediana": 9171774,
+        "hi": 9179651
       },
       "total_2via": {
-        "media": 18397075,
-        "lo": 18397075,
-        "mediana": 18397075,
-        "hi": 18397075
+        "media": 18397082,
+        "lo": 18397082,
+        "mediana": 18397082,
+        "hi": 18397082
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 53536,
-      "media": 53468,
-      "lo": 37730,
-      "hi": 69203,
-      "abs_mediana": 53536
+      "mediana": 53535,
+      "media": 53466,
+      "lo": 37779,
+      "hi": 69146,
+      "abs_mediana": 53535
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1225,14 +1225,14 @@
         "ubigeo": 40000,
         "nombre": "Arequipa",
         "exterior": false,
-        "pct_actas": 99.79,
+        "pct_actas": 99.81,
         "lider": "sanchez",
         "margen": 27.16,
         "share_keiko_actual": 36.42,
         "share_keiko_proyectado": 36.43,
         "votos": {
-          "keiko": 333722,
-          "sanchez": 582615
+          "keiko": 333804,
+          "sanchez": 582758
         }
       },
       {
