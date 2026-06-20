@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-20T16:01:42Z",
+  "timestamp_utc": "2026-06-20T17:34:21Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 99.63,
-    "actas_contabilizadas": 92423,
+    "actas_pct": 99.636,
+    "actas_contabilizadas": 92428,
     "actas_total": 92766,
-    "votos_emitidos": 19606639,
-    "votos_validos": 18325535,
-    "participacion": 71.752,
+    "votos_emitidos": 19607769,
+    "votos_validos": 18326586,
+    "participacion": 71.756,
     "votos": {
-      "sanchez": 9142095,
-      "keiko": 9183440
+      "sanchez": 9142571,
+      "keiko": 9184015
     }
   },
   "regiones": [
@@ -247,12 +247,12 @@
       "ubigeo": 190000,
       "nombre": "Piura",
       "exterior": false,
-      "actas_contabilizadas": 5251,
+      "actas_contabilizadas": 5255,
       "actas_total": 5281,
-      "pct_actas": 99.43,
+      "pct_actas": 99.51,
       "votos": {
-        "sanchez": 442762,
-        "keiko": 586399
+        "sanchez": 443162,
+        "keiko": 586846
       }
     },
     {
@@ -307,12 +307,12 @@
       "ubigeo": 240000,
       "nombre": "Callao",
       "exterior": false,
-      "actas_contabilizadas": 2893,
+      "actas_contabilizadas": 2894,
       "actas_total": 2898,
-      "pct_actas": 99.83,
+      "pct_actas": 99.86,
       "votos": {
-        "sanchez": 211418,
-        "keiko": 403115
+        "sanchez": 211494,
+        "keiko": 403243
       }
     },
     {
@@ -1124,7 +1124,7 @@
     "metodo": "beta-binomial-pooling-parcial-actas-v1",
     "n_samples": 20000,
     "kappa": 4.0,
-    "frac_faltante": 0.0039,
+    "frac_faltante": 0.0038,
     "sigma_sistematico_pts": 0.023,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
@@ -1140,42 +1140,42 @@
         "media": 50.145,
         "lo": 50.099,
         "mediana": 50.145,
-        "hi": 50.191
+        "hi": 50.19
       },
       "sanchez": {
         "media": 49.855,
-        "lo": 49.809,
+        "lo": 49.81,
         "mediana": 49.855,
         "hi": 49.901
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9225114,
-        "lo": 9216632,
-        "mediana": 9225145,
-        "hi": 9233606
+        "media": 9225103,
+        "lo": 9216742,
+        "mediana": 9225132,
+        "hi": 9233471
       },
       "sanchez": {
-        "media": 9171796,
-        "lo": 9163304,
-        "mediana": 9171764,
-        "hi": 9180278
+        "media": 9171862,
+        "lo": 9163493,
+        "mediana": 9171833,
+        "hi": 9180223
       },
       "total_2via": {
-        "media": 18396910,
-        "lo": 18396910,
-        "mediana": 18396910,
-        "hi": 18396910
+        "media": 18396965,
+        "lo": 18396965,
+        "mediana": 18396965,
+        "hi": 18396965
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 53381,
-      "media": 53317,
-      "lo": 36353,
-      "hi": 70303,
-      "abs_mediana": 53381
+      "mediana": 53300,
+      "media": 53241,
+      "lo": 36519,
+      "hi": 69978,
+      "abs_mediana": 53300
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1435,14 +1435,14 @@
         "ubigeo": 190000,
         "nombre": "Piura",
         "exterior": false,
-        "pct_actas": 99.43,
+        "pct_actas": 99.51,
         "lider": "keiko",
-        "margen": 13.96,
-        "share_keiko_actual": 56.98,
+        "margen": 13.95,
+        "share_keiko_actual": 56.97,
         "share_keiko_proyectado": 56.97,
         "votos": {
-          "sanchez": 442762,
-          "keiko": 586399
+          "sanchez": 443162,
+          "keiko": 586846
         }
       },
       {
@@ -1505,14 +1505,14 @@
         "ubigeo": 240000,
         "nombre": "Callao",
         "exterior": false,
-        "pct_actas": 99.83,
+        "pct_actas": 99.86,
         "lider": "keiko",
         "margen": 31.19,
         "share_keiko_actual": 65.6,
         "share_keiko_proyectado": 65.57,
         "votos": {
-          "sanchez": 211418,
-          "keiko": 403115
+          "sanchez": 211494,
+          "keiko": 403243
         }
       },
       {
