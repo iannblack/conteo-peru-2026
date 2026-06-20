@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-20T15:07:40Z",
+  "timestamp_utc": "2026-06-20T15:13:36Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 99.628,
-    "actas_contabilizadas": 92421,
+    "actas_pct": 99.629,
+    "actas_contabilizadas": 92422,
     "actas_total": 92766,
-    "votos_emitidos": 19606220,
-    "votos_validos": 18325138,
-    "participacion": 71.751,
+    "votos_emitidos": 19606432,
+    "votos_validos": 18325339,
+    "participacion": 71.752,
     "votos": {
-      "sanchez": 9141825,
-      "keiko": 9183313
+      "sanchez": 9141948,
+      "keiko": 9183391
     }
   },
   "regiones": [
@@ -271,12 +271,12 @@
       "ubigeo": 210000,
       "nombre": "San Martín",
       "exterior": false,
-      "actas_contabilizadas": 2533,
+      "actas_contabilizadas": 2534,
       "actas_total": 2534,
-      "pct_actas": 99.96,
+      "pct_actas": 100.0,
       "votos": {
-        "keiko": 219244,
-        "sanchez": 263980
+        "keiko": 219293,
+        "sanchez": 264127
       }
     },
     {
@@ -1151,31 +1151,31 @@
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9225151,
-        "lo": 9216645,
-        "mediana": 9225183,
-        "hi": 9233663
+        "media": 9225114,
+        "lo": 9216632,
+        "mediana": 9225145,
+        "hi": 9233606
       },
       "sanchez": {
-        "media": 9171754,
-        "lo": 9163242,
-        "mediana": 9171721,
-        "hi": 9180259
+        "media": 9171796,
+        "lo": 9163304,
+        "mediana": 9171764,
+        "hi": 9180278
       },
       "total_2via": {
-        "media": 18396905,
-        "lo": 18396905,
-        "mediana": 18396905,
-        "hi": 18396905
+        "media": 18396910,
+        "lo": 18396910,
+        "mediana": 18396910,
+        "hi": 18396910
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 53462,
-      "media": 53397,
-      "lo": 36386,
-      "hi": 70421,
-      "abs_mediana": 53462
+      "mediana": 53381,
+      "media": 53317,
+      "lo": 36353,
+      "hi": 70303,
+      "abs_mediana": 53381
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1463,14 +1463,14 @@
         "ubigeo": 210000,
         "nombre": "San Martín",
         "exterior": false,
-        "pct_actas": 99.96,
+        "pct_actas": 100.0,
         "lider": "sanchez",
-        "margen": 9.26,
-        "share_keiko_actual": 45.37,
-        "share_keiko_proyectado": 45.38,
+        "margen": 9.27,
+        "share_keiko_actual": 45.36,
+        "share_keiko_proyectado": 45.37,
         "votos": {
-          "keiko": 219244,
-          "sanchez": 263980
+          "keiko": 219293,
+          "sanchez": 264127
         }
       },
       {
