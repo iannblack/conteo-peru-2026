@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-22T21:54:11Z",
+  "timestamp_utc": "2026-06-22T21:59:45Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 99.707,
-    "actas_contabilizadas": 92494,
+    "actas_pct": 99.709,
+    "actas_contabilizadas": 92496,
     "actas_total": 92766,
-    "votos_emitidos": 19621343,
-    "votos_validos": 18339336,
-    "participacion": 71.806,
+    "votos_emitidos": 19621751,
+    "votos_validos": 18339722,
+    "participacion": 71.808,
     "votos": {
-      "sanchez": 9149504,
-      "keiko": 9189832
+      "sanchez": 9149740,
+      "keiko": 9189982
     }
   },
   "regiones": [
@@ -187,12 +187,12 @@
       "ubigeo": 140000,
       "nombre": "Lima",
       "exterior": false,
-      "actas_contabilizadas": 29037,
+      "actas_contabilizadas": 29038,
       "actas_total": 29247,
-      "pct_actas": 99.28,
+      "pct_actas": 99.29,
       "votos": {
-        "sanchez": 2320579,
-        "keiko": 4046143
+        "sanchez": 2320674,
+        "keiko": 4046276
       }
     },
     {
@@ -211,12 +211,12 @@
       "ubigeo": 160000,
       "nombre": "Madre de Dios",
       "exterior": false,
-      "actas_contabilizadas": 506,
+      "actas_contabilizadas": 507,
       "actas_total": 507,
-      "pct_actas": 99.8,
+      "pct_actas": 100.0,
       "votos": {
-        "keiko": 29384,
-        "sanchez": 65917
+        "keiko": 29401,
+        "sanchez": 66058
       }
     },
     {
@@ -1139,43 +1139,43 @@
       "keiko": {
         "media": 50.145,
         "lo": 50.109,
-        "mediana": 50.146,
+        "mediana": 50.145,
         "hi": 50.182
       },
       "sanchez": {
         "media": 49.855,
         "lo": 49.818,
-        "mediana": 49.854,
+        "mediana": 49.855,
         "hi": 49.891
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9225065,
-        "lo": 9218261,
-        "mediana": 9225093,
-        "hi": 9231860
+        "media": 9225018,
+        "lo": 9218266,
+        "mediana": 9225046,
+        "hi": 9231765
       },
       "sanchez": {
-        "media": 9171534,
-        "lo": 9164740,
-        "mediana": 9171506,
-        "hi": 9178339
+        "media": 9171560,
+        "lo": 9164813,
+        "mediana": 9171532,
+        "hi": 9178313
       },
       "total_2via": {
-        "media": 18396600,
-        "lo": 18396600,
-        "mediana": 18396600,
-        "hi": 18396600
+        "media": 18396578,
+        "lo": 18396578,
+        "mediana": 18396578,
+        "hi": 18396578
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 53587,
-      "media": 53531,
-      "lo": 39922,
-      "hi": 67120,
-      "abs_mediana": 53587
+      "mediana": 53513,
+      "media": 53457,
+      "lo": 39953,
+      "hi": 66952,
+      "abs_mediana": 53513
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1365,14 +1365,14 @@
         "ubigeo": 140000,
         "nombre": "Lima",
         "exterior": false,
-        "pct_actas": 99.28,
+        "pct_actas": 99.29,
         "lider": "keiko",
         "margen": 27.1,
         "share_keiko_actual": 63.55,
         "share_keiko_proyectado": 63.55,
         "votos": {
-          "sanchez": 2320579,
-          "keiko": 4046143
+          "sanchez": 2320674,
+          "keiko": 4046276
         }
       },
       {
@@ -1393,14 +1393,14 @@
         "ubigeo": 160000,
         "nombre": "Madre de Dios",
         "exterior": false,
-        "pct_actas": 99.8,
+        "pct_actas": 100.0,
         "lider": "sanchez",
-        "margen": 38.33,
-        "share_keiko_actual": 30.83,
-        "share_keiko_proyectado": 31.01,
+        "margen": 38.4,
+        "share_keiko_actual": 30.8,
+        "share_keiko_proyectado": 30.98,
         "votos": {
-          "keiko": 29384,
-          "sanchez": 65917
+          "keiko": 29401,
+          "sanchez": 66058
         }
       },
       {
