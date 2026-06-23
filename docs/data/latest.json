@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-23T22:44:15Z",
+  "timestamp_utc": "2026-06-23T23:15:31Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 99.745,
-    "actas_contabilizadas": 92529,
+    "actas_pct": 99.75,
+    "actas_contabilizadas": 92534,
     "actas_total": 92766,
-    "votos_emitidos": 19628677,
-    "votos_validos": 18346181,
-    "participacion": 71.833,
+    "votos_emitidos": 19629706,
+    "votos_validos": 18347145,
+    "participacion": 71.837,
     "votos": {
-      "sanchez": 9152331,
-      "keiko": 9193850
+      "sanchez": 9152849,
+      "keiko": 9194296
     }
   },
   "regiones": [
@@ -127,12 +127,12 @@
       "ubigeo": 90000,
       "nombre": "Huánuco",
       "exterior": false,
-      "actas_contabilizadas": 2337,
+      "actas_contabilizadas": 2340,
       "actas_total": 2341,
-      "pct_actas": 99.83,
+      "pct_actas": 99.96,
       "votos": {
-        "keiko": 140559,
-        "sanchez": 251799
+        "keiko": 140784,
+        "sanchez": 252123
       }
     },
     {
@@ -187,12 +187,12 @@
       "ubigeo": 140000,
       "nombre": "Lima",
       "exterior": false,
-      "actas_contabilizadas": 29052,
+      "actas_contabilizadas": 29054,
       "actas_total": 29247,
-      "pct_actas": 99.33,
+      "pct_actas": 99.34,
       "votos": {
-        "sanchez": 2321891,
-        "keiko": 4048097
+        "sanchez": 2322085,
+        "keiko": 4048318
       }
     },
     {
@@ -1138,44 +1138,44 @@
     "proyeccion_2via_pct": {
       "keiko": {
         "media": 50.146,
-        "lo": 50.113,
+        "lo": 50.114,
         "mediana": 50.146,
-        "hi": 50.178
+        "hi": 50.177
       },
       "sanchez": {
         "media": 49.854,
-        "lo": 49.822,
+        "lo": 49.823,
         "mediana": 49.854,
-        "hi": 49.887
+        "hi": 49.886
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9224992,
-        "lo": 9219026,
-        "mediana": 9225014,
-        "hi": 9230944
+        "media": 9224978,
+        "lo": 9219122,
+        "mediana": 9225000,
+        "hi": 9230818
       },
       "sanchez": {
-        "media": 9171374,
-        "lo": 9165421,
-        "mediana": 9171351,
-        "hi": 9177339
+        "media": 9171408,
+        "lo": 9165569,
+        "mediana": 9171387,
+        "hi": 9177265
       },
       "total_2via": {
-        "media": 18396365,
-        "lo": 18396365,
-        "mediana": 18396365,
-        "hi": 18396365
+        "media": 18396387,
+        "lo": 18396387,
+        "mediana": 18396387,
+        "hi": 18396387
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 53663,
-      "media": 53618,
-      "lo": 41687,
-      "hi": 65523,
-      "abs_mediana": 53663
+      "mediana": 53614,
+      "media": 53570,
+      "lo": 41858,
+      "hi": 65249,
+      "abs_mediana": 53614
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1295,14 +1295,14 @@
         "ubigeo": 90000,
         "nombre": "Huánuco",
         "exterior": false,
-        "pct_actas": 99.83,
+        "pct_actas": 99.96,
         "lider": "sanchez",
-        "margen": 28.35,
-        "share_keiko_actual": 35.82,
+        "margen": 28.34,
+        "share_keiko_actual": 35.83,
         "share_keiko_proyectado": 35.85,
         "votos": {
-          "keiko": 140559,
-          "sanchez": 251799
+          "keiko": 140784,
+          "sanchez": 252123
         }
       },
       {
@@ -1365,14 +1365,14 @@
         "ubigeo": 140000,
         "nombre": "Lima",
         "exterior": false,
-        "pct_actas": 99.33,
+        "pct_actas": 99.34,
         "lider": "keiko",
         "margen": 27.1,
         "share_keiko_actual": 63.55,
         "share_keiko_proyectado": 63.55,
         "votos": {
-          "sanchez": 2321891,
-          "keiko": 4048097
+          "sanchez": 2322085,
+          "keiko": 4048318
         }
       },
       {
