@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-23T15:33:00Z",
+  "timestamp_utc": "2026-06-23T15:38:19Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -103,12 +103,12 @@
       "ubigeo": 70000,
       "nombre": "Cusco",
       "exterior": false,
-      "actas_contabilizadas": 3982,
+      "actas_contabilizadas": 3983,
       "actas_total": 3983,
-      "pct_actas": 99.97,
+      "pct_actas": 100.0,
       "votos": {
-        "keiko": 167199,
-        "sanchez": 596470
+        "keiko": 167218,
+        "sanchez": 596621
       }
     },
     {
@@ -1132,8 +1132,8 @@
       "sanchez": 0.0
     },
     "share_actual_2via": {
-      "keiko": 50.111,
-      "sanchez": 49.889
+      "keiko": 50.11,
+      "sanchez": 49.89
     },
     "proyeccion_2via_pct": {
       "keiko": {
@@ -1151,31 +1151,31 @@
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9225102,
+        "media": 9225079,
         "lo": 9218522,
-        "mediana": 9225128,
-        "hi": 9231691
+        "mediana": 9225106,
+        "hi": 9231646
       },
       "sanchez": {
-        "media": 9171525,
-        "lo": 9164936,
-        "mediana": 9171498,
-        "hi": 9178105
+        "media": 9171526,
+        "lo": 9164959,
+        "mediana": 9171499,
+        "hi": 9178083
       },
       "total_2via": {
-        "media": 18396627,
-        "lo": 18396627,
-        "mediana": 18396627,
-        "hi": 18396627
+        "media": 18396605,
+        "lo": 18396605,
+        "mediana": 18396605,
+        "hi": 18396605
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 53630,
-      "media": 53578,
-      "lo": 40417,
-      "hi": 66755,
-      "abs_mediana": 53630
+      "mediana": 53607,
+      "media": 53554,
+      "lo": 40439,
+      "hi": 66687,
+      "abs_mediana": 53607
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1267,14 +1267,14 @@
         "ubigeo": 70000,
         "nombre": "Cusco",
         "exterior": false,
-        "pct_actas": 99.97,
+        "pct_actas": 100.0,
         "lider": "sanchez",
-        "margen": 56.21,
+        "margen": 56.22,
         "share_keiko_actual": 21.89,
-        "share_keiko_proyectado": 21.93,
+        "share_keiko_proyectado": 21.92,
         "votos": {
-          "keiko": 167199,
-          "sanchez": 596470
+          "keiko": 167218,
+          "sanchez": 596621
         }
       },
       {
