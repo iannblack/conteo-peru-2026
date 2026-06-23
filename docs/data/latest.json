@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-23T17:25:19Z",
+  "timestamp_utc": "2026-06-23T17:30:50Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 99.722,
-    "actas_contabilizadas": 92508,
+    "actas_pct": 99.724,
+    "actas_contabilizadas": 92510,
     "actas_total": 92766,
-    "votos_emitidos": 19624383,
-    "votos_validos": 18342162,
-    "participacion": 71.817,
+    "votos_emitidos": 19624637,
+    "votos_validos": 18342404,
+    "participacion": 71.818,
     "votos": {
-      "sanchez": 9150753,
-      "keiko": 9191409
+      "sanchez": 9150906,
+      "keiko": 9191498
     }
   },
   "regiones": [
@@ -319,12 +319,12 @@
       "ubigeo": 250000,
       "nombre": "Ucayali",
       "exterior": false,
-      "actas_contabilizadas": 1557,
+      "actas_contabilizadas": 1559,
       "actas_total": 1564,
-      "pct_actas": 99.55,
+      "pct_actas": 99.68,
       "votos": {
-        "sanchez": 128676,
-        "keiko": 142537
+        "sanchez": 128779,
+        "keiko": 142648
       }
     },
     {
@@ -1138,7 +1138,7 @@
     "proyeccion_2via_pct": {
       "keiko": {
         "media": 50.145,
-        "lo": 50.11,
+        "lo": 50.111,
         "mediana": 50.145,
         "hi": 50.18
       },
@@ -1146,36 +1146,36 @@
         "media": 49.855,
         "lo": 49.82,
         "mediana": 49.855,
-        "hi": 49.89
+        "hi": 49.889
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9224976,
-        "lo": 9218553,
-        "mediana": 9225002,
-        "hi": 9231398
+        "media": 9224904,
+        "lo": 9218520,
+        "mediana": 9224930,
+        "hi": 9231281
       },
       "sanchez": {
-        "media": 9171503,
-        "lo": 9165082,
-        "mediana": 9171477,
-        "hi": 9177927
+        "media": 9171441,
+        "lo": 9165064,
+        "mediana": 9171415,
+        "hi": 9177825
       },
       "total_2via": {
-        "media": 18396480,
-        "lo": 18396480,
-        "mediana": 18396480,
-        "hi": 18396480
+        "media": 18396345,
+        "lo": 18396345,
+        "mediana": 18396345,
+        "hi": 18396345
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 53525,
-      "media": 53473,
-      "lo": 40626,
-      "hi": 66316,
-      "abs_mediana": 53525
+      "mediana": 53514,
+      "media": 53463,
+      "lo": 40696,
+      "hi": 66217,
+      "abs_mediana": 53514
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1519,14 +1519,14 @@
         "ubigeo": 250000,
         "nombre": "Ucayali",
         "exterior": false,
-        "pct_actas": 99.55,
+        "pct_actas": 99.68,
         "lider": "keiko",
         "margen": 5.11,
-        "share_keiko_actual": 52.56,
+        "share_keiko_actual": 52.55,
         "share_keiko_proyectado": 52.55,
         "votos": {
-          "sanchez": 128676,
-          "keiko": 142537
+          "sanchez": 128779,
+          "keiko": 142648
         }
       },
       {
