@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-24T17:37:27Z",
+  "timestamp_utc": "2026-06-24T18:49:05Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 99.863,
-    "actas_contabilizadas": 92639,
+    "actas_pct": 99.87,
+    "actas_contabilizadas": 92645,
     "actas_total": 92766,
-    "votos_emitidos": 19654020,
-    "votos_validos": 18369949,
-    "participacion": 71.926,
+    "votos_emitidos": 19655286,
+    "votos_validos": 18371141,
+    "participacion": 71.93,
     "votos": {
-      "sanchez": 9163118,
-      "keiko": 9206831
+      "sanchez": 9163516,
+      "keiko": 9207625
     }
   },
   "regiones": [
@@ -187,12 +187,12 @@
       "ubigeo": 140000,
       "nombre": "Lima",
       "exterior": false,
-      "actas_contabilizadas": 29150,
+      "actas_contabilizadas": 29155,
       "actas_total": 29247,
-      "pct_actas": 99.67,
+      "pct_actas": 99.69,
       "votos": {
-        "sanchez": 2331634,
-        "keiko": 4059734
+        "sanchez": 2331963,
+        "keiko": 4060377
       }
     },
     {
@@ -247,12 +247,12 @@
       "ubigeo": 190000,
       "nombre": "Piura",
       "exterior": false,
-      "actas_contabilizadas": 5268,
+      "actas_contabilizadas": 5269,
       "actas_total": 5281,
-      "pct_actas": 99.75,
+      "pct_actas": 99.77,
       "votos": {
-        "sanchez": 444114,
-        "keiko": 588561
+        "sanchez": 444183,
+        "keiko": 588712
       }
     },
     {
@@ -1125,57 +1125,57 @@
     "n_samples": 20000,
     "kappa": 4.0,
     "frac_faltante": 0.0014,
-    "sigma_sistematico_pts": 0.009,
+    "sigma_sistematico_pts": 0.008,
     "ganador_proyectado": "keiko",
     "prob_victoria": {
       "keiko": 1.0,
       "sanchez": 0.0
     },
     "share_actual_2via": {
-      "keiko": 50.119,
-      "sanchez": 49.881
+      "keiko": 50.12,
+      "sanchez": 49.88
     },
     "proyeccion_2via_pct": {
       "keiko": {
-        "media": 50.135,
-        "lo": 50.118,
-        "mediana": 50.135,
+        "media": 50.136,
+        "lo": 50.119,
+        "mediana": 50.136,
         "hi": 50.152
       },
       "sanchez": {
-        "media": 49.865,
+        "media": 49.864,
         "lo": 49.848,
-        "mediana": 49.865,
-        "hi": 49.882
+        "mediana": 49.864,
+        "hi": 49.881
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9223079,
-        "lo": 9219946,
-        "mediana": 9223090,
-        "hi": 9226211
+        "media": 9223066,
+        "lo": 9220086,
+        "mediana": 9223076,
+        "hi": 9226044
       },
       "sanchez": {
-        "media": 9173265,
-        "lo": 9170134,
-        "mediana": 9173254,
-        "hi": 9176399
+        "media": 9173178,
+        "lo": 9170200,
+        "mediana": 9173168,
+        "hi": 9176157
       },
       "total_2via": {
-        "media": 18396345,
-        "lo": 18396345,
-        "mediana": 18396345,
-        "hi": 18396345
+        "media": 18396244,
+        "lo": 18396244,
+        "mediana": 18396244,
+        "hi": 18396244
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 49836,
-      "media": 49814,
-      "lo": 43547,
-      "hi": 56076,
-      "abs_mediana": 49836
+      "mediana": 49908,
+      "media": 49887,
+      "lo": 43929,
+      "hi": 55843,
+      "abs_mediana": 49908
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1365,14 +1365,14 @@
         "ubigeo": 140000,
         "nombre": "Lima",
         "exterior": false,
-        "pct_actas": 99.67,
+        "pct_actas": 99.69,
         "lider": "keiko",
         "margen": 27.04,
         "share_keiko_actual": 63.52,
         "share_keiko_proyectado": 63.52,
         "votos": {
-          "sanchez": 2331634,
-          "keiko": 4059734
+          "sanchez": 2331963,
+          "keiko": 4060377
         }
       },
       {
@@ -1435,14 +1435,14 @@
         "ubigeo": 190000,
         "nombre": "Piura",
         "exterior": false,
-        "pct_actas": 99.75,
+        "pct_actas": 99.77,
         "lider": "keiko",
         "margen": 13.99,
-        "share_keiko_actual": 56.99,
+        "share_keiko_actual": 57.0,
         "share_keiko_proyectado": 56.99,
         "votos": {
-          "sanchez": 444114,
-          "keiko": 588561
+          "sanchez": 444183,
+          "keiko": 588712
         }
       },
       {
