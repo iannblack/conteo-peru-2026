@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-24T16:09:56Z",
+  "timestamp_utc": "2026-06-24T16:17:25Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -247,12 +247,12 @@
       "ubigeo": 190000,
       "nombre": "Piura",
       "exterior": false,
-      "actas_contabilizadas": 5266,
+      "actas_contabilizadas": 5268,
       "actas_total": 5281,
-      "pct_actas": 99.72,
+      "pct_actas": 99.75,
       "votos": {
-        "sanchez": 443997,
-        "keiko": 588278
+        "sanchez": 444114,
+        "keiko": 588561
       }
     },
     {
@@ -1132,13 +1132,13 @@
       "sanchez": 0.0
     },
     "share_actual_2via": {
-      "keiko": 50.118,
-      "sanchez": 49.882
+      "keiko": 50.119,
+      "sanchez": 49.881
     },
     "proyeccion_2via_pct": {
       "keiko": {
         "media": 50.135,
-        "lo": 50.117,
+        "lo": 50.118,
         "mediana": 50.135,
         "hi": 50.153
       },
@@ -1146,36 +1146,36 @@
         "media": 49.865,
         "lo": 49.847,
         "mediana": 49.865,
-        "hi": 49.883
+        "hi": 49.882
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9222991,
-        "lo": 9219759,
-        "mediana": 9223003,
-        "hi": 9226219
+        "media": 9223051,
+        "lo": 9219865,
+        "mediana": 9223062,
+        "hi": 9226233
       },
       "sanchez": {
-        "media": 9173318,
-        "lo": 9170089,
-        "mediana": 9173305,
-        "hi": 9176549
+        "media": 9173266,
+        "lo": 9170083,
+        "mediana": 9173255,
+        "hi": 9176451
       },
       "total_2via": {
-        "media": 18396308,
-        "lo": 18396308,
-        "mediana": 18396308,
-        "hi": 18396308
+        "media": 18396316,
+        "lo": 18396316,
+        "mediana": 18396316,
+        "hi": 18396316
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 49698,
-      "media": 49673,
-      "lo": 43210,
-      "hi": 56130,
-      "abs_mediana": 49698
+      "mediana": 49807,
+      "media": 49785,
+      "lo": 43414,
+      "hi": 56150,
+      "abs_mediana": 49807
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1435,14 +1435,14 @@
         "ubigeo": 190000,
         "nombre": "Piura",
         "exterior": false,
-        "pct_actas": 99.72,
+        "pct_actas": 99.75,
         "lider": "keiko",
-        "margen": 13.98,
+        "margen": 13.99,
         "share_keiko_actual": 56.99,
-        "share_keiko_proyectado": 56.98,
+        "share_keiko_proyectado": 56.99,
         "votos": {
-          "sanchez": 443997,
-          "keiko": 588278
+          "sanchez": 444114,
+          "keiko": 588561
         }
       },
       {
