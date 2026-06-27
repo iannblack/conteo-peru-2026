@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-27T00:30:10Z",
+  "timestamp_utc": "2026-06-27T00:35:34Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -187,12 +187,12 @@
       "ubigeo": 140000,
       "nombre": "Lima",
       "exterior": false,
-      "actas_contabilizadas": 29166,
+      "actas_contabilizadas": 29167,
       "actas_total": 29247,
-      "pct_actas": 99.72,
+      "pct_actas": 99.73,
       "votos": {
-        "sanchez": 2332992,
-        "keiko": 4061932
+        "sanchez": 2333051,
+        "keiko": 4062084
       }
     },
     {
@@ -1151,31 +1151,31 @@
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9223157,
-        "lo": 9220547,
-        "mediana": 9223168,
-        "hi": 9225762
+        "media": 9223170,
+        "lo": 9220586,
+        "mediana": 9223181,
+        "hi": 9225749
       },
       "sanchez": {
-        "media": 9173366,
-        "lo": 9170761,
-        "mediana": 9173355,
-        "hi": 9175977
+        "media": 9173345,
+        "lo": 9170766,
+        "mediana": 9173334,
+        "hi": 9175929
       },
       "total_2via": {
-        "media": 18396523,
-        "lo": 18396523,
-        "mediana": 18396523,
-        "hi": 18396523
+        "media": 18396515,
+        "lo": 18396515,
+        "mediana": 18396515,
+        "hi": 18396515
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 49813,
-      "media": 49791,
-      "lo": 44570,
-      "hi": 55000,
-      "abs_mediana": 49813
+      "mediana": 49847,
+      "media": 49825,
+      "lo": 44656,
+      "hi": 54982,
+      "abs_mediana": 49847
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1365,14 +1365,14 @@
         "ubigeo": 140000,
         "nombre": "Lima",
         "exterior": false,
-        "pct_actas": 99.72,
+        "pct_actas": 99.73,
         "lider": "keiko",
         "margen": 27.04,
         "share_keiko_actual": 63.52,
         "share_keiko_proyectado": 63.51,
         "votos": {
-          "sanchez": 2332992,
-          "keiko": 4061932
+          "sanchez": 2333051,
+          "keiko": 4062084
         }
       },
       {
