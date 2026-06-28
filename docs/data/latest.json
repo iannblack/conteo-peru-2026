@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-28T15:15:44Z",
+  "timestamp_utc": "2026-06-28T20:52:37Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -15,15 +15,15 @@
     }
   },
   "nacional": {
-    "actas_pct": 99.988,
-    "actas_contabilizadas": 92755,
+    "actas_pct": 99.99,
+    "actas_contabilizadas": 92757,
     "actas_total": 92766,
-    "votos_emitidos": 19681091,
-    "votos_validos": 18395005,
-    "participacion": 72.025,
+    "votos_emitidos": 19681535,
+    "votos_validos": 18395418,
+    "participacion": 72.026,
     "votos": {
-      "sanchez": 9172916,
-      "keiko": 9222089
+      "sanchez": 9173053,
+      "keiko": 9222365
     }
   },
   "regiones": [
@@ -295,12 +295,12 @@
       "ubigeo": 230000,
       "nombre": "Tumbes",
       "exterior": false,
-      "actas_contabilizadas": 631,
+      "actas_contabilizadas": 632,
       "actas_total": 632,
-      "pct_actas": 99.84,
+      "pct_actas": 100.0,
       "votos": {
-        "sanchez": 45495,
-        "keiko": 82124
+        "sanchez": 45530,
+        "keiko": 82280
       }
     },
     {
@@ -1151,31 +1151,31 @@
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9223309,
-        "lo": 9223064,
-        "mediana": 9223309,
-        "hi": 9223553
+        "media": 9223338,
+        "lo": 9223114,
+        "mediana": 9223337,
+        "hi": 9223558
       },
       "sanchez": {
-        "media": 9173901,
-        "lo": 9173657,
-        "mediana": 9173901,
-        "hi": 9174146
+        "media": 9173865,
+        "lo": 9173645,
+        "mediana": 9173865,
+        "hi": 9174089
       },
       "total_2via": {
-        "media": 18397210,
-        "lo": 18397210,
-        "mediana": 18397210,
-        "hi": 18397210
+        "media": 18397203,
+        "lo": 18397203,
+        "mediana": 18397203,
+        "hi": 18397203
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 49407,
-      "media": 49409,
-      "lo": 48919,
-      "hi": 49895,
-      "abs_mediana": 49407
+      "mediana": 49472,
+      "media": 49472,
+      "lo": 49026,
+      "hi": 49913,
+      "abs_mediana": 49472
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1491,14 +1491,14 @@
         "ubigeo": 230000,
         "nombre": "Tumbes",
         "exterior": false,
-        "pct_actas": 99.84,
+        "pct_actas": 100.0,
         "lider": "keiko",
-        "margen": 28.7,
-        "share_keiko_actual": 64.35,
-        "share_keiko_proyectado": 64.25,
+        "margen": 28.75,
+        "share_keiko_actual": 64.38,
+        "share_keiko_proyectado": 64.28,
         "votos": {
-          "sanchez": 45495,
-          "keiko": 82124
+          "sanchez": 45530,
+          "keiko": 82280
         }
       },
       {
