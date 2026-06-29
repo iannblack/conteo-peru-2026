@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-06-29T15:20:08Z",
+  "timestamp_utc": "2026-06-29T15:25:41Z",
   "id_eleccion": 10,
   "fuente": "ONPE — resultadosegundavuelta.onpe.gob.pe",
   "candidatos": {
@@ -371,8 +371,8 @@
       "actas_total": 839,
       "pct_actas": 99.88,
       "votos": {
-        "sanchez": 50691,
-        "keiko": 63991
+        "sanchez": 50741,
+        "keiko": 64067
       }
     },
     {
@@ -893,10 +893,10 @@
       "ubigeo": 940900,
       "iso3": "ESP",
       "nombre": "España",
-      "actas_contabilizadas": 445,
+      "actas_contabilizadas": 446,
       "votos": {
-        "sanchez": 22607,
-        "keiko": 34141
+        "sanchez": 22657,
+        "keiko": 34217
       }
     },
     {
@@ -1137,45 +1137,45 @@
     },
     "proyeccion_2via_pct": {
       "keiko": {
-        "media": 50.134,
+        "media": 50.135,
         "lo": 50.133,
-        "mediana": 50.134,
+        "mediana": 50.135,
         "hi": 50.136
       },
       "sanchez": {
-        "media": 49.866,
+        "media": 49.865,
         "lo": 49.864,
-        "mediana": 49.866,
+        "mediana": 49.865,
         "hi": 49.867
       }
     },
     "proyeccion_votos": {
       "keiko": {
-        "media": 9223290,
-        "lo": 9223092,
-        "mediana": 9223290,
-        "hi": 9223485
+        "media": 9223366,
+        "lo": 9223169,
+        "mediana": 9223366,
+        "hi": 9223561
       },
       "sanchez": {
-        "media": 9173823,
-        "lo": 9173628,
-        "mediana": 9173823,
-        "hi": 9174020
+        "media": 9173873,
+        "lo": 9173677,
+        "mediana": 9173873,
+        "hi": 9174070
       },
       "total_2via": {
-        "media": 18397113,
-        "lo": 18397113,
-        "mediana": 18397113,
-        "hi": 18397113
+        "media": 18397239,
+        "lo": 18397239,
+        "mediana": 18397239,
+        "hi": 18397239
       }
     },
     "margen_votos": {
       "lider": "keiko",
-      "mediana": 49467,
-      "media": 49467,
-      "lo": 49072,
-      "hi": 49858,
-      "abs_mediana": 49467
+      "mediana": 49493,
+      "media": 49494,
+      "lo": 49098,
+      "hi": 49884,
+      "abs_mediana": 49493
     },
     "votos_por_acta_nacional": 198.3,
     "por_region": [
@@ -1577,12 +1577,12 @@
         "exterior": true,
         "pct_actas": 99.88,
         "lider": "keiko",
-        "margen": 11.6,
+        "margen": 11.61,
         "share_keiko_actual": 55.8,
-        "share_keiko_proyectado": 55.76,
+        "share_keiko_proyectado": 55.77,
         "votos": {
-          "sanchez": 50691,
-          "keiko": 63991
+          "sanchez": 50741,
+          "keiko": 64067
         }
       },
       {
